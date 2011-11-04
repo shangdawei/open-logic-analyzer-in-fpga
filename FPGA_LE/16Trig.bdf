@@ -230,9 +230,25 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 648 1040 824 1056)
+	(rect 648 1024 824 1040)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "DEBUG_TriEN" (rect 90 0 161 12)(font "Arial" ))
+	(text "TriEN" (rect 90 0 117 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 648 1096 824 1112)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "SetInit" (rect 90 0 121 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -1024,19 +1040,6 @@ applicable agreement for further details.
 	(pt 432 904)
 )
 (connector
-	(pt 648 1048)
-	(pt 640 1048)
-)
-(connector
-	(pt 640 1048)
-	(pt 640 1032)
-)
-(connector
-	(text "TriEN" (rect 592 1016 619 1028)(font "Arial" ))
-	(pt 640 1032)
-	(pt 584 1032)
-)
-(connector
 	(text "EnTrig" (rect 472 992 502 1004)(font "Arial" ))
 	(pt 464 1008)
 	(pt 520 1008)
@@ -1054,5 +1057,10 @@ applicable agreement for further details.
 (connector
 	(pt 520 1056)
 	(pt 464 1056)
+)
+(connector
+	(text "TriEN" (rect 616 1016 643 1028)(font "Arial" ))
+	(pt 584 1032)
+	(pt 648 1032)
 )
 (text "~" (rect 624 488 631 502)(font "Arial" (font_size 8)))
