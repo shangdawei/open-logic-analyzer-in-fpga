@@ -15,10 +15,10 @@
 -- MIF file representing initial state of PLL Scan Chain
 --    Device Family: Cyclone III
 --    Device Part: -
---    Device Speed Grade: -
+--    Device Speed Grade: 6
 --    PLL Scan Chain: Fast PLL (144 bits)
---    File Name: Z:\FCD-3009-1.1\DE0\Demonstrations\altpll_reconfig_rom_restored\MainPLL_5MBPS.mif
---    Generated: Tue Nov 01 14:46:56 2011
+--    File Name: Z:\FCD-3009-1.1\DE0\LogicAnalyzer\FPGA_LE\altpll_reconfig_TOP\MainPLL_5MBPS.mif
+--    Generated: Fri Nov 04 19:29:46 2011
 
 WIDTH=1;
 DEPTH=144;
@@ -82,21 +82,21 @@ CONTENT BEGIN
 	52   :   1;
 	53   :   1;
 	54   :   0; -- clk0 counter: Bypass = 0 (1 bit(s))
-	55   :   1; -- clk0 counter: High Count = 240 (8 bit(s))
-	56   :   1;
+	55   :   0; -- clk0 counter: High Count = 60 (8 bit(s))
+	56   :   0;
 	57   :   1;
 	58   :   1;
-	59   :   0;
-	60   :   0;
+	59   :   1;
+	60   :   1;
 	61   :   0;
 	62   :   0;
 	63   :   0; -- clk0 counter: Odd Division = 0 (1 bit(s))
-	64   :   1; -- clk0 counter: Low Count = 240 (8 bit(s))
-	65   :   1;
+	64   :   0; -- clk0 counter: Low Count = 60 (8 bit(s))
+	65   :   0;
 	66   :   1;
 	67   :   1;
-	68   :   0;
-	69   :   0;
+	68   :   1;
+	69   :   1;
 	70   :   0;
 	71   :   0;
 	72   :   0; -- clk1 counter: Bypass = 0 (1 bit(s))
@@ -136,21 +136,21 @@ CONTENT BEGIN
 	106  :   0;
 	107  :   0;
 	108  :   0; -- clk3 counter: Bypass = 0 (1 bit(s))
-	109  :   0; -- clk3 counter: High Count = 60 (8 bit(s))
-	110  :   0;
+	109  :   1; -- clk3 counter: High Count = 240 (8 bit(s))
+	110  :   1;
 	111  :   1;
 	112  :   1;
-	113  :   1;
-	114  :   1;
+	113  :   0;
+	114  :   0;
 	115  :   0;
 	116  :   0;
 	117  :   0; -- clk3 counter: Odd Division = 0 (1 bit(s))
-	118  :   0; -- clk3 counter: Low Count = 60 (8 bit(s))
-	119  :   0;
+	118  :   1; -- clk3 counter: Low Count = 240 (8 bit(s))
+	119  :   1;
 	120  :   1;
 	121  :   1;
-	122  :   1;
-	123  :   1;
+	122  :   0;
+	123  :   0;
 	124  :   0;
 	125  :   0;
 	126  :   0; -- clk4 counter: Bypass = 0 (1 bit(s))
