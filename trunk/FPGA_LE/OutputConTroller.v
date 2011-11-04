@@ -1,3 +1,6 @@
+
+	
+	
 module OutputController(DataIn,NumIn,OutCLK,Init,DataOut,RD,FinishRD,tIndex,tDataIn);
 	input [127:0] DataIn;
 	output reg [127:0] tDataIn;

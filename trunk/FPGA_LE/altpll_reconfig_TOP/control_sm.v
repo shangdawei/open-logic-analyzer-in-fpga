@@ -1,5 +1,3 @@
-
-
 module control_sm (clock, reset, busy, want_to_reconfig,intended_rom, mux_sel, write_from_rom, reconfig, current_state,main_reset_rom_address,reset_rom_address);
 
 	input  clock;

@@ -1,5 +1,4 @@
-/*
-CLKDIV16 CopyRight By WenX(c) 2011
+CopyRight By WenX(c) 2011
 Wenxiao1992@gmail.com
 edited at 2011-11-4 at Southeast University
 
@@ -17,18 +16,3 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License at <http://www.gnu.org/licenses/>
 for more details.
-*/
-
-module CLKD16(CLKin,CLKout);
-	input CLKin;
-	output reg CLKout;
-	
-	reg [2:0] step;
-	
-	always @(posedge CLKin)begin
-		step=step+1;
-		if(step==0)
-			CLKout=~CLKout;
-	end
-
-endmodule 

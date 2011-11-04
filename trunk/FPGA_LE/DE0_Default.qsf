@@ -666,7 +666,31 @@ set_global_assignment -name SYNTH_MESSAGE_LEVEL HIGH
 set_global_assignment -name FMAX_REQUIREMENT "500 MHz"
 set_instance_assignment -name INPUT_MIN_DELAY "5 ns" -from ALLSTORE|* -to Xin -disable
 set_global_assignment -name MISC_FILE DE0_Default.dpf
-set_global_assignment -name VERILOG_FILE V/Reset_Delay.v
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE DE0_Default.vwf
+set_global_assignment -name SEARCH_PATH V/ -tag from_archive
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTPLLS.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTREC.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/control_sm.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/pll_reconfig_circuit.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_1.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_2.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_3.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_4.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_muxer.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/the_pll.v
+set_global_assignment -name BDF_FILE 16Trig.bdf
+set_global_assignment -name VERILOG_FILE CLKD16.v
+set_global_assignment -name SDC_FILE TS_constraints.sdc
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/altpll_reconfig_rom.v
+set_global_assignment -name BDF_FILE altpll_reconfig_TOP/PLL_Reconfig_TOP.bdf
 set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
 set_global_assignment -name QIP_FILE TMPPLL.qip
 set_global_assignment -name BDF_FILE Block1.bdf
@@ -695,17 +719,7 @@ set_global_assignment -name QIP_FILE UartPLL.qip
 set_global_assignment -name BDF_FILE AllStore.bdf
 set_global_assignment -name VERILOG_FILE MyRx.v
 set_global_assignment -name VERILOG_FILE Decode.v
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE DE0_Default.vwf
 set_global_assignment -name QIP_FILE ALTPLL_RECFG.qip
 set_global_assignment -name QIP_FILE TrigReg.qip
 set_global_assignment -name QIP_FILE ADD_LATCH.qip
-set_global_assignment -name SEARCH_PATH V/ -tag from_archive
-set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
-set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
-set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
-set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
