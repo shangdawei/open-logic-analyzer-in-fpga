@@ -391,7 +391,7 @@ set_global_assignment -name STATE_MACHINE_PROCESSING "ONE-HOT"
 set_global_assignment -name SAFE_STATE_MACHINE ON
 set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION OFF
 set_global_assignment -name ROUTER_EFFORT_MULTIPLIER 3.0
-set_instance_assignment -name TSU_REQUIREMENT "4 ns" -from Xin -to *
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from Xin -to *
 set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout
 set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout
 set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout2
@@ -665,21 +665,9 @@ set_global_assignment -name SYNTH_GATED_CLOCK_CONVERSION OFF
 set_global_assignment -name SYNTH_MESSAGE_LEVEL HIGH
 set_global_assignment -name FMAX_REQUIREMENT "500 MHz"
 set_instance_assignment -name INPUT_MIN_DELAY "5 ns" -from ALLSTORE|* -to Xin -disable
-set_instance_assignment -name TSU_REQUIREMENT "3 ns" -from "AllStore:inst2|*" -to *
-set_instance_assignment -name TSU_REQUIREMENT "3 ns" -from * -to "AllStore:inst2|*"
-set_instance_assignment -name TCO_REQUIREMENT "3 ns" -from "AllStore:inst2|*" -to *
-set_instance_assignment -name TCO_REQUIREMENT "3 ns" -from * -to "AllStore:inst2|*"
-set_instance_assignment -name TPD_REQUIREMENT "3 ns" -from "AllStore:inst2|*" -to *
-set_instance_assignment -name TPD_REQUIREMENT "3 ns" -from * -to "AllStore:inst2|*"
-set_instance_assignment -name TH_REQUIREMENT "3 ns" -from "AllStore:inst2|*" -to *
-set_instance_assignment -name TH_REQUIREMENT "3 ns" -from * -to "AllStore:inst2|*"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name MISC_FILE DE0_Default.dpf
-set_global_assignment -name VERILOG_FILE V/VGA_Ctrl.v
 set_global_assignment -name VERILOG_FILE V/Reset_Delay.v
-set_global_assignment -name VERILOG_FILE V/IMG_RAM.v
 set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
-set_global_assignment -name VERILOG_FILE V/SEG7_LUT_4.v
 set_global_assignment -name QIP_FILE TMPPLL.qip
 set_global_assignment -name BDF_FILE Block1.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE DE0_Default.vwf
@@ -712,3 +700,12 @@ set_global_assignment -name QIP_FILE ALTPLL_RECFG.qip
 set_global_assignment -name QIP_FILE TrigReg.qip
 set_global_assignment -name QIP_FILE ADD_LATCH.qip
 set_global_assignment -name SEARCH_PATH V/ -tag from_archive
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
