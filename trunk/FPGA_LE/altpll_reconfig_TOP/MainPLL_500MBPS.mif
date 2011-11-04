@@ -17,8 +17,8 @@
 --    Device Part: -
 --    Device Speed Grade: 6
 --    PLL Scan Chain: Fast PLL (144 bits)
---    File Name: Z:\FCD-3009-1.1\DE0\Demonstrations\altpll_reconfig_rom_restored\MainPLL_500MBPS.mif
---    Generated: Tue Nov 01 16:20:25 2011
+--    File Name: Z:\FCD-3009-1.1\DE0\LogicAnalyzer\FPGA_LE\altpll_reconfig_TOP\MainPLL_500MBPS.mif
+--    Generated: Fri Nov 04 19:30:59 2011
 
 WIDTH=1;
 DEPTH=144;
@@ -82,23 +82,23 @@ CONTENT BEGIN
 	52   :   0;
 	53   :   1;
 	54   :   0; -- clk0 counter: Bypass = 0 (1 bit(s))
-	55   :   0; -- clk0 counter: High Count = 4 (8 bit(s))
+	55   :   0; -- clk0 counter: High Count = 1 (8 bit(s))
 	56   :   0;
 	57   :   0;
 	58   :   0;
 	59   :   0;
-	60   :   1;
+	60   :   0;
 	61   :   0;
-	62   :   0;
+	62   :   1;
 	63   :   0; -- clk0 counter: Odd Division = 0 (1 bit(s))
-	64   :   0; -- clk0 counter: Low Count = 4 (8 bit(s))
+	64   :   0; -- clk0 counter: Low Count = 1 (8 bit(s))
 	65   :   0;
 	66   :   0;
 	67   :   0;
 	68   :   0;
-	69   :   1;
+	69   :   0;
 	70   :   0;
-	71   :   0;
+	71   :   1;
 	72   :   0; -- clk1 counter: Bypass = 0 (1 bit(s))
 	73   :   0; -- clk1 counter: High Count = 1 (8 bit(s))
 	74   :   0;
@@ -136,23 +136,23 @@ CONTENT BEGIN
 	106  :   0;
 	107  :   0;
 	108  :   0; -- clk3 counter: Bypass = 0 (1 bit(s))
-	109  :   0; -- clk3 counter: High Count = 1 (8 bit(s))
+	109  :   0; -- clk3 counter: High Count = 4 (8 bit(s))
 	110  :   0;
 	111  :   0;
 	112  :   0;
 	113  :   0;
-	114  :   0;
+	114  :   1;
 	115  :   0;
-	116  :   1;
+	116  :   0;
 	117  :   0; -- clk3 counter: Odd Division = 0 (1 bit(s))
-	118  :   0; -- clk3 counter: Low Count = 1 (8 bit(s))
+	118  :   0; -- clk3 counter: Low Count = 4 (8 bit(s))
 	119  :   0;
 	120  :   0;
 	121  :   0;
 	122  :   0;
-	123  :   0;
+	123  :   1;
 	124  :   0;
-	125  :   1;
+	125  :   0;
 	126  :   0; -- clk4 counter: Bypass = 0 (1 bit(s))
 	127  :   0; -- clk4 counter: High Count = 2 (8 bit(s))
 	128  :   0;

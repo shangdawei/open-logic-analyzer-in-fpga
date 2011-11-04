@@ -1,6 +1,6 @@
-//altpll bandwidth_type="AUTO" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" clk0_divide_by=434 clk0_duty_cycle=50 clk0_multiply_by=1 clk0_phase_shift="0" clk1_divide_by=217 clk1_duty_cycle=50 clk1_multiply_by=2 clk1_phase_shift="0" compensate_clock="CLK0" device_family="Cyclone III" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_UNUSED" port_clk3="PORT_UNUSED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" self_reset_on_loss_lock="ON" width_clock=5 clk inclk locked
+//altpll bandwidth_type="AUTO" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" clk0_divide_by=419 clk0_duty_cycle=50 clk0_multiply_by=217 clk0_phase_shift="0" clk1_divide_by=4190 clk1_duty_cycle=50 clk1_multiply_by=439 clk1_phase_shift="95444" clk2_divide_by=417 clk2_duty_cycle=50 clk2_multiply_by=5 clk2_phase_shift="0" compensate_clock="CLK0" device_family="Cyclone III" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_USED" port_clk3="PORT_UNUSED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" self_reset_on_loss_lock="ON" width_clock=5 clk inclk locked
 //VERSION_BEGIN 9.1 cbx_altpll 2009:10:21:21:22:16:SJ cbx_cycloneii 2009:10:21:21:22:16:SJ cbx_mgl 2009:10:21:21:37:49:SJ cbx_stratixii 2009:10:21:21:22:16:SJ cbx_util_mgl 2009:10:21:21:22:16:SJ  VERSION_END
-//CBXI_INSTANCE_NAME="Block1_UartPLL_inst19_altpll_altpll_component"
+//CBXI_INSTANCE_NAME="Block1_RandomSeq_inst8_RandomPLLs_inst_altpll_altpll_component"
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
 
@@ -26,7 +26,7 @@
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  UartPLL_altpll
+module  RandomPLLs_altpll
 	( 
 	clk,
 	inclk,
@@ -80,14 +80,18 @@ module  UartPLL_altpll
 	);
 	defparam
 		pll1.bandwidth_type = "auto",
-		pll1.clk0_divide_by = 434,
+		pll1.clk0_divide_by = 419,
 		pll1.clk0_duty_cycle = 50,
-		pll1.clk0_multiply_by = 1,
+		pll1.clk0_multiply_by = 217,
 		pll1.clk0_phase_shift = "0",
-		pll1.clk1_divide_by = 217,
+		pll1.clk1_divide_by = 4190,
 		pll1.clk1_duty_cycle = 50,
-		pll1.clk1_multiply_by = 2,
-		pll1.clk1_phase_shift = "0",
+		pll1.clk1_multiply_by = 439,
+		pll1.clk1_phase_shift = "95444",
+		pll1.clk2_divide_by = 417,
+		pll1.clk2_duty_cycle = 50,
+		pll1.clk2_multiply_by = 5,
+		pll1.clk2_phase_shift = "0",
 		pll1.compensate_clock = "clk0",
 		pll1.inclk0_input_frequency = 20000,
 		pll1.operation_mode = "normal",
@@ -97,5 +101,5 @@ module  UartPLL_altpll
 	assign
 		clk = {wire_pll1_clk[4:0]},
 		locked = wire_pll1_locked;
-endmodule //UartPLL_altpll
+endmodule //RandomPLLs_altpll
 //VALID FILE
