@@ -1,0 +1,170 @@
+Restore Archived Project report for DE0_Default
+Fri Nov 04 10:37:11 2011
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Nov 04 10:37:11 2011 ;
+; Revision Name                   ; DE0_Default                           ;
+; Top-level Entity Name           ; Block1                                ;
+; Family                          ; Cyclone III                           ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'Z:/FCD-3009-1.1/DE0/DE0_Default.qar' into the 'Z:/FCD-3009-1.1/DE0/FPGA_LE/' directory
+Info: Generated report 'DE0_Default.restore.rpt'
+Info: Evaluation of Tcl script d:/altera/91/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 136 megabytes
+    Info: Processing ended: Fri Nov 04 10:37:11 2011
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-------------------------------------+
+; Files Restored                      ;
++-------------------------------------+
+; File Name                           ;
++-------------------------------------+
+; 16Trig.bdf                          ;
+; ADD_LATCH.bsf                       ;
+; ADD_LATCH.cmp                       ;
+; ADD_LATCH.inc                       ;
+; ADD_LATCH.qip                       ;
+; ADD_LATCH.v                         ;
+; ADD_LATCH_bb.v                      ;
+; ADD_LATCH_inst.v                    ;
+; ALTPLL_RECFG.bsf                    ;
+; ALTPLL_RECFG.cmp                    ;
+; ALTPLL_RECFG.inc                    ;
+; ALTPLL_RECFG.qip                    ;
+; ALTPLL_RECFG.v                      ;
+; ALTPLL_RECFG_bb.v                   ;
+; ALTPLL_RECFG_inst.v                 ;
+; ASignal.bdf                         ;
+; AllStore.bdf                        ;
+; Block1.bdf                          ;
+; CLKmaker.v                          ;
+; CMP.v                               ;
+; Cross.v                             ;
+; DE0_Default.dpf                     ;
+; DE0_Default.qpf                     ;
+; DE0_Default.qsf                     ;
+; DE0_Default.vwf                     ;
+; DE0_Default_assignment_defaults.qdf ;
+; DShift.v                            ;
+; Decode.v                            ;
+; Decode24.bsf                        ;
+; Decode24.cmp                        ;
+; Decode24.inc                        ;
+; Decode24.qip                        ;
+; Decode24.v                          ;
+; Decode24_bb.v                       ;
+; Decode24_inst.v                     ;
+; FIFO.bsf                            ;
+; FIFO.cmp                            ;
+; FIFO.inc                            ;
+; FIFO.qip                            ;
+; FIFO.v                              ;
+; FIFO_bb.v                           ;
+; FIFO_inst.v                         ;
+; FPGA_TMP0.vwf                       ;
+; MyRx.v                              ;
+; Myuart.v                            ;
+; OutputConTroller.v                  ;
+; QSignal.bdf                         ;
+; QTrig.bdf                           ;
+; ShiftReg.bsf                        ;
+; ShiftReg.inc                        ;
+; ShiftReg.qip                        ;
+; ShiftReg.v                          ;
+; ShiftReg_bb.v                       ;
+; ShiftReg_inst.v                     ;
+; Shifts.bdf                          ;
+; SignalTap.bsf                       ;
+; SignalTap.cmp                       ;
+; SignalTap.inc                       ;
+; SignalTap.qip                       ;
+; SignalTap.v                         ;
+; SignalTap_bb.v                      ;
+; SignalTap_inst.v                    ;
+; TMPPLL.bsf                          ;
+; TMPPLL.cmp                          ;
+; TMPPLL.inc                          ;
+; TMPPLL.ppf                          ;
+; TMPPLL.qip                          ;
+; TMPPLL.v                            ;
+; TMPPLL_bb.v                         ;
+; TMPPLL_inst.v                       ;
+; TMPTOP.bdf                          ;
+; TMPTOP.vwf                          ;
+; TS_constraints.sdc                  ;
+; TS_constraints.tcl                  ;
+; TS_nativelink.tcl                   ;
+; Trig.v                              ;
+; TrigReg.bsf                         ;
+; TrigReg.cmp                         ;
+; TrigReg.inc                         ;
+; TrigReg.qip                         ;
+; TrigReg.v                           ;
+; TrigReg_bb.v                        ;
+; TrigReg_inst.v                      ;
+; Uart.v                              ;
+; UartPLL.bsf                         ;
+; UartPLL.cmp                         ;
+; UartPLL.inc                         ;
+; UartPLL.ppf                         ;
+; UartPLL.qip                         ;
+; UartPLL.v                           ;
+; UartPLL_bb.v                        ;
+; UartPLL_inst.v                      ;
+; V/Reset_Delay.v                     ;
+; V/SEG7_LUT.v                        ;
+; V/SEG7_LUT_4.v                      ;
+; core.v                              ;
+; signalprobe_qsf.tcl                 ;
++-------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
