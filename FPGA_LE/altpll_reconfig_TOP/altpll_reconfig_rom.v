@@ -25,7 +25,7 @@ tapout_reconfig
 input  input_clock;
 input  input_reset;
 input  input_want_to_reconfig;
-input  [ 1:0] input_intended_rom;
+input  [1:0] input_intended_rom;
 output [2:0] output_current_state;
 output c0;
 output c1;
@@ -118,7 +118,8 @@ rom_muxer u3 (
 		  .data2(rom_2_q_wire),
 	      .data3(rom_3_q_wire),
 	      .sel(mux_sel_wire),
-	      .result(rom_data_in_wire));
+	      .result(rom_data_in_wire)
+	      );
 
 
 rom_1 u4 (
@@ -156,8 +157,7 @@ rom_4 u7 (
 	.rden(rom_common_rden_wire),
 	.q(rom_3_q_wire));
 
-
-control_sm u8 (
+control_sm u12(
 
 
 	.clock(input_clock),

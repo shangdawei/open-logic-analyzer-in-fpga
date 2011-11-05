@@ -72,10 +72,10 @@ module rom_muxer (
 				// synopsys translate_on
 				);
 	defparam
-		lpm_mux_component.lpm_size = 4,
+		lpm_mux_component.lpm_size = 8,
 		lpm_mux_component.lpm_type = "LPM_MUX",
 		lpm_mux_component.lpm_width = 1,
-		lpm_mux_component.lpm_widths = 2;
+		lpm_mux_component.lpm_widths = 3;
 
 
 endmodule

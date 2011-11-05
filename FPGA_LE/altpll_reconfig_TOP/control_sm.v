@@ -4,8 +4,8 @@ module control_sm (clock, reset, busy, want_to_reconfig,intended_rom, mux_sel, w
 	input  reset;
 	input  busy;
 	input  want_to_reconfig;
-	input  [1:0] intended_rom;
-	output [1:0] mux_sel;
+	input  [2:0] intended_rom;
+	output [2:0] mux_sel;
 	output write_from_rom;
 	output reconfig;
 	output [2:0] current_state;
