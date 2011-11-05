@@ -28,7 +28,7 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY Block1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "8.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:56:36  MARCH 06, 2009"
-set_global_assignment -name LAST_QUARTUS_VERSION 9.1
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP0.08"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 
@@ -390,181 +390,6 @@ set_global_assignment -name STATE_MACHINE_PROCESSING "ONE-HOT"
 set_global_assignment -name SAFE_STATE_MACHINE ON
 set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION OFF
 set_global_assignment -name ROUTER_EFFORT_MULTIPLIER 3.0
-set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from Xin -to *
-set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout
-set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout
-set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout2
-set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout2
-set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout3
-set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout3
-set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout4
-set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout4
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[3]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[2]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[1]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[0]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[31]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[30]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[29]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[28]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[27]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[26]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[25]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[24]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[23]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[22]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[21]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[20]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[19]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[18]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[17]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[16]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[15]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[14]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[13]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[12]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[11]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[10]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[9]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[8]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[7]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[6]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[5]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[4]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[3]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[2]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[1]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[0]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[31]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[30]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[29]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[28]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[27]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[26]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[25]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[24]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[23]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[22]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[21]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[20]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[19]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[18]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[17]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[16]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[15]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[14]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[13]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[12]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[11]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[10]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[9]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[8]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[7]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[6]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[5]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[4]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[3]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[2]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[1]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[0]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[31]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[30]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[29]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[28]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[27]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[26]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[25]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[24]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[23]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[22]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[21]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[20]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[19]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[18]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[17]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[16]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[15]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[14]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[13]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[12]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[11]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[10]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[9]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[8]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[7]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[6]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[5]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[4]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[3]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[2]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[1]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[0]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[31]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[30]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[29]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[28]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[27]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[26]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[25]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[24]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[23]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[22]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[21]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[20]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[19]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[18]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[17]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[16]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[15]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[14]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[13]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[12]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[11]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[10]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[9]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[8]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[7]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[6]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[5]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[4]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[3]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[2]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[1]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[0]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[10]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[9]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[8]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[7]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[6]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[5]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[4]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[3]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[2]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[1]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[0]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[15]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[14]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[13]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[12]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[11]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[10]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[9]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[8]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[7]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[6]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[5]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[4]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[3]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[2]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[1]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[0]
-set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[4]
 set_location_assignment PIN_F13 -to HEX0_D[6]
 set_location_assignment PIN_E11 -to HEX0_D[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0_D[0]
@@ -635,15 +460,10 @@ set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_timing_analysi
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_timing_analysis
 set_global_assignment -name EDA_RESYNTHESIS_TOOL "<None>"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 14622752 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_location_assignment PIN_U22 -to Rx
 set_location_assignment PIN_U21 -to TxOut
 set_location_assignment PIN_H2 -to Reload1
 set_location_assignment PIN_J6 -to Reload2
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name USE_CHECKSUM_AS_USERCODE ON
 set_global_assignment -name GENERATE_TTF_FILE ON
 set_global_assignment -name GENERATE_RBF_FILE ON
@@ -651,8 +471,6 @@ set_global_assignment -name GENERATE_SVF_FILE ON
 set_global_assignment -name GENERATE_JAM_FILE ON
 set_global_assignment -name GENERATE_JBC_FILE ON
 set_global_assignment -name DEVICE_MIGRATION_LIST EP3C16F484C6
-set_location_assignment PIN_B1 -to SoftReload
-set_instance_assignment -name TSU_REQUIREMENT "3 ns" -from Xin -to ALLStore*
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name AUTO_RAM_TO_LCELL_CONVERSION ON
@@ -663,62 +481,6 @@ set_instance_assignment -name INPUT_MIN_DELAY "5 ns" -from ALLSTORE|* -to Xin -d
 set_global_assignment -name MISC_FILE DE0_Default.dpf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE DE0_Default.vwf
 set_global_assignment -name SEARCH_PATH V/ -tag from_archive
-set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
-set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
-set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
-set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
-set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTPLLS.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTREC.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/control_sm.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/pll_reconfig_circuit.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_1.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_2.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_3.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_4.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_muxer.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/the_pll.v
-set_global_assignment -name BDF_FILE 16Trig.bdf
-set_global_assignment -name VERILOG_FILE CLKD16.v
-set_global_assignment -name SDC_FILE TS_constraints.sdc
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/altpll_reconfig_rom.v
-set_global_assignment -name BDF_FILE altpll_reconfig_TOP/PLL_Reconfig_TOP.bdf
-set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
-set_global_assignment -name QIP_FILE TMPPLL.qip
-set_global_assignment -name BDF_FILE Block1.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE DE0_Default.vwf
-set_global_assignment -name VERILOG_FILE DShift.v
-set_global_assignment -name VERILOG_FILE CLKmaker.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE FPGA_TMP0.vwf
-set_global_assignment -name BDF_FILE Shifts.bdf
-set_global_assignment -name QIP_FILE ShiftReg.qip
-set_global_assignment -name BDF_FILE ASignal.bdf
-set_global_assignment -name BDF_FILE QSignal.bdf
-set_global_assignment -name VERILOG_FILE Cross.v
-set_global_assignment -name QIP_FILE FIFO.qip
-set_global_assignment -name VERILOG_FILE CMP.v
-set_global_assignment -name VERILOG_FILE Trig.v
-set_global_assignment -name BDF_FILE TMPTOP.bdf
-set_global_assignment -name BDF_FILE QTrig.bdf
-set_global_assignment -name QIP_FILE Decode24.qip
-set_global_assignment -name VECTOR_WAVEFORM_FILE TMPTOP.vwf
-set_global_assignment -name VERILOG_FILE OutputConTroller.v
-set_global_assignment -name VERILOG_FILE Uart.v
-set_global_assignment -name VERILOG_FILE core.v
-set_global_assignment -name QIP_FILE SignalTap.qip
-set_global_assignment -name VERILOG_FILE Myuart.v
-set_global_assignment -name QIP_FILE UartPLL.qip
-set_global_assignment -name BDF_FILE AllStore.bdf
-set_global_assignment -name VERILOG_FILE MyRx.v
-set_global_assignment -name VERILOG_FILE Decode.v
-set_global_assignment -name QIP_FILE ALTPLL_RECFG.qip
-set_global_assignment -name QIP_FILE TrigReg.qip
-set_global_assignment -name QIP_FILE ADD_LATCH.qip
-set_global_assignment -name VERILOG_FILE TestOutput.v
-set_global_assignment -name BDF_FILE RandomSeq.bdf
 set_global_assignment -name MISC_FILE "Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/DE0_Default.dpf"
 set_location_assignment PIN_AA17 -to TestOut[0]
 set_location_assignment PIN_AB17 -to TestOut[1]
@@ -894,7 +656,269 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Xin[13]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Xin[14]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Xin[15]
 set_location_assignment PIN_AB8 -to Xin[3]
-set_global_assignment -name VERILOG_FILE LED_SW.v
 set_location_assignment PIN_H5 -to TrigEN_SW
 set_location_assignment PIN_B12 -to CLKIN2
+set_location_assignment PIN_J1 -to LED[0]
+set_location_assignment PIN_J2 -to LED[1]
+set_location_assignment PIN_J3 -to LED[2]
+set_location_assignment PIN_H1 -to LED[3]
+set_location_assignment PIN_F2 -to LED[4]
+set_location_assignment PIN_E1 -to LED[5]
+set_location_assignment PIN_C1 -to LED[6]
+set_location_assignment PIN_C2 -to LED[7]
+set_location_assignment PIN_B2 -to LED[8]
+set_location_assignment PIN_B1 -to LED[9]
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTPLLS.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTREC.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/control_sm.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/pll_reconfig_circuit.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_1.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_2.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_3.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_4.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_muxer.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/the_pll.v
+set_global_assignment -name BDF_FILE 16Trig.bdf
+set_global_assignment -name VERILOG_FILE CLKD16.v
+set_global_assignment -name SDC_FILE TS_constraints.sdc
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/altpll_reconfig_rom.v
+set_global_assignment -name BDF_FILE altpll_reconfig_TOP/PLL_Reconfig_TOP.bdf
+set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
+set_global_assignment -name QIP_FILE TMPPLL.qip
+set_global_assignment -name BDF_FILE Block1.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE DE0_Default.vwf
+set_global_assignment -name VERILOG_FILE DShift.v
+set_global_assignment -name VERILOG_FILE CLKmaker.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE FPGA_TMP0.vwf
+set_global_assignment -name BDF_FILE Shifts.bdf
+set_global_assignment -name QIP_FILE ShiftReg.qip
+set_global_assignment -name BDF_FILE ASignal.bdf
+set_global_assignment -name BDF_FILE QSignal.bdf
+set_global_assignment -name VERILOG_FILE Cross.v
+set_global_assignment -name QIP_FILE FIFO.qip
+set_global_assignment -name VERILOG_FILE CMP.v
+set_global_assignment -name VERILOG_FILE Trig.v
+set_global_assignment -name BDF_FILE TMPTOP.bdf
+set_global_assignment -name BDF_FILE QTrig.bdf
+set_global_assignment -name QIP_FILE Decode24.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE TMPTOP.vwf
+set_global_assignment -name VERILOG_FILE OutputConTroller.v
+set_global_assignment -name VERILOG_FILE Uart.v
+set_global_assignment -name VERILOG_FILE core.v
+set_global_assignment -name QIP_FILE SignalTap.qip
+set_global_assignment -name VERILOG_FILE Myuart.v
+set_global_assignment -name QIP_FILE UartPLL.qip
+set_global_assignment -name BDF_FILE AllStore.bdf
+set_global_assignment -name VERILOG_FILE MyRx.v
+set_global_assignment -name VERILOG_FILE Decode.v
+set_global_assignment -name QIP_FILE ALTPLL_RECFG.qip
+set_global_assignment -name QIP_FILE TrigReg.qip
+set_global_assignment -name QIP_FILE ADD_LATCH.qip
+set_global_assignment -name VERILOG_FILE TestOutput.v
+set_global_assignment -name BDF_FILE RandomSeq.bdf
+set_global_assignment -name VERILOG_FILE LED_SW.v
+set_global_assignment -name BDF_FILE UartTop.bdf
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_5.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_6.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_7.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_8.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/RomMUX.qip
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/CLKMaker.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 14622752 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from Xin -to *
+set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout
+set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout
+set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout2
+set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout2
+set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout3
+set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout3
+set_instance_assignment -name TCO_REQUIREMENT "3.5 ns" -from * -to Xout4
+set_instance_assignment -name MIN_TCO_REQUIREMENT "2.5 ns" -from * -to Xout4
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[3]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[2]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[1]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[0]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[31]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[30]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[29]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[28]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[27]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[26]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[25]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[24]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[23]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[22]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[21]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[20]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[19]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[18]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[17]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[16]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[15]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[14]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[13]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[12]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[11]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[10]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[9]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[8]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[7]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[6]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[5]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[4]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[3]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[2]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[1]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT[0]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[31]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[30]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[29]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[28]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[27]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[26]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[25]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[24]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[23]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[22]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[21]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[20]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[19]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[18]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[17]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[16]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[15]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[14]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[13]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[12]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[11]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[10]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[9]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[8]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[7]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[6]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[5]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[4]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[3]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[2]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[1]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT2[0]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[31]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[30]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[29]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[28]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[27]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[26]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[25]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[24]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[23]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[22]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[21]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[20]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[19]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[18]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[17]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[16]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[15]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[14]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[13]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[12]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[11]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[10]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[9]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[8]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[7]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[6]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[5]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[4]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[3]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[2]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[1]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT3[0]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[31]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[30]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[29]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[28]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[27]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[26]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[25]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[24]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[23]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[22]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[21]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[20]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[19]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[18]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[17]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[16]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[15]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[14]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[13]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[12]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[11]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[10]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[9]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[8]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[7]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[6]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[5]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[4]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[3]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[2]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[1]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to SOUT4[0]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[10]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[9]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[8]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[7]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[6]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[5]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[4]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[3]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[2]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[1]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Wrusedw[0]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[15]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[14]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[13]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[12]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[11]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[10]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[9]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[8]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[7]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[6]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[5]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[4]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[3]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[2]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[1]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to Xin[0]
+set_instance_assignment -name SIMULATION_COMPARE_SIGNAL ON -to CLKO[4]
+set_instance_assignment -name TSU_REQUIREMENT "3 ns" -from Xin -to ALLStore*
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "AllStore:inst2|QSignal|*" -to *
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "AllStore:inst2|QSignal|*"
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from "RandomSeq:inst8|*" -to *
+set_instance_assignment -name TSU_REQUIREMENT "2 ns" -from * -to "RandomSeq:inst8|*"
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from "RandomSeq:inst8|*" -to *
+set_instance_assignment -name TCO_REQUIREMENT "2 ns" -from * -to "RandomSeq:inst8|*"
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from "RandomSeq:inst8|*" -to *
+set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from * -to "RandomSeq:inst8|*"
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "RandomSeq:inst8|*" -to *
+set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "RandomSeq:inst8|*"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

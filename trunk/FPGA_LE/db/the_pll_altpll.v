@@ -1,4 +1,4 @@
-//altpll bandwidth_type="AUTO" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" clk0_divide_by=1 clk0_duty_cycle=50 clk0_multiply_by=5 clk0_phase_shift="0" clk1_divide_by=1 clk1_duty_cycle=50 clk1_multiply_by=5 clk1_phase_shift="2000" clk2_divide_by=4 clk2_duty_cycle=50 clk2_multiply_by=5 clk2_phase_shift="0" clk3_divide_by=4 clk3_duty_cycle=50 clk3_multiply_by=5 clk3_phase_shift="8000" clk4_divide_by=2 clk4_duty_cycle=50 clk4_multiply_by=5 clk4_phase_shift="0" compensate_clock="CLK4" device_family="Cyclone III" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="zero_delay_buffer" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_USED" port_clk3="PORT_USED" port_clk4="PORT_USED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_USED" port_scandataout="PORT_USED" scan_chain_mif_file="MainPLL_500MBPS.mif" self_reset_on_loss_lock="OFF" width_clock=5 areset clk configupdate inclk locked scanclk scanclkena scandata scandataout scandone
+//altpll bandwidth_type="AUTO" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" clk0_divide_by=10 clk0_duty_cycle=50 clk0_multiply_by=1 clk0_phase_shift="0" clk1_divide_by=10 clk1_duty_cycle=50 clk1_multiply_by=1 clk1_phase_shift="100000" clk2_divide_by=40 clk2_duty_cycle=50 clk2_multiply_by=1 clk2_phase_shift="0" clk3_divide_by=40 clk3_duty_cycle=50 clk3_multiply_by=1 clk3_phase_shift="400000" clk4_divide_by=20 clk4_duty_cycle=50 clk4_multiply_by=1 clk4_phase_shift="0" compensate_clock="CLK4" device_family="Cyclone III" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="zero_delay_buffer" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_USED" port_clk3="PORT_USED" port_clk4="PORT_USED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_USED" port_scandataout="PORT_USED" scan_chain_mif_file="MainPLL_500MBPS.mif" self_reset_on_loss_lock="OFF" width_clock=5 areset clk configupdate inclk locked scanclk scanclkena scandata scandataout scandone
 //VERSION_BEGIN 9.1 cbx_altpll 2009:10:21:21:22:16:SJ cbx_cycloneii 2009:10:21:21:22:16:SJ cbx_mgl 2009:10:21:21:37:49:SJ cbx_stratixii 2009:10:21:21:22:16:SJ cbx_util_mgl 2009:10:21:21:22:16:SJ  VERSION_END
 //CBXI_INSTANCE_NAME="Block1_PLL_Reconfig_TOP_inst_altpll_reconfig_rom_inst_the_pll_u1_altpll_altpll_component"
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
@@ -110,25 +110,25 @@ module  the_pll_altpll
 	);
 	defparam
 		pll1.bandwidth_type = "auto",
-		pll1.clk0_divide_by = 1,
+		pll1.clk0_divide_by = 10,
 		pll1.clk0_duty_cycle = 50,
-		pll1.clk0_multiply_by = 5,
+		pll1.clk0_multiply_by = 1,
 		pll1.clk0_phase_shift = "0",
-		pll1.clk1_divide_by = 1,
+		pll1.clk1_divide_by = 10,
 		pll1.clk1_duty_cycle = 50,
-		pll1.clk1_multiply_by = 5,
-		pll1.clk1_phase_shift = "2000",
-		pll1.clk2_divide_by = 4,
+		pll1.clk1_multiply_by = 1,
+		pll1.clk1_phase_shift = "100000",
+		pll1.clk2_divide_by = 40,
 		pll1.clk2_duty_cycle = 50,
-		pll1.clk2_multiply_by = 5,
+		pll1.clk2_multiply_by = 1,
 		pll1.clk2_phase_shift = "0",
-		pll1.clk3_divide_by = 4,
+		pll1.clk3_divide_by = 40,
 		pll1.clk3_duty_cycle = 50,
-		pll1.clk3_multiply_by = 5,
-		pll1.clk3_phase_shift = "8000",
-		pll1.clk4_divide_by = 2,
+		pll1.clk3_multiply_by = 1,
+		pll1.clk3_phase_shift = "400000",
+		pll1.clk4_divide_by = 20,
 		pll1.clk4_duty_cycle = 50,
-		pll1.clk4_multiply_by = 5,
+		pll1.clk4_multiply_by = 1,
 		pll1.clk4_phase_shift = "0",
 		pll1.compensate_clock = "clk4",
 		pll1.inclk0_input_frequency = 20000,
