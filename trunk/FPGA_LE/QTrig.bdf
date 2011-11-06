@@ -566,12 +566,6 @@ applicable agreement for further details.
 	(pt 248 72)
 )
 (connector
-	(text "wCMD[3..0]" (rect 192 72 249 84)(font "Arial" ))
-	(pt 176 88)
-	(pt 248 88)
-	(bus)
-)
-(connector
 	(pt 528 152)
 	(pt 456 152)
 )
@@ -720,4 +714,10 @@ applicable agreement for further details.
 (connector
 	(pt 392 216)
 	(pt 440 216)
+)
+(connector
+	(text "wCMD[3..0]" (rect 192 72 249 84)(font "Arial" ))
+	(pt 248 88)
+	(pt 176 88)
+	(bus)
 )

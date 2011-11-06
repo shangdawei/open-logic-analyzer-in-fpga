@@ -1,4 +1,4 @@
-module Decode(DataIn,CLK,Locked,CLR,Order,Data,adden,SetInit,TrigEN,SetTrigTime,SoftReload,SerPLL);
+module Decode(DataIn,CLK,Locked,CLR,Order,Data,adden,SetInit,TrigEN,SetTrigTime,SoftReload,SerPLL,stateLED);
 
 	input [7:0] DataIn;
 	input CLK;
@@ -15,6 +15,7 @@ module Decode(DataIn,CLK,Locked,CLR,Order,Data,adden,SetInit,TrigEN,SetTrigTime,
 	reg SetInit_S;
 	output reg SoftReload;
 	output reg SerPLL;
+	output reg [3:0] stateLED;
 	
 	//state==0
 	//WaitingMode
@@ -53,6 +54,15 @@ module Decode(DataIn,CLK,Locked,CLR,Order,Data,adden,SetInit,TrigEN,SetTrigTime,
 				end
 			endcase
 		end
+	end
+
+	always begin
+		if(state==0)
+			stateLED=1;
+		else if (state==1)
+			stateLED=2;
+		else
+			stateLED=4;
 	end
 	
 	//

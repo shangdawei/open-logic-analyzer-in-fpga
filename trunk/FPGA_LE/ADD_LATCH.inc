@@ -15,7 +15,7 @@
 
 FUNCTION ADD_LATCH 
 (
-	aset,
+	aclr,
 	data[5..0],
 	gate
 )

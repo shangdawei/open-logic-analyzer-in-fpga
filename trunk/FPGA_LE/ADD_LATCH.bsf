@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 72)
 		(input)
-		(text "aset" (rect 0 0 24 14)(font "Arial" (font_size 8)))
-		(text "aset" (rect 20 66 39 79)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 20 66 37 79)(font "Arial" (font_size 8)))
 		(line (pt 0 72)(pt 16 72)(line_width 1))
 	)
 	(port

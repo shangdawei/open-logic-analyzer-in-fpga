@@ -16,7 +16,7 @@
 component ADD_LATCH
 	PORT
 	(
-		aset		: IN STD_LOGIC ;
+		aclr		: IN STD_LOGIC ;
 		data		: IN STD_LOGIC_VECTOR (5 DOWNTO 0);
 		gate		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
