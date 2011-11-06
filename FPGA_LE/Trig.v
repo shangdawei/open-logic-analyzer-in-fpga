@@ -33,25 +33,23 @@ always @(posedge CLK)begin
 	end
 end
 
-always @(posedge CLK)begin
-	XinReg={XinReg<<1,Xin};
+always @(negedge CLK)begin
+	XinReg=(XinReg<<1)|Xin;
 end
 
-always @(posedge CLK)begin
+always begin
 	if(EN==0)begin
 		ResTri=0;
 		//WARNING
 		//How the EN works
-	end else if((CMD[3]==1)&&(EN==1))begin
-		if((CMD[2])&&(CMD[1:0]==XinReg[1:0]))begin
+	end else if((CMD[3]==1))begin
+		if((CMD[1]==XinReg[1])&&(CMD[0]==XinReg[0]))begin
 			ResTri=1;
-		end else if(CMD[2])begin
-			ResTri=0;
 		end else begin
-			ResTri=1;
+			ResTri=0;
 		end
 	end
-	else begin //CMD[3]==0
+	else begin //EN==1 but CMD[3]==0
 		ResTri=1;
 	end
 end
