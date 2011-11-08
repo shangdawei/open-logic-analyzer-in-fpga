@@ -18,7 +18,7 @@
 --    Device Speed Grade: 6
 --    PLL Scan Chain: Fast PLL (144 bits)
 --    File Name: Z:\FCD-3009-1.1\DE0\LogicAnalyzer\FPGA_LE\altpll_reconfig_TOP\MainPLL_500MBPS.mif
---    Generated: Sun Nov 06 03:11:36 2011
+--    Generated: Tue Nov 08 18:12:55 2011
 
 WIDTH=1;
 DEPTH=144;
@@ -81,94 +81,94 @@ CONTENT BEGIN
 	51   :   1;
 	52   :   0;
 	53   :   1;
-	54   :   0; -- clk0 counter: Bypass = 0 (1 bit(s))
-	55   :   0; -- clk0 counter: High Count = 1 (8 bit(s))
+	54   :   1; -- clk0 counter: Bypass = 1 (1 bit(s))
+	55   :   0; -- clk0 counter: High Count = 0 (8 bit(s))
 	56   :   0;
 	57   :   0;
 	58   :   0;
 	59   :   0;
 	60   :   0;
 	61   :   0;
-	62   :   1;
+	62   :   0;
 	63   :   0; -- clk0 counter: Odd Division = 0 (1 bit(s))
-	64   :   0; -- clk0 counter: Low Count = 1 (8 bit(s))
+	64   :   0; -- clk0 counter: Low Count = 0 (8 bit(s))
 	65   :   0;
 	66   :   0;
 	67   :   0;
 	68   :   0;
 	69   :   0;
 	70   :   0;
-	71   :   1;
-	72   :   0; -- clk1 counter: Bypass = 0 (1 bit(s))
-	73   :   0; -- clk1 counter: High Count = 1 (8 bit(s))
+	71   :   0;
+	72   :   1; -- clk1 counter: Bypass = 1 (1 bit(s))
+	73   :   0; -- clk1 counter: High Count = 0 (8 bit(s))
 	74   :   0;
 	75   :   0;
 	76   :   0;
 	77   :   0;
 	78   :   0;
 	79   :   0;
-	80   :   1;
+	80   :   0;
 	81   :   0; -- clk1 counter: Odd Division = 0 (1 bit(s))
-	82   :   0; -- clk1 counter: Low Count = 1 (8 bit(s))
+	82   :   0; -- clk1 counter: Low Count = 0 (8 bit(s))
 	83   :   0;
 	84   :   0;
 	85   :   0;
 	86   :   0;
 	87   :   0;
 	88   :   0;
-	89   :   1;
+	89   :   0;
 	90   :   0; -- clk2 counter: Bypass = 0 (1 bit(s))
-	91   :   0; -- clk2 counter: High Count = 4 (8 bit(s))
+	91   :   0; -- clk2 counter: High Count = 2 (8 bit(s))
 	92   :   0;
 	93   :   0;
 	94   :   0;
 	95   :   0;
-	96   :   1;
-	97   :   0;
+	96   :   0;
+	97   :   1;
 	98   :   0;
 	99   :   0; -- clk2 counter: Odd Division = 0 (1 bit(s))
-	100  :   0; -- clk2 counter: Low Count = 4 (8 bit(s))
+	100  :   0; -- clk2 counter: Low Count = 2 (8 bit(s))
 	101  :   0;
 	102  :   0;
 	103  :   0;
 	104  :   0;
-	105  :   1;
-	106  :   0;
+	105  :   0;
+	106  :   1;
 	107  :   0;
 	108  :   0; -- clk3 counter: Bypass = 0 (1 bit(s))
-	109  :   0; -- clk3 counter: High Count = 4 (8 bit(s))
+	109  :   0; -- clk3 counter: High Count = 2 (8 bit(s))
 	110  :   0;
 	111  :   0;
 	112  :   0;
 	113  :   0;
-	114  :   1;
-	115  :   0;
+	114  :   0;
+	115  :   1;
 	116  :   0;
 	117  :   0; -- clk3 counter: Odd Division = 0 (1 bit(s))
-	118  :   0; -- clk3 counter: Low Count = 4 (8 bit(s))
+	118  :   0; -- clk3 counter: Low Count = 2 (8 bit(s))
 	119  :   0;
 	120  :   0;
 	121  :   0;
 	122  :   0;
-	123  :   1;
-	124  :   0;
+	123  :   0;
+	124  :   1;
 	125  :   0;
 	126  :   0; -- clk4 counter: Bypass = 0 (1 bit(s))
-	127  :   0; -- clk4 counter: High Count = 2 (8 bit(s))
+	127  :   0; -- clk4 counter: High Count = 1 (8 bit(s))
 	128  :   0;
 	129  :   0;
 	130  :   0;
 	131  :   0;
 	132  :   0;
-	133  :   1;
-	134  :   0;
+	133  :   0;
+	134  :   1;
 	135  :   0; -- clk4 counter: Odd Division = 0 (1 bit(s))
-	136  :   0; -- clk4 counter: Low Count = 2 (8 bit(s))
+	136  :   0; -- clk4 counter: Low Count = 1 (8 bit(s))
 	137  :   0;
 	138  :   0;
 	139  :   0;
 	140  :   0;
 	141  :   0;
-	142  :   1;
-	143  :   0;
+	142  :   0;
+	143  :   1;
 END;

@@ -27,13 +27,14 @@ output reg ResTri;
 always @(posedge CLK)begin
 	if(wEN)begin
 		CMD=wCMD;
-	end
+	end/*
 	else if(SetInit) begin
-		CMD=4'h0;
-	end
+		//CMD=4'h0;
+		;
+	end*/
 end
 
-always @(negedge CLK)begin
+always @(posedge CLK)begin
 	XinReg=(XinReg<<1)|Xin;
 end
 
