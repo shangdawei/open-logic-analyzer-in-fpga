@@ -458,11 +458,10 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll.ppf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll.inc TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll.cmp TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL the_pll.bsf TRUE FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL the_pll.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll_inst.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll_bb.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll.mif TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll_initial.mif TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL MainPLL_500MBPS.mif TRUE
 // Retrieval info: LIB_FILE: altera_mf
 // Retrieval info: CBX_MODULE_PREFIX: ON

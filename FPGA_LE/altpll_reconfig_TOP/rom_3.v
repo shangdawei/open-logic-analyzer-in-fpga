@@ -150,7 +150,7 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom_3.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom_3.inc TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom_3.cmp TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom_3.bsf TRUE FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL rom_3.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom_3_inst.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom_3_bb.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom_3_waveforms.html TRUE

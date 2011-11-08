@@ -3,17 +3,6 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY Block1
 
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP0.08"
-set_global_assignment -name BDF_FILE altpll_reconfig_TOP/PLL_Reconfig_TOP.bdf
-set_global_assignment -name BDF_FILE 16Trig.bdf
-set_global_assignment -name BDF_FILE AllStore.bdf
-set_global_assignment -name BDF_FILE ASignal.bdf
-set_global_assignment -name BDF_FILE Block1.bdf
-set_global_assignment -name BDF_FILE QSignal.bdf
-set_global_assignment -name BDF_FILE QTrig.bdf
-set_global_assignment -name BDF_FILE RandomSeq.bdf
-set_global_assignment -name BDF_FILE Shifts.bdf
-set_global_assignment -name BDF_FILE TMPTOP.bdf
-set_global_assignment -name BDF_FILE UartTop.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
@@ -211,10 +200,55 @@ set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from "RandomSeq:inst8|*" -
 set_instance_assignment -name TPD_REQUIREMENT "2 ns" -from * -to "RandomSeq:inst8|*"
 set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "RandomSeq:inst8|*" -to *
 set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "RandomSeq:inst8|*"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
-set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
 set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
-set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
 set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
 set_global_assignment -name OPTIMIZE_POWER_DURING_SYNTHESIS "EXTRA EFFORT"
+set_global_assignment -name TPD_REQUIREMENT "4 ns"
+set_global_assignment -name TSU_REQUIREMENT "4 ns"
+set_global_assignment -name TCO_REQUIREMENT "4 ns"
+set_global_assignment -name TH_REQUIREMENT "4 ns"
+set_global_assignment -name FMAX_REQUIREMENT "500 MHz"
+set_global_assignment -name ENABLE_RECOVERY_REMOVAL_ANALYSIS ON
+set_global_assignment -name ENABLE_CLOCK_LATENCY ON
+set_global_assignment -name USE_TIMEQUEST_TIMING_ANALYZER OFF
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name OPTIMIZE_POWER_DURING_FITTING "EXTRA EFFORT"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name PLACEMENT_EFFORT_MULTIPLIER 4
+set_global_assignment -name ROUTER_EFFORT_MULTIPLIER 4
+set_global_assignment -name OPTIMIZE_SSN "EXTRA EFFORT"
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_MAP_LOGIC_TO_MEMORY_FOR_AREA ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
+set_global_assignment -name FITTER_EARLY_TIMING_ESTIMATE_MODE PESSIMISTIC
+set_global_assignment -name FLOW_ENABLE_IO_ASSIGNMENT_ANALYSIS ON
+set_global_assignment -name AUTO_RAM_TO_LCELL_CONVERSION ON
+set_global_assignment -name AUTO_RESOURCE_SHARING ON
+set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/pll_reconfig_circuit.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/control_sm.v
+set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/altpll_reconfig_rom.v
+set_global_assignment -name BDF_FILE altpll_reconfig_TOP/PLL_Reconfig_TOP.bdf
+set_global_assignment -name BDF_FILE 16Trig.bdf
+set_global_assignment -name BDF_FILE AllStore.bdf
+set_global_assignment -name BDF_FILE ASignal.bdf
+set_global_assignment -name BDF_FILE Block1.bdf
+set_global_assignment -name BDF_FILE QSignal.bdf
+set_global_assignment -name BDF_FILE QTrig.bdf
+set_global_assignment -name BDF_FILE RandomSeq.bdf
+set_global_assignment -name BDF_FILE Shifts.bdf
+set_global_assignment -name BDF_FILE TMPTOP.bdf
+set_global_assignment -name BDF_FILE UartTop.bdf
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/ALTPLLS.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_1.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_2.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_3.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_4.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/the_pll.qip
+set_global_assignment -name QIP_FILE altpll_reconfig_TOP/rom_muxer.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

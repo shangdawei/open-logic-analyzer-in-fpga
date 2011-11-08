@@ -1,0 +1,67 @@
+184606208
+Version 9.1 Build 222 10/21/2009 SJ Full Version
+1320388548
+4
+-------------------------------
+Entity
+Block1
+Revision
+DE0_Default
+Device
+EP3C16F484C6
+Total logic elements
+1485 / 15408 ( 9 % )
+    -- Combinational with no register
+701
+    -- Register only
+444
+    -- Combinational with a register
+340
+
+
+Logic element usage by number of LUT inputs
+
+    -- 4 input functions
+709
+    -- 3 input functions
+230
+    -- <=2 input functions
+102
+    -- Register only
+444
+
+
+Logic elements by mode
+
+    -- normal mode
+1004
+    -- arithmetic mode
+37
+
+
+Total registers
+909
+    -- Dedicated logic registers
+784 / 15408 ( 5 % )
+    -- I/O registers
+250
+
+
+Total LABs:  partially or completely used
+95 / 963 ( 9 % )
+
+
+Virtual pins
+0
+I/O pins
+236
+Embedded Multiplier 9-bit elements
+0 / 112 ( 0 % )
+Total memory bits
+262144
+Total RAM block bits
+294912
+PLL
+2 / 4 ( 50 % )
+M9K
+32 / 56 ( 57 % )
