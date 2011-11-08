@@ -4,7 +4,7 @@ module TestOutput(ain,bin,cin,out,Allout);
 	input bin;
 	input cin;
 	output out;
-	output [14:0] Allout;
+	output [15:0] Allout;
 
 	assign	out=(ain && bin) || cin;
 	assign	Allout[0]=ain;
@@ -22,5 +22,6 @@ module TestOutput(ain,bin,cin,out,Allout);
 	assign	Allout[12]=out;
 	assign	Allout[13]=out;
 	assign	Allout[14]=out;
+	assign	Allout[15]=out;
 
 endmodule

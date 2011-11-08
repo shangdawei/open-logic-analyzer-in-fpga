@@ -1,4 +1,4 @@
-//altpll bandwidth_type="AUTO" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" clk0_divide_by=3125 clk0_duty_cycle=50 clk0_multiply_by=16 clk0_phase_shift="0" clk1_divide_by=3125 clk1_duty_cycle=50 clk1_multiply_by=64 clk1_phase_shift="0" compensate_clock="CLK0" device_family="Cyclone III" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_UNUSED" port_clk3="PORT_UNUSED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" self_reset_on_loss_lock="ON" width_clock=5 clk inclk locked
+//altpll bandwidth_type="AUTO" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" clk0_divide_by=3125 clk0_duty_cycle=50 clk0_multiply_by=16 clk0_phase_shift="0" clk1_divide_by=3125 clk1_duty_cycle=50 clk1_multiply_by=64 clk1_phase_shift="0" compensate_clock="CLK0" device_family="Stratix II" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_UNUSED" port_clk3="PORT_UNUSED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" self_reset_on_loss_lock="ON" width_clock=5 clk inclk locked
 //VERSION_BEGIN 9.1 cbx_altpll 2009:10:21:21:22:16:SJ cbx_cycloneii 2009:10:21:21:22:16:SJ cbx_mgl 2009:10:21:21:37:49:SJ cbx_stratixii 2009:10:21:21:22:16:SJ cbx_util_mgl 2009:10:21:21:22:16:SJ  VERSION_END
 //CBXI_INSTANCE_NAME="Block1_UartPLL_inst19_altpll_altpll_component"
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
@@ -22,7 +22,7 @@
 
 
 
-//synthesis_resources = cycloneiii_pll 1 
+//synthesis_resources = stratixii_pll 1 
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
@@ -42,38 +42,38 @@ module  UartPLL_altpll
 // synopsys translate_on
 `endif
 
-	wire  [4:0]   wire_pll1_clk;
-	wire  wire_pll1_fbout;
+	wire  [5:0]   wire_pll1_clk;
 	wire  wire_pll1_locked;
 
-	cycloneiii_pll   pll1
+	stratixii_pll   pll1
 	( 
 	.activeclock(),
 	.clk(wire_pll1_clk),
 	.clkbad(),
-	.fbin(wire_pll1_fbout),
-	.fbout(wire_pll1_fbout),
+	.clkloss(),
+	.enable0(),
+	.enable1(),
 	.inclk(inclk),
 	.locked(wire_pll1_locked),
-	.phasedone(),
 	.scandataout(),
 	.scandone(),
-	.vcooverrange(),
-	.vcounderrange()
+	.sclkout(),
+	.testdownout(),
+	.testupout()
 	`ifndef FORMAL_VERIFICATION
 	// synopsys translate_off
 	`endif
 	,
 	.areset(1'b0),
 	.clkswitch(1'b0),
-	.configupdate(1'b0),
+	.ena(1'b1),
+	.fbin(1'b0),
 	.pfdena(1'b1),
-	.phasecounterselect({3{1'b0}}),
-	.phasestep(1'b0),
-	.phaseupdown(1'b0),
 	.scanclk(1'b0),
-	.scanclkena(1'b1),
-	.scandata(1'b0)
+	.scandata(1'b0),
+	.scanread(1'b0),
+	.scanwrite(1'b0),
+	.testin({4{1'b0}})
 	`ifndef FORMAL_VERIFICATION
 	// synopsys translate_on
 	`endif
@@ -92,10 +92,13 @@ module  UartPLL_altpll
 		pll1.inclk0_input_frequency = 20000,
 		pll1.operation_mode = "normal",
 		pll1.pll_type = "auto",
-		pll1.self_reset_on_loss_lock = "on",
-		pll1.lpm_type = "cycloneiii_pll";
+		pll1.lpm_type = "stratixii_pll";
 	assign
-		clk = {wire_pll1_clk[4:0]},
+		clk = {0{wire_pll1_clk}},
 		locked = wire_pll1_locked;
+	initial/*synthesis enable_verilog_initial_construct*/
+ 	begin
+		$display("Error: MGL_INTERNAL_ERROR: Port object altpll|clk of width  5 is being assigned the port altpll|stratixii_pll inst pll1|clk of width 6 which is illegal, as port widths dont match nor are multiples. CAUSE : The port widths are mismatched in the mentioned assignment. The port widths of the connected ports should match or the LHS port width should be a multiple of the RHS port width. ACTION : Check the port widths of the connected ports. Logical operation results in a port width equal to the larger of the two ports and concatenation results in a port width equal to the sum of the individual port widths. Double check for such cases.");
+	end
 endmodule //UartPLL_altpll
-//VALID FILE
+//ERROR FILE
