@@ -1,0 +1,21 @@
+Quartus II Archive log --	Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/PLL_Reconfig_TOP.qarlog
+
+Archive:	Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/PLL_Reconfig_TOP.qar
+Date:		Sat Nov 05 21:24:24 2011
+Quartus II		9.1 Build 222 10/21/2009 SP 0.08 SJ Full Version
+
+	=========== Files Selected: ===========
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.atm
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.cfm
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.cmp.kpt
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.dpi
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.hdbx
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.map.kpt
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.qxp_info
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.rcf
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/DE0_Default.cmp.scidsc
+Z:/FCD-3009-1.1/DE0/LogicAnalyzer/FPGA_LE/db/tmp_qic_export_dir/qic_export_file_list
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

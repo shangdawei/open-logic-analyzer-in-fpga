@@ -1,0 +1,155 @@
+Restore Archived Project report for altpll_reconfig_rom
+Fri Nov 04 18:44:36 2011
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Nov 04 18:44:36 2011 ;
+; Revision Name                   ; altpll_reconfig_rom                   ;
+; Top-level Entity Name           ; Test                                  ;
+; Family                          ; Cyclone III                           ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'Z:/FCD-3009-1.1/DE0/altpll_reconfig_TOP.qar' into the 'Z:/FCD-3009-1.1/DE0/altpll_reconfig_TOP_restored/' directory
+Info: Generated report 'altpll_reconfig_rom.restore.rpt'
+Info: Evaluation of Tcl script d:/altera/91/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 135 megabytes
+    Info: Processing ended: Fri Nov 04 18:44:36 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++---------------------------------------------+
+; Files Restored                              ;
++---------------------------------------------+
+; File Name                                   ;
++---------------------------------------------+
+; ALTPLLS.bsf                                 ;
+; ALTPLLS.cmp                                 ;
+; ALTPLLS.inc                                 ;
+; ALTPLLS.ppf                                 ;
+; ALTPLLS.qip                                 ;
+; ALTPLLS.v                                   ;
+; ALTPLLS_bb.v                                ;
+; ALTPLLS_inst.v                              ;
+; ALTREC.bsf                                  ;
+; ALTREC.cmp                                  ;
+; ALTREC.inc                                  ;
+; ALTREC.qip                                  ;
+; ALTREC.v                                    ;
+; ALTREC_bb.v                                 ;
+; ALTREC_inst.v                               ;
+; MainPLL_500MBPS.mif                         ;
+; MainPLL_50MBPS.mif                          ;
+; MainPLL_5MBPS.mif                           ;
+; PLL_Reconfig_TOP.bdf                        ;
+; TST_TOP.vwf                                 ;
+; Test.bdf                                    ;
+; altpll_reconfig_rom.qpf                     ;
+; altpll_reconfig_rom.qsf                     ;
+; altpll_reconfig_rom.v                       ;
+; altpll_reconfig_rom.vwf                     ;
+; altpll_reconfig_rom_assignment_defaults.qdf ;
+; altpll_reconfig_rom_controller.vwf          ;
+; altpll_reconfig_rom_controller_results.vwf  ;
+; assignment_defaults.qdf                     ;
+; control_sm.v                                ;
+; db/altpll_reconfig_rom.sim.cvwf             ;
+; pll_reconfig_circuit.v                      ;
+; rom_1.bsf                                   ;
+; rom_1.cmp                                   ;
+; rom_1.inc                                   ;
+; rom_1.qip                                   ;
+; rom_1.v                                     ;
+; rom_1_bb.v                                  ;
+; rom_1_inst.v                                ;
+; rom_2.bsf                                   ;
+; rom_2.cmp                                   ;
+; rom_2.inc                                   ;
+; rom_2.qip                                   ;
+; rom_2.v                                     ;
+; rom_2_bb.v                                  ;
+; rom_2_inst.v                                ;
+; rom_3.bsf                                   ;
+; rom_3.cmp                                   ;
+; rom_3.inc                                   ;
+; rom_3.qip                                   ;
+; rom_3.v                                     ;
+; rom_3_bb.v                                  ;
+; rom_3_inst.v                                ;
+; rom_4.bsf                                   ;
+; rom_4.cmp                                   ;
+; rom_4.inc                                   ;
+; rom_4.qip                                   ;
+; rom_4.v                                     ;
+; rom_4_bb.v                                  ;
+; rom_4_inst.v                                ;
+; rom_muxer.bsf                               ;
+; rom_muxer.cmp                               ;
+; rom_muxer.inc                               ;
+; rom_muxer.qip                               ;
+; rom_muxer.v                                 ;
+; rom_muxer_bb.v                              ;
+; rom_muxer_inst.v                            ;
+; test_bench_1.vwf                            ;
+; test_bench_2.vwf                            ;
+; test_bench_3.vwf                            ;
+; test_bench_4.vwf                            ;
+; test_bench_5_result.vwf                     ;
+; test_bench_6_result.vwf                     ;
+; the_pll.bsf                                 ;
+; the_pll.cmp                                 ;
+; the_pll.inc                                 ;
+; the_pll.ppf                                 ;
+; the_pll.qip                                 ;
+; the_pll.v                                   ;
+; the_pll_500_mhz.mif                         ;
+; the_pll_bb.v                                ;
+; the_pll_inst.v                              ;
++---------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

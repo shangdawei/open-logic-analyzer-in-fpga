@@ -1,0 +1,76 @@
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
++---------------------------------------------------------------------+
+; Quartus II QXP Design File                                          ;
++------------------+--------------------------------------------------+
+; Field            ; Value                                            ;
++------------------+--------------------------------------------------+
+; Entity           ; Block1                                           ;
+; Case Sensitive   ;                                                  ;
+; QXP Source       ; Block1.qxp                                       ;
+; Software Version ; Version 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Date             ; Fri Nov 04 14:35:48 2011                         ;
+; Contents         ; Placement and Routing                            ;
+; Family           ; EP3C16F484C6                                     ;
+; Device           ; EP3C16F484C6                                     ;
++------------------+--------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------+
+; Boundary Ports                                                                                       ;
++--------------------------+--------+------------------------------------------------------------------+
+; Port Name                ; Type   ; Default Value                                                    ;
++--------------------------+--------+------------------------------------------------------------------+
+; ENOUT                    ; output ; X                                                                ;
+; OutCLK                   ; output ; X                                                                ;
+; CLKIN                    ; input  ; 1                                                                ;
+; CLKP0                    ; output ; X                                                                ;
+; CLKP1                    ; output ; X                                                                ;
+; CLKD4P0                  ; output ; X                                                                ;
+; CLKD4P1                  ; output ; X                                                                ;
+; ENWFIFO                  ; output ; X                                                                ;
+; aclr                     ; output ; X                                                                ;
+; Xin [15:0]               ; input  ; 1111111111111111                                                 ;
+; SOUT [31:0]              ; output ; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                 ;
+; Wrusedw0 [10:0]          ; output ; XXXXXXXXXXX                                                      ;
+; addEN                    ; output ; X                                                                ;
+; Rx                       ; input  ; 1                                                                ;
+; ENTrig                   ; output ; X                                                                ;
+; TrigEN_CMD               ; output ; X                                                                ;
+; TrigEN_SW                ; input  ; 1                                                                ;
+; SetInit                  ; output ; X                                                                ;
+; SetTrigTime              ; output ; X                                                                ;
+; Reload2                  ; input  ; 1                                                                ;
+; state [3:0]              ; output ; XXXX                                                             ;
+; Reload1                  ; input  ; 1                                                                ;
+; TxOut                    ; output ; X                                                                ;
+; EN_FIFO                  ; output ; X                                                                ;
+; ResTri                   ; output ; X                                                                ;
+; HEX0_DP                  ; output ; X                                                                ;
+; HEX1_DP                  ; output ; X                                                                ;
+; HEX2_DP                  ; output ; X                                                                ;
+; HEX3_DP                  ; output ; X                                                                ;
+; OPC_RD                   ; output ; X                                                                ;
+; OPC_FinishRD             ; output ; X                                                                ;
+; CLKUN                    ; output ; X                                                                ;
+; Debug_Xout [63:0]        ; output ; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ;
+; HEX0_D [6:0]             ; output ; XXXXXXX                                                          ;
+; HEX1_D [6:0]             ; output ; XXXXXXX                                                          ;
+; HEX2_D [6:0]             ; output ; XXXXXXX                                                          ;
+; HEX3_D [6:0]             ; output ; XXXXXXX                                                          ;
+; OPC_Data_For_TXOUT [7:0] ; output ; XXXXXXXX                                                         ;
+; OPC_TDataOut [31:0]      ; output ; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                 ;
+; OPC_tIndex [4:0]         ; output ; XXXXX                                                            ;
+; TX_DATAOUT [7:0]         ; output ; XXXXXXXX                                                         ;
++--------------------------+--------+------------------------------------------------------------------+
