@@ -18,6 +18,8 @@ Wrusedw0<5
 	input locked;
 	input Reload;
 	
+	reg tTrig;
+	
 	output reg ENWFIFO;
 	output reg ENTrig;
 	output reg ENOUT;
