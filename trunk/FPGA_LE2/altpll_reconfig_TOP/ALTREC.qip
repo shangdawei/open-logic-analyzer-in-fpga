@@ -1,0 +1,8 @@
+set_global_assignment -name IP_TOOL_NAME "ALTPLL_RECONFIG"
+set_global_assignment -name IP_TOOL_VERSION "9.0"
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "ALTREC.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ALTREC.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ALTREC_inst.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ALTREC_bb.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ALTREC.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ALTREC.cmp"]
