@@ -1,0 +1,168 @@
+Assembler report for DE0_Default
+Sat Nov 12 13:15:15 2011
+Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Parallel Compilation
+  5. Assembler Generated Files
+  6. Assembler Device Options: Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.sof
+  7. Assembler Device Options: Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.pof
+  8. Assembler Device Options: Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.rbf
+  9. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Sat Nov 12 13:15:15 2011 ;
+; Revision Name         ; DE0_Default                           ;
+; Top-level Entity Name ; Block1                                ;
+; Family                ; Cyclone III                           ;
+; Device                ; EP3C16F484C6                          ;
++-----------------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Assembler Settings                                                                                     ;
++-----------------------------------------------------------------------------+----------+---------------+
+; Option                                                                      ; Setting  ; Default Value ;
++-----------------------------------------------------------------------------+----------+---------------+
+; Auto user code                                                              ; On       ; Off           ;
+; Use configuration device                                                    ; On       ; Off           ;
+; Configuration device                                                        ; Epcs4    ; Auto          ;
+; Generate Tabular Text File (.ttf) For Target Device                         ; On       ; Off           ;
+; Generate Raw Binary File (.rbf) For Target Device                           ; On       ; Off           ;
+; Generate Serial Vector Format File (.svf) for Target Device                 ; On       ; Off           ;
+; Generate a JEDEC STAPL Format File (.jam) for Target Device                 ; On       ; Off           ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; On       ; Off           ;
+; Use smart compilation                                                       ; Off      ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation  ; On       ; On            ;
+; Enable compact report table                                                 ; Off      ; Off           ;
+; Generate compressed bitstreams                                              ; On       ; On            ;
+; Compression mode                                                            ; Off      ; Off           ;
+; Clock source for configuration device                                       ; Internal ; Internal      ;
+; Clock frequency of the configuration device                                 ; 10 MHZ   ; 10 MHz        ;
+; Divide clock frequency by                                                   ; 1        ; 1             ;
+; Configuration device auto user code                                         ; Off      ; Off           ;
+; Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device ; Off      ; Off           ;
+; Hexadecimal Output File start address                                       ; 0        ; 0             ;
+; Hexadecimal Output File count direction                                     ; Up       ; Up            ;
+; Release clears before tri-states                                            ; Off      ; Off           ;
+; Auto-restart configuration after error                                      ; On       ; On            ;
+; Enable OCT_DONE                                                             ; Off      ; Off           ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; On       ; On            ;
++-----------------------------------------------------------------------------+----------+---------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; Assembler Generated Files                         ;
++---------------------------------------------------+
+; File Name                                         ;
++---------------------------------------------------+
+; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.sof ;
+; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.jam ;
+; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.jbc ;
+; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.svf ;
+; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.pof ;
+; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.ttf ;
+; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.rbf ;
++---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Assembler Device Options: Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.sof ;
++----------------+------------------------------------------------------------+
+; Option         ; Setting                                                    ;
++----------------+------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                               ;
+; JTAG usercode  ; 0x0020C9B5                                                 ;
+; Checksum       ; 0x0020C9B5                                                 ;
++----------------+------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Assembler Device Options: Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.pof ;
++--------------------+--------------------------------------------------------+
+; Option             ; Setting                                                ;
++--------------------+--------------------------------------------------------+
+; Device             ; EPCS4                                                  ;
+; JTAG usercode      ; 0x00000000                                             ;
+; Checksum           ; 0x05B9433A                                             ;
+; Compression Ratio  ; 3                                                      ;
++--------------------+--------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Assembler Device Options: Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.rbf ;
++---------------------+-------------------------------------------------------+
+; Option              ; Setting                                               ;
++---------------------+-------------------------------------------------------+
+; Raw Binary File     ;                                                       ;
+;  Compression Ratio  ; 3                                                     ;
++---------------------+-------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Assembler
+    Info: Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
+    Info: Processing started: Sat Nov 12 13:15:09 2011
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE0_Default -c DE0_Default
+Info: Timing-driven compilation is using the Classic Timing Analyzer
+Info: Detected fmax, tsu, tco, and/or tpd requirements -- optimizing circuit to achieve only the specified requirements
+Info: Starting Vectorless Power Activity Estimation
+Info: Completed Vectorless Power Activity Estimation
+Info: Writing out detailed assembly data for power analysis
+Info: Assembler is generating device programming files
+Info: Quartus II Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 228 megabytes
+    Info: Processing ended: Sat Nov 12 13:15:15 2011
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
+
+
