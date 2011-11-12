@@ -57,7 +57,7 @@ module OutputController(DataIn,NumIn,OutCLK,Init,DataOut,RD,FinishRD,tIndex,tDat
 			if((!FinishRD) && tIndex==0 && (NumIn>2))begin
 				tDataIn=DataIn;
 			end else if((!FinishRD) && tIndex==0 && (NumIn==2))begin
-				tDataIn=128'h5B5B5B5B5B5B5B5B5B5B5B5B5B5B5B5B;
+				tDataIn=128'h59595959595959595959595959595959;
 			end
 		end
 	end
