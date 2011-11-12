@@ -1,5 +1,5 @@
 Assembler report for DE0_Default
-Sat Nov 12 13:15:15 2011
+Sat Nov 12 13:52:30 2011
 Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Nov 12 13:15:15 2011 ;
+; Assembler Status      ; Successful - Sat Nov 12 13:52:30 2011 ;
 ; Revision Name         ; DE0_Default                           ;
 ; Top-level Entity Name ; Block1                                ;
 ; Family                ; Cyclone III                           ;
@@ -151,7 +151,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
-    Info: Processing started: Sat Nov 12 13:15:09 2011
+    Info: Processing started: Sat Nov 12 13:52:23 2011
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE0_Default -c DE0_Default
 Info: Timing-driven compilation is using the Classic Timing Analyzer
 Info: Detected fmax, tsu, tco, and/or tpd requirements -- optimizing circuit to achieve only the specified requirements
@@ -161,8 +161,8 @@ Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 228 megabytes
-    Info: Processing ended: Sat Nov 12 13:15:15 2011
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Sat Nov 12 13:52:30 2011
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_Default
-Sat Nov 12 13:10:04 2011
+Sat Nov 12 13:47:24 2011
 Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
 
 
@@ -140,7 +140,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 12 13:10:04 2011            ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 12 13:47:24 2011            ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SP 0.08 SJ Full Version ;
 ; Revision Name                      ; DE0_Default                                      ;
 ; Top-level Entity Name              ; Block1                                           ;
@@ -327,7 +327,7 @@ applicable agreement for further details.
 ; lpm_mux.tdf                                ; yes             ; Megafunction                           ; d:/altera/91/quartus/libraries/megafunctions/lpm_mux.tdf                     ;
 ; db/mux_6qc.tdf                             ; yes             ; Auto-Generated Megafunction            ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/mux_6qc.tdf                             ;
 ; db/altsyncram_2da1.tdf                     ; yes             ; Auto-Generated Megafunction            ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/altsyncram_2da1.tdf                     ;
-; NewPLL_500MSPS.mif                         ; yes             ; Auto-Found Memory Initialization File  ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/NewPLL_500MSPS.mif                         ;
+; newpll_500msps.mif                         ; yes             ; Auto-Found Memory Initialization File  ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/newpll_500msps.mif                         ;
 ; db/altsyncram_vca1.tdf                     ; yes             ; Auto-Generated Megafunction            ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/altsyncram_vca1.tdf                     ;
 ; newpll_200msps.mif                         ; yes             ; Auto-Found Memory Initialization File  ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/newpll_200msps.mif                         ;
 ; db/altsyncram_uca1.tdf                     ; yes             ; Auto-Generated Megafunction            ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/altsyncram_uca1.tdf                     ;
@@ -4662,7 +4662,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
-    Info: Processing started: Sat Nov 12 13:09:48 2011
+    Info: Processing started: Sat Nov 12 13:47:08 2011
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_Default -c DE0_Default
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file trigclrdelay.v
@@ -5036,7 +5036,6 @@ Info: Instantiated megafunction "PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_2da1.tdf
     Info: Found entity 1: altsyncram_2da1
 Info: Elaborating entity "altsyncram_2da1" for hierarchy "PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_1:u4|altsyncram:altsyncram_component|altsyncram_2da1:auto_generated"
-Critical Warning: Memory depth (256) in the design file differs from memory depth (144) in the Memory Initialization File "NewPLL_500MSPS.mif" -- setting initial value for remaining addresses to 0
 Info: Elaborating entity "rom_2" for hierarchy "PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_2:u5"
 Info: Elaborating entity "altsyncram" for hierarchy "PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_2:u5|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_2:u5|altsyncram:altsyncram_component"
@@ -5718,10 +5717,10 @@ Info: Implemented 1849 device resources after synthesis - the final resource cou
     Info: Implemented 1221 logic cells
     Info: Implemented 517 RAM segments
     Info: Implemented 3 PLLs
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 149 warnings
-    Info: Peak virtual memory: 256 megabytes
-    Info: Processing ended: Sat Nov 12 13:10:04 2011
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 148 warnings
+    Info: Peak virtual memory: 254 megabytes
+    Info: Processing ended: Sat Nov 12 13:47:24 2011
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:16
 
 

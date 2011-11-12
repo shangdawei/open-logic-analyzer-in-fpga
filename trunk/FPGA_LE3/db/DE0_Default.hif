@@ -9271,58 +9271,6 @@ address_b
 
 # end
 # entity
-altsyncram_ric1
-# storage
-db|DE0_Default.(59).cnf
-db|DE0_Default.(59).cnf
-# case_insensitive
-# source_file
-db|altsyncram_ric1.tdf
-ed9fe472ca6b91b6c35e0672509385
-7
-# used_port {
-rden_a
--1
-3
-q_a0
--1
-3
-clock0
--1
-3
-address_a7
--1
-3
-address_a6
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-altpll_reconfig_top|mainpll_100mbps.mif
-7d24fc39a1ed61ca11123da9df3338
-}
-# macro_sequence
-
-# end
-# entity
 altsyncram
 # storage
 db|DE0_Default.(61).cnf
@@ -9603,58 +9551,6 @@ address_b
 
 # end
 # entity
-altsyncram_fhc1
-# storage
-db|DE0_Default.(62).cnf
-db|DE0_Default.(62).cnf
-# case_insensitive
-# source_file
-db|altsyncram_fhc1.tdf
-b8566594e42d88a13ff3fa9186df2f
-7
-# used_port {
-rden_a
--1
-3
-q_a0
--1
-3
-clock0
--1
-3
-address_a7
--1
-3
-address_a6
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-altpll_reconfig_top|mainpll_50mbps.mif
-d0de8d399e328116722281b020d285f1
-}
-# macro_sequence
-
-# end
-# entity
 altsyncram
 # storage
 db|DE0_Default.(64).cnf
@@ -9930,58 +9826,6 @@ byteena_a
 address_b
 -1
 2
-}
-# macro_sequence
-
-# end
-# entity
-altsyncram_bhc1
-# storage
-db|DE0_Default.(65).cnf
-db|DE0_Default.(65).cnf
-# case_insensitive
-# source_file
-db|altsyncram_bhc1.tdf
-7bdda6d33a1408fbc2286d12f8b1b15
-7
-# used_port {
-rden_a
--1
-3
-q_a0
--1
-3
-clock0
--1
-3
-address_a7
--1
-3
-address_a6
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-altpll_reconfig_top|mainpll_10mbps.mif
-826e1aa31272f3c451e9c41a2738a17
 }
 # macro_sequence
 
@@ -19862,58 +19706,6 @@ address_b
 
 # end
 # entity
-altsyncram_hia1
-# storage
-db|DE0_Default.(127).cnf
-db|DE0_Default.(127).cnf
-# case_insensitive
-# source_file
-db|altsyncram_hia1.tdf
-e7c6c93f1632abfddc83655c2ac4a3fb
-7
-# used_port {
-rden_a
--1
-3
-q_a0
--1
-3
-clock0
--1
-3
-address_a7
--1
-3
-address_a6
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-mainpll_900ambps.mif
-45719b8a7d12cecd2d4399135ce3f351
-}
-# macro_sequence
-
-# end
-# entity
 altpll
 # storage
 db|DE0_Default.(60).cnf
@@ -25174,39 +24966,6 @@ clkena
 
 # end
 # entity
-the_pll_altpll
-# storage
-db|DE0_Default.(110).cnf
-db|DE0_Default.(110).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-db|the_pll_altpll.v
-71ae74c8bd35a4ea242b62c6b0a7c2f
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-ALTERA_RESERVED_QISALTERA_RESERVED_QIS
-# end
-# entity
 Block1
 # storage
 db|DE0_Default.(0).cnf
@@ -25225,63 +24984,6 @@ AUTO
 }
 # macro_sequence
 
-# end
-# entity
-PLL_Reconfig_TOP
-# storage
-db|DE0_Default.(24).cnf
-db|DE0_Default.(24).cnf
-# case_insensitive
-# source_file
-altpll_reconfig_top|pll_reconfig_top.bdf
-b275587b383498676cd5a8253f09f8
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-PLL_Reconfig_TOP:inst
-}
-# macro_sequence
-
-# end
-# entity
-the_pll
-# storage
-db|DE0_Default.(26).cnf
-db|DE0_Default.(26).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-altpll_reconfig_top|the_pll.v
-2534c0a2cbe153b221e761704cd4616
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|the_pll:u1
-PLL_Reconfig_TOP:inst|the_pll:inst8
-}
-# macro_sequence
-ALTERA_RESERVED_QISALTERA_RESERVED_QIS
 # end
 # entity
 altpll
@@ -26918,6 +26620,63 @@ PLL_Reconfig_TOP:inst|rom_1:inst4|altsyncram:altsyncram_component|altsyncram_2da
 }
 # macro_sequence
 
+# end
+# entity
+PLL_Reconfig_TOP
+# storage
+db|DE0_Default.(24).cnf
+db|DE0_Default.(24).cnf
+# case_insensitive
+# source_file
+altpll_reconfig_top|pll_reconfig_top.bdf
+c0c875de90b156165756dd8ec115f41
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+PLL_Reconfig_TOP:inst
+}
+# macro_sequence
+
+# end
+# entity
+the_pll
+# storage
+db|DE0_Default.(26).cnf
+db|DE0_Default.(26).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+altpll_reconfig_top|the_pll.v
+94fce5ef6428dec79f90025fa48e6bb
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|the_pll:u1
+PLL_Reconfig_TOP:inst|the_pll:inst8
+}
+# macro_sequence
+ALTERA_RESERVED_QISALTERA_RESERVED_QIS
 # end
 # complete
 

@@ -463,6 +463,5 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll_bb.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll.mif TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL the_pll_initial.mif TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL NewPLL_500MSPS.mif TRUE
 // Retrieval info: LIB_FILE: altera_mf
 // Retrieval info: CBX_MODULE_PREFIX: ON
