@@ -1,4 +1,4 @@
-//altpll c0_high=4 c0_initial=1 c0_low=4 c0_mode="EVEN" c0_ph=0 c1_high=1 c1_initial=1 c1_low=1 c1_mode="EVEN" c1_ph=0 c2_high=4 c2_initial=5 c2_low=4 c2_mode="EVEN" c2_ph=0 c3_high=1 c3_initial=2 c3_low=1 c3_mode="EVEN" c3_ph=0 c4_high=2 c4_initial=1 c4_low=2 c4_mode="EVEN" c4_ph=0 CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" charge_pump_current_bits=1 clk0_counter="C0" clk1_counter="C1" clk2_counter="C2" clk3_counter="C3" clk4_counter="C4" compensate_clock="CLK4" device_family="Cyclone III" inclk0_input_frequency=20000 intended_device_family="Cyclone III" loop_filter_c_bits=0 loop_filter_r_bits=27 m=10 m_initial=1 m_ph=0 n=1 operation_mode="zero_delay_buffer" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_USED" port_clk3="PORT_USED" port_clk4="PORT_USED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" self_reset_on_loss_lock="ON" vco_post_scale=2 width_clock=5 clk inclk locked
+//altpll c0_high=1 c0_initial=1 c0_low=1 c0_mode="EVEN" c0_ph=0 c1_high=1 c1_initial=2 c1_low=1 c1_mode="EVEN" c1_ph=0 c2_high=4 c2_initial=1 c2_low=4 c2_mode="EVEN" c2_ph=0 c3_high=4 c3_initial=5 c3_low=4 c3_mode="EVEN" c3_ph=0 c4_high=3 c4_initial=1 c4_low=2 c4_mode="ODD" c4_ph=0 CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" charge_pump_current_bits=1 clk0_counter="C0" clk1_counter="C1" clk2_counter="C2" clk3_counter="C3" clk4_counter="C4" compensate_clock="CLK4" device_family="Cyclone III" inclk0_input_frequency=20000 intended_device_family="Cyclone III" loop_filter_c_bits=0 loop_filter_r_bits=27 m=20 m_initial=1 m_ph=0 n=1 operation_mode="zero_delay_buffer" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_USED" port_clk3="PORT_USED" port_clk4="PORT_USED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" self_reset_on_loss_lock="ON" vco_post_scale=1 width_clock=5 clk inclk locked
 //VERSION_BEGIN 9.1 cbx_altpll 2009:10:21:21:22:16:SJ cbx_cycloneii 2009:10:21:21:22:16:SJ cbx_mgl 2009:10:21:21:37:49:SJ cbx_stratixii 2009:10:21:21:22:16:SJ cbx_util_mgl 2009:10:21:21:22:16:SJ  VERSION_END
 //CBXI_INSTANCE_NAME="Block1_TMPPLL_inst_altpll_altpll_component"
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
@@ -79,30 +79,30 @@ module  TMPPLL_altpll
 	`endif
 	);
 	defparam
-		pll1.c0_high = 4,
+		pll1.c0_high = 1,
 		pll1.c0_initial = 1,
-		pll1.c0_low = 4,
+		pll1.c0_low = 1,
 		pll1.c0_mode = "even",
 		pll1.c0_ph = 0,
 		pll1.c1_high = 1,
-		pll1.c1_initial = 1,
+		pll1.c1_initial = 2,
 		pll1.c1_low = 1,
 		pll1.c1_mode = "even",
 		pll1.c1_ph = 0,
 		pll1.c2_high = 4,
-		pll1.c2_initial = 5,
+		pll1.c2_initial = 1,
 		pll1.c2_low = 4,
 		pll1.c2_mode = "even",
 		pll1.c2_ph = 0,
-		pll1.c3_high = 1,
-		pll1.c3_initial = 2,
-		pll1.c3_low = 1,
+		pll1.c3_high = 4,
+		pll1.c3_initial = 5,
+		pll1.c3_low = 4,
 		pll1.c3_mode = "even",
 		pll1.c3_ph = 0,
-		pll1.c4_high = 2,
+		pll1.c4_high = 3,
 		pll1.c4_initial = 1,
 		pll1.c4_low = 2,
-		pll1.c4_mode = "even",
+		pll1.c4_mode = "odd",
 		pll1.c4_ph = 0,
 		pll1.charge_pump_current_bits = 1,
 		pll1.clk0_counter = "c0",
@@ -114,14 +114,14 @@ module  TMPPLL_altpll
 		pll1.inclk0_input_frequency = 20000,
 		pll1.loop_filter_c_bits = 0,
 		pll1.loop_filter_r_bits = 27,
-		pll1.m = 10,
+		pll1.m = 20,
 		pll1.m_initial = 1,
 		pll1.m_ph = 0,
 		pll1.n = 1,
 		pll1.operation_mode = "zero_delay_buffer",
 		pll1.pll_type = "auto",
 		pll1.self_reset_on_loss_lock = "on",
-		pll1.vco_post_scale = 2,
+		pll1.vco_post_scale = 1,
 		pll1.lpm_type = "cycloneiii_pll";
 	assign
 		clk = {wire_pll1_clk[4:0]},

@@ -1,8 +1,10 @@
 |Block1
 EN_FIFO <= AllStore:inst2.EN
-CLKIN => PLL_Reconfig_TOP:inst.iCLK
+CLKIN => PLL_TIMER:inst.CLkin
 CLKIN => UartPLL:inst19.inclk0
 CLKIN => 16trig:inst4.CLK50M
+CLKIN8 => PLL_TIMER:inst.CLK_in_1
+CLKIN9 => PLL_TIMER:inst.CLK_in_2
 Rx => MyRx:inst1.Rx
 Wrusedw0[0] <= AllStore:inst2.Wrusedw[0]
 Wrusedw0[1] <= AllStore:inst2.Wrusedw[1]
@@ -58,9 +60,12 @@ HEX0_DP <= state[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX1_DP <= state[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX2_DP <= state[2].DB_MAX_OUTPUT_PORT_TYPE
 HEX3_DP <= state[3].DB_MAX_OUTPUT_PORT_TYPE
-CLKUN <= PLL_Reconfig_TOP:inst.CLKO4
-PLLbusy <= PLL_Reconfig_TOP:inst.PLL_busy
+CLKUN <= PLL_TIMER:inst.CLKUN
+PLLbusy <= <GND>
 TxOut <= MyUart:inst15.Tx
+CLKout1 <= RandomSeq:inst8.CLKout1
+CLKIN2 => RandomSeq:inst8.CLKin
+CLKout2 <= RandomSeq:inst8.CLKout2
 HEX0_D[0] <= SEG7_LUT:inst28.oSEG[0]
 HEX0_D[1] <= SEG7_LUT:inst28.oSEG[1]
 HEX0_D[2] <= SEG7_LUT:inst28.oSEG[2]
@@ -115,7 +120,6 @@ TestOut[12] <= RandomSeq:inst8.TestOutput[12]
 TestOut[13] <= RandomSeq:inst8.TestOutput[13]
 TestOut[14] <= RandomSeq:inst8.TestOutput[14]
 TestOut[15] <= SW2.DB_MAX_OUTPUT_PORT_TYPE
-CLKIN2 => RandomSeq:inst8.CLKin
 SW2 => TestOut[15].DATAIN
 TX_DATAOUT[0] <= CMD_DATA[0].DB_MAX_OUTPUT_PORT_TYPE
 TX_DATAOUT[1] <= CMD_DATA[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -7648,76 +7652,43 @@ q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
 shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|PLL_Reconfig_TOP:inst
-Locked <= altpll_reconfig_rom:inst.locked
-iCLK => altpll_reconfig_rom:inst.input_clock
-iRST => altpll_reconfig_rom:inst.input_reset
-iWantToReconfig => altpll_reconfig_rom:inst.input_want_to_reconfig
-iRST_ROM_ADD => altpll_reconfig_rom:inst.input_main_reset_rom_address
-PLL_RECONFIG[0] => altpll_reconfig_rom:inst.input_intended_rom[0]
-PLL_RECONFIG[1] => altpll_reconfig_rom:inst.input_intended_rom[1]
-PLL_busy <= altpll_reconfig_rom:inst.tapout_busy
-CLKO0 <= altpll_reconfig_rom:inst.c0
-CLKO1 <= altpll_reconfig_rom:inst.c1
-CLKO2 <= altpll_reconfig_rom:inst.c2
-CLKO3 <= altpll_reconfig_rom:inst.c3
-CLKO4 <= altpll_reconfig_rom:inst.c4
+|Block1|PLL_TIMER:inst
+locked <= TMPPLL:inst.locked
+CLkin => TMPPLL:inst.inclk0
+CLKUN <= TMPPLL:inst.c4
+CLKout[0] <= OutClkCtrl:inst2.CLKout[0]
+CLKout[1] <= OutClkCtrl:inst2.CLKout[1]
+CLKout[2] <= OutClkCtrl:inst2.CLKout[2]
+CLK_in_1 => OutClkCtrl:inst2.CLKin1
+CLK_in_2 => OutClkCtrl:inst2.CLKin2
+wcmd => OutClkCtrl:inst2.wcmd
+cmd[0] => OutClkCtrl:inst2.cmd[0]
+cmd[1] => OutClkCtrl:inst2.cmd[1]
+cmd[2] => OutClkCtrl:inst2.cmd[2]
+cmd[3] => OutClkCtrl:inst2.cmd[3]
+cmd[4] => OutClkCtrl:inst2.cmd[4]
+cmd[5] => OutClkCtrl:inst2.cmd[5]
+cmd[6] => OutClkCtrl:inst2.cmd[6]
+cmd[7] => OutClkCtrl:inst2.cmd[7]
 
 
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst
-input_clock => input_clock.IN7
-input_reset => input_reset.IN2
-input_want_to_reconfig => input_want_to_reconfig.IN1
-input_intended_rom[0] => input_intended_rom[0].IN1
-input_intended_rom[1] => input_intended_rom[1].IN1
-c0 <= the_pll:u1.c0
-c1 <= the_pll:u1.c1
-c2 <= the_pll:u1.c2
-c3 <= the_pll:u1.c3
-c4 <= the_pll:u1.c4
-locked <= the_pll:u1.locked
-output_current_state[0] <= control_sm:u12.current_state
-output_current_state[1] <= control_sm:u12.current_state
-output_current_state[2] <= control_sm:u12.current_state
-input_main_reset_rom_address => input_main_reset_rom_address.IN1
-tapout_busy <= busy_wire.DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_rden <= rom_common_rden_wire.DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[0] <= rom_common_address_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[1] <= rom_common_address_wire[1].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[2] <= rom_common_address_wire[2].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[3] <= rom_common_address_wire[3].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[4] <= rom_common_address_wire[4].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[5] <= rom_common_address_wire[5].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[6] <= rom_common_address_wire[6].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_common_address[7] <= rom_common_address_wire[7].DB_MAX_OUTPUT_PORT_TYPE
-tapout_rom_data_in <= rom_data_in_wire.DB_MAX_OUTPUT_PORT_TYPE
-tapout_reconfig <= reconfig_wire.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|the_pll:u1
-areset => areset.IN1
-configupdate => configupdate.IN1
-inclk0 => sub_wire10[0].IN1
-scanclk => scanclk.IN1
-scanclkena => scanclkena.IN1
-scandata => scandata.IN1
+|Block1|PLL_TIMER:inst|TMPPLL:inst
+inclk0 => sub_wire8[0].IN1
 c0 <= altpll:altpll_component.clk
 c1 <= altpll:altpll_component.clk
 c2 <= altpll:altpll_component.clk
 c3 <= altpll:altpll_component.clk
 c4 <= altpll:altpll_component.clk
 locked <= altpll:altpll_component.locked
-scandataout <= altpll:altpll_component.scandataout
-scandone <= altpll:altpll_component.scandone
 
 
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|the_pll:u1|altpll:altpll_component
-inclk[0] => the_pll_altpll:auto_generated.inclk[0]
-inclk[1] => the_pll_altpll:auto_generated.inclk[1]
+|Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component
+inclk[0] => TMPPLL_altpll:auto_generated.inclk[0]
+inclk[1] => TMPPLL_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
 pllena => ~NO_FANOUT~
 clkswitch => ~NO_FANOUT~
-areset => the_pll_altpll:auto_generated.areset
+areset => ~NO_FANOUT~
 pfdena => ~NO_FANOUT~
 clkena[0] => ~NO_FANOUT~
 clkena[1] => ~NO_FANOUT~
@@ -7729,19 +7700,19 @@ extclkena[0] => ~NO_FANOUT~
 extclkena[1] => ~NO_FANOUT~
 extclkena[2] => ~NO_FANOUT~
 extclkena[3] => ~NO_FANOUT~
-scanclk => the_pll_altpll:auto_generated.scanclk
-scanclkena => the_pll_altpll:auto_generated.scanclkena
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
 scanaclr => ~NO_FANOUT~
 scanread => ~NO_FANOUT~
 scanwrite => ~NO_FANOUT~
-scandata => the_pll_altpll:auto_generated.scandata
+scandata => ~NO_FANOUT~
 phasecounterselect[0] => ~NO_FANOUT~
 phasecounterselect[1] => ~NO_FANOUT~
 phasecounterselect[2] => ~NO_FANOUT~
 phasecounterselect[3] => ~NO_FANOUT~
 phaseupdown => ~NO_FANOUT~
 phasestep => ~NO_FANOUT~
-configupdate => the_pll_altpll:auto_generated.configupdate
+configupdate => ~NO_FANOUT~
 fbmimicbidir <> <GND>
 clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
 clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -7758,9 +7729,9 @@ enable1 <= <GND>
 enable0 <= <GND>
 activeclock <= <GND>
 clkloss <= <GND>
-locked <= the_pll_altpll:auto_generated.locked
-scandataout <= the_pll_altpll:auto_generated.scandataout
-scandone <= the_pll_altpll:auto_generated.scandone
+locked <= TMPPLL_altpll:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
 sclkout0 <= <GND>
 sclkout1 <= <GND>
 phasedone <= <GND>
@@ -7771,1833 +7742,36 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|the_pll:u1|altpll:altpll_component|the_pll_altpll:auto_generated
-areset => pll_lock_sync.ACLR
-areset => pll1.ARESET
+|Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
 clk[2] <= pll1.CLK2
 clk[3] <= pll1.CLK3
 clk[4] <= pll1.CLK4
-configupdate => pll1.CONFIGUPDATE
 inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
-locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
-scanclk => pll1.SCANCLK
-scanclkena => pll1.SCANCLKENA
-scandata => pll1.SCANDATA
-scandataout <= pll1.SCANDATAOUT
-scandone <= pll1.SCANDONE
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2
-clock => clock.IN1
-counter_param[0] => counter_param[0].IN1
-counter_param[1] => counter_param[1].IN1
-counter_param[2] => counter_param[2].IN1
-counter_type[0] => counter_type[0].IN1
-counter_type[1] => counter_type[1].IN1
-counter_type[2] => counter_type[2].IN1
-counter_type[3] => counter_type[3].IN1
-data_in[0] => data_in[0].IN1
-data_in[1] => data_in[1].IN1
-data_in[2] => data_in[2].IN1
-data_in[3] => data_in[3].IN1
-data_in[4] => data_in[4].IN1
-data_in[5] => data_in[5].IN1
-data_in[6] => data_in[6].IN1
-data_in[7] => data_in[7].IN1
-data_in[8] => data_in[8].IN1
-pll_areset_in => pll_areset_in.IN1
-pll_scandataout => pll_scandataout.IN1
-pll_scandone => pll_scandone.IN1
-read_param => read_param.IN1
-reconfig => reconfig.IN1
-reset => reset.IN1
-reset_rom_address => reset_rom_address.IN1
-rom_data_in => rom_data_in.IN1
-write_from_rom => write_from_rom.IN1
-write_param => write_param.IN1
-busy <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.busy
-data_out[0] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[1] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[2] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[3] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[4] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[5] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[6] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[7] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-data_out[8] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.data_out
-pll_areset <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.pll_areset
-pll_configupdate <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.pll_configupdate
-pll_scanclk <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.pll_scanclk
-pll_scanclkena <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.pll_scanclkena
-pll_scandata <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.pll_scandata
-rom_address_out[0] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-rom_address_out[1] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-rom_address_out[2] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-rom_address_out[3] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-rom_address_out[4] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-rom_address_out[5] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-rom_address_out[6] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-rom_address_out[7] <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.rom_address_out
-write_rom_ena <= pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component.write_rom_ena
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component
-busy <= busy.DB_MAX_OUTPUT_PORT_TYPE
-clock => clock.IN9
-counter_param[0] => read_init_nominal_state.IN1
-counter_param[0] => counter_param_latch_reg[0].DATAIN
-counter_param[1] => read_init_nominal_state.IN1
-counter_param[1] => counter_param_latch_reg[1].DATAIN
-counter_param[2] => read_init_nominal_state.IN1
-counter_param[2] => counter_param_latch_reg[2].DATAIN
-counter_type[0] => counter_type_latch_reg[0].DATAIN
-counter_type[1] => read_init_nominal_state.IN1
-counter_type[1] => counter_type_latch_reg[1].DATAIN
-counter_type[2] => read_init_nominal_state.IN0
-counter_type[2] => counter_type_latch_reg[2].DATAIN
-counter_type[3] => read_init_nominal_state.IN1
-counter_type[3] => counter_type_latch_reg[3].DATAIN
-data_in[0] => data_in[0].IN2
-data_in[1] => data_in[1].IN2
-data_in[2] => data_in[2].IN2
-data_in[3] => data_in[3].IN2
-data_in[4] => data_in[4].IN2
-data_in[5] => data_in[5].IN2
-data_in[6] => data_in[6].IN2
-data_in[7] => data_in[7].IN2
-data_in[8] => data_in[8].IN1
-data_out[0] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[4] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[5] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[6] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[7] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[8] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-pll_areset <= pll_areset.DB_MAX_OUTPUT_PORT_TYPE
-pll_areset_in => pll_areset.IN1
-pll_configupdate <= pll_configupdate.DB_MAX_OUTPUT_PORT_TYPE
-pll_scanclk <= clock.DB_MAX_OUTPUT_PORT_TYPE
-pll_scanclkena <= pll_scanclkena.DB_MAX_OUTPUT_PORT_TYPE
-pll_scandata <= pll_scandata.DB_MAX_OUTPUT_PORT_TYPE
-pll_scandataout => ~NO_FANOUT~
-pll_scandone => reconfig_wait_state.IN1
-pll_scandone => areset_init_state_1.DATAIN
-pll_scandone => reconfig_post_state.IN1
-pll_scandone => idle_state.IN1
-pll_scandone => reconfig_wait_state.IN1
-read_param => read_init_nominal_state.IN1
-read_param => input_latch_enable.IN0
-read_param => idle_state.IN1
-reconfig => reconfig_init_state.IN1
-reconfig => idle_state.IN1
-reset => write_nominal_state.ACLR
-reset => write_init_state.ACLR
-reset => write_init_nominal_state.ACLR
-reset => write_data_state.ACLR
-reset => shift_reg17[0].ACLR
-reset => shift_reg16[0].ACLR
-reset => shift_reg15[0].ACLR
-reset => shift_reg14[0].ACLR
-reset => shift_reg13[0].ACLR
-reset => shift_reg12[0].ACLR
-reset => shift_reg11[0].ACLR
-reset => shift_reg10[0].ACLR
-reset => shift_reg9[0].ACLR
-reset => shift_reg8[0].ACLR
-reset => shift_reg7[0].ACLR
-reset => shift_reg6[0].ACLR
-reset => shift_reg5[0].ACLR
-reset => shift_reg4[0].ACLR
-reset => shift_reg3[0].ACLR
-reset => shift_reg2[0].ACLR
-reset => shift_reg1[0].ACLR
-reset => shift_reg0[0].ACLR
-reset => rom_second_state.ACLR
-reset => rom_second_last_state.ACLR
-reset => rom_last_state.ACLR
-reset => rom_init_state.ACLR
-reset => rom_first_state.ACLR
-reset => rom_data_state.ACLR
-reset => reset_state.PRESET
-reset => reconfig_wait_state.ACLR
-reset => reconfig_seq_ena_state.ACLR
-reset => reconfig_seq_data_state.ACLR
-reset => reconfig_post_state.ACLR
-reset => reconfig_init_state.ACLR
-reset => reconfig_counter_state.ACLR
-reset => read_last_state.ACLR
-reset => read_last_nominal_state.ACLR
-reset => read_init_state.ACLR
-reset => read_init_nominal_state.ACLR
-reset => read_first_state.ACLR
-reset => read_first_nominal_state.ACLR
-reset => read_data_state.ACLR
-reset => read_data_nominal_state.ACLR
-reset => nominal_data17[0].ACLR
-reset => nominal_data16[0].ACLR
-reset => nominal_data15[0].ACLR
-reset => nominal_data14[0].ACLR
-reset => nominal_data13[0].ACLR
-reset => nominal_data12[0].ACLR
-reset => nominal_data11[0].ACLR
-reset => nominal_data10[0].ACLR
-reset => nominal_data9[0].ACLR
-reset => nominal_data8[0].ACLR
-reset => nominal_data7[0].ACLR
-reset => nominal_data6[0].ACLR
-reset => nominal_data5[0].ACLR
-reset => nominal_data4[0].ACLR
-reset => nominal_data3[0].ACLR
-reset => nominal_data2[0].ACLR
-reset => nominal_data1[0].ACLR
-reset => nominal_data0[0].ACLR
-reset => idle_state.ACLR
-reset => counter_type_latch_reg[0].ACLR
-reset => counter_type_latch_reg[1].ACLR
-reset => counter_type_latch_reg[2].ACLR
-reset => counter_type_latch_reg[3].ACLR
-reset => counter_param_latch_reg[0].ACLR
-reset => counter_param_latch_reg[1].ACLR
-reset => counter_param_latch_reg[2].ACLR
-reset => areset_state.IN1
-reset_rom_address => rom_init_state.IN1
-reset_rom_address => rom_init_state.IN1
-reset_rom_address => rom_init_state.IN1
-reset_rom_address => rom_init_state.IN1
-reset_rom_address => idle_state.IN1
-reset_rom_address => idle_state.IN1
-reset_rom_address => idle_state.IN1
-reset_rom_address => rom_data_state.IN1
-reset_rom_address => rom_second_last_state.IN1
-reset_rom_address => rom_second_state.IN1
-rom_address_out[0] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_address_out[1] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_address_out[2] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_address_out[3] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_address_out[4] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_address_out[5] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_address_out[6] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_address_out[7] <= rom_address_out.DB_MAX_OUTPUT_PORT_TYPE
-rom_data_in => scan_cache_in.IN1
-write_from_rom => rom_init_state.IN1
-write_from_rom => idle_state.IN1
-write_param => input_latch_enable.IN1
-write_param => shift_reg_load_nominal_enable.IN1
-write_param => idle_state.IN1
-write_rom_ena <= write_rom_ena.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|altsyncram:altsyncram4
-wren_a => altsyncram_fv01:auto_generated.wren_a
-rden_a => ~NO_FANOUT~
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_fv01:auto_generated.data_a[0]
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_fv01:auto_generated.address_a[0]
-address_a[1] => altsyncram_fv01:auto_generated.address_a[1]
-address_a[2] => altsyncram_fv01:auto_generated.address_a[2]
-address_a[3] => altsyncram_fv01:auto_generated.address_a[3]
-address_a[4] => altsyncram_fv01:auto_generated.address_a[4]
-address_a[5] => altsyncram_fv01:auto_generated.address_a[5]
-address_a[6] => altsyncram_fv01:auto_generated.address_a[6]
-address_a[7] => altsyncram_fv01:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_fv01:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_fv01:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|altsyncram:altsyncram4|altsyncram_fv01:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-data_a[0] => ram_block1a0.PORTADATAIN
-q_a[0] <= ram_block1a0.PORTADATAOUT
-wren_a => ram_block1a0.PORTAWE
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_add_sub:add_sub5
-dataa[0] => add_sub_hpa:auto_generated.dataa[0]
-dataa[1] => add_sub_hpa:auto_generated.dataa[1]
-dataa[2] => add_sub_hpa:auto_generated.dataa[2]
-dataa[3] => add_sub_hpa:auto_generated.dataa[3]
-dataa[4] => add_sub_hpa:auto_generated.dataa[4]
-dataa[5] => add_sub_hpa:auto_generated.dataa[5]
-dataa[6] => add_sub_hpa:auto_generated.dataa[6]
-dataa[7] => add_sub_hpa:auto_generated.dataa[7]
-dataa[8] => add_sub_hpa:auto_generated.dataa[8]
-datab[0] => add_sub_hpa:auto_generated.datab[0]
-datab[1] => add_sub_hpa:auto_generated.datab[1]
-datab[2] => add_sub_hpa:auto_generated.datab[2]
-datab[3] => add_sub_hpa:auto_generated.datab[3]
-datab[4] => add_sub_hpa:auto_generated.datab[4]
-datab[5] => add_sub_hpa:auto_generated.datab[5]
-datab[6] => add_sub_hpa:auto_generated.datab[6]
-datab[7] => add_sub_hpa:auto_generated.datab[7]
-datab[8] => add_sub_hpa:auto_generated.datab[8]
-cin => add_sub_hpa:auto_generated.cin
-add_sub => ~NO_FANOUT~
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= add_sub_hpa:auto_generated.result[0]
-result[1] <= add_sub_hpa:auto_generated.result[1]
-result[2] <= add_sub_hpa:auto_generated.result[2]
-result[3] <= add_sub_hpa:auto_generated.result[3]
-result[4] <= add_sub_hpa:auto_generated.result[4]
-result[5] <= add_sub_hpa:auto_generated.result[5]
-result[6] <= add_sub_hpa:auto_generated.result[6]
-result[7] <= add_sub_hpa:auto_generated.result[7]
-result[8] <= add_sub_hpa:auto_generated.result[8]
-cout <= <GND>
-overflow <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_add_sub:add_sub5|add_sub_hpa:auto_generated
-cin => op_1.IN18
-cin => op_1.IN19
-dataa[0] => op_1.IN16
-dataa[1] => op_1.IN14
-dataa[2] => op_1.IN12
-dataa[3] => op_1.IN10
-dataa[4] => op_1.IN8
-dataa[5] => op_1.IN6
-dataa[6] => op_1.IN4
-dataa[7] => op_1.IN2
-dataa[8] => op_1.IN0
-datab[0] => op_1.IN17
-datab[1] => op_1.IN15
-datab[2] => op_1.IN13
-datab[3] => op_1.IN11
-datab[4] => op_1.IN9
-datab[5] => op_1.IN7
-datab[6] => op_1.IN5
-datab[7] => op_1.IN3
-datab[8] => op_1.IN1
-result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_add_sub:add_sub6
-dataa[0] => add_sub_k8a:auto_generated.dataa[0]
-dataa[1] => add_sub_k8a:auto_generated.dataa[1]
-dataa[2] => add_sub_k8a:auto_generated.dataa[2]
-dataa[3] => add_sub_k8a:auto_generated.dataa[3]
-dataa[4] => add_sub_k8a:auto_generated.dataa[4]
-dataa[5] => add_sub_k8a:auto_generated.dataa[5]
-dataa[6] => add_sub_k8a:auto_generated.dataa[6]
-dataa[7] => add_sub_k8a:auto_generated.dataa[7]
-datab[0] => ~NO_FANOUT~
-datab[1] => ~NO_FANOUT~
-datab[2] => ~NO_FANOUT~
-datab[3] => ~NO_FANOUT~
-datab[4] => ~NO_FANOUT~
-datab[5] => ~NO_FANOUT~
-datab[6] => ~NO_FANOUT~
-datab[7] => ~NO_FANOUT~
-cin => add_sub_k8a:auto_generated.cin
-add_sub => ~NO_FANOUT~
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= add_sub_k8a:auto_generated.result[0]
-result[1] <= add_sub_k8a:auto_generated.result[1]
-result[2] <= add_sub_k8a:auto_generated.result[2]
-result[3] <= add_sub_k8a:auto_generated.result[3]
-result[4] <= add_sub_k8a:auto_generated.result[4]
-result[5] <= add_sub_k8a:auto_generated.result[5]
-result[6] <= add_sub_k8a:auto_generated.result[6]
-result[7] <= add_sub_k8a:auto_generated.result[7]
-cout <= <GND>
-overflow <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_add_sub:add_sub6|add_sub_k8a:auto_generated
-cin => op_1.IN16
-cin => op_1.IN17
-dataa[0] => op_1.IN14
-dataa[1] => op_1.IN12
-dataa[2] => op_1.IN10
-dataa[3] => op_1.IN8
-dataa[4] => op_1.IN6
-dataa[5] => op_1.IN4
-dataa[6] => op_1.IN2
-dataa[7] => op_1.IN0
-result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_compare:cmpr7
-dataa[0] => cmpr_tnd:auto_generated.dataa[0]
-dataa[1] => cmpr_tnd:auto_generated.dataa[1]
-dataa[2] => cmpr_tnd:auto_generated.dataa[2]
-dataa[3] => cmpr_tnd:auto_generated.dataa[3]
-dataa[4] => cmpr_tnd:auto_generated.dataa[4]
-dataa[5] => cmpr_tnd:auto_generated.dataa[5]
-dataa[6] => cmpr_tnd:auto_generated.dataa[6]
-dataa[7] => cmpr_tnd:auto_generated.dataa[7]
-datab[0] => cmpr_tnd:auto_generated.datab[0]
-datab[1] => cmpr_tnd:auto_generated.datab[1]
-datab[2] => cmpr_tnd:auto_generated.datab[2]
-datab[3] => cmpr_tnd:auto_generated.datab[3]
-datab[4] => cmpr_tnd:auto_generated.datab[4]
-datab[5] => cmpr_tnd:auto_generated.datab[5]
-datab[6] => cmpr_tnd:auto_generated.datab[6]
-datab[7] => cmpr_tnd:auto_generated.datab[7]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-alb <= <GND>
-aeb <= cmpr_tnd:auto_generated.aeb
-agb <= <GND>
-aleb <= <GND>
-aneb <= <GND>
-ageb <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_compare:cmpr7|cmpr_tnd:auto_generated
-aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => data_wire[0].IN0
-dataa[1] => data_wire[0].IN0
-dataa[2] => data_wire[1].IN0
-dataa[3] => data_wire[1].IN0
-dataa[4] => data_wire[2].IN0
-dataa[5] => data_wire[2].IN0
-dataa[6] => data_wire[3].IN0
-dataa[7] => data_wire[3].IN0
-datab[0] => data_wire[0].IN1
-datab[1] => data_wire[0].IN1
-datab[2] => data_wire[1].IN1
-datab[3] => data_wire[1].IN1
-datab[4] => data_wire[2].IN1
-datab[5] => data_wire[2].IN1
-datab[6] => data_wire[3].IN1
-datab[7] => data_wire[3].IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr1
-clock => cntr_30l:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_30l:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_30l:auto_generated.sload
-data[0] => cntr_30l:auto_generated.data[0]
-data[1] => cntr_30l:auto_generated.data[1]
-data[2] => cntr_30l:auto_generated.data[2]
-data[3] => cntr_30l:auto_generated.data[3]
-data[4] => cntr_30l:auto_generated.data[4]
-data[5] => cntr_30l:auto_generated.data[5]
-data[6] => cntr_30l:auto_generated.data[6]
-data[7] => cntr_30l:auto_generated.data[7]
-cin => ~NO_FANOUT~
-q[0] <= cntr_30l:auto_generated.q[0]
-q[1] <= cntr_30l:auto_generated.q[1]
-q[2] <= cntr_30l:auto_generated.q[2]
-q[3] <= cntr_30l:auto_generated.q[3]
-q[4] <= cntr_30l:auto_generated.q[4]
-q[5] <= cntr_30l:auto_generated.q[5]
-q[6] <= cntr_30l:auto_generated.q[6]
-q[7] <= cntr_30l:auto_generated.q[7]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr1|cntr_30l:auto_generated
-clock => counter_reg_bit[7].CLK
-clock => counter_reg_bit[6].CLK
-clock => counter_reg_bit[5].CLK
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN1
-sload => _.IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr12
-clock => cntr_30l:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_30l:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_30l:auto_generated.sload
-data[0] => cntr_30l:auto_generated.data[0]
-data[1] => cntr_30l:auto_generated.data[1]
-data[2] => cntr_30l:auto_generated.data[2]
-data[3] => cntr_30l:auto_generated.data[3]
-data[4] => cntr_30l:auto_generated.data[4]
-data[5] => cntr_30l:auto_generated.data[5]
-data[6] => cntr_30l:auto_generated.data[6]
-data[7] => cntr_30l:auto_generated.data[7]
-cin => ~NO_FANOUT~
-q[0] <= cntr_30l:auto_generated.q[0]
-q[1] <= cntr_30l:auto_generated.q[1]
-q[2] <= cntr_30l:auto_generated.q[2]
-q[3] <= cntr_30l:auto_generated.q[3]
-q[4] <= cntr_30l:auto_generated.q[4]
-q[5] <= cntr_30l:auto_generated.q[5]
-q[6] <= cntr_30l:auto_generated.q[6]
-q[7] <= cntr_30l:auto_generated.q[7]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr12|cntr_30l:auto_generated
-clock => counter_reg_bit[7].CLK
-clock => counter_reg_bit[6].CLK
-clock => counter_reg_bit[5].CLK
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN1
-sload => _.IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr13
-clock => cntr_qij:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_qij:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_qij:auto_generated.sload
-data[0] => cntr_qij:auto_generated.data[0]
-data[1] => cntr_qij:auto_generated.data[1]
-data[2] => cntr_qij:auto_generated.data[2]
-data[3] => cntr_qij:auto_generated.data[3]
-data[4] => cntr_qij:auto_generated.data[4]
-data[5] => cntr_qij:auto_generated.data[5]
-cin => ~NO_FANOUT~
-q[0] <= cntr_qij:auto_generated.q[0]
-q[1] <= cntr_qij:auto_generated.q[1]
-q[2] <= cntr_qij:auto_generated.q[2]
-q[3] <= cntr_qij:auto_generated.q[3]
-q[4] <= cntr_qij:auto_generated.q[4]
-q[5] <= cntr_qij:auto_generated.q[5]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr13|cntr_qij:auto_generated
-clock => counter_reg_bit[5].CLK
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN1
-sload => counter_reg_bit[5].IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr14
-clock => cntr_sij:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_sij:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_sij:auto_generated.sload
-data[0] => cntr_sij:auto_generated.data[0]
-data[1] => cntr_sij:auto_generated.data[1]
-data[2] => cntr_sij:auto_generated.data[2]
-data[3] => cntr_sij:auto_generated.data[3]
-data[4] => cntr_sij:auto_generated.data[4]
-data[5] => cntr_sij:auto_generated.data[5]
-data[6] => cntr_sij:auto_generated.data[6]
-data[7] => cntr_sij:auto_generated.data[7]
-cin => ~NO_FANOUT~
-q[0] <= cntr_sij:auto_generated.q[0]
-q[1] <= cntr_sij:auto_generated.q[1]
-q[2] <= cntr_sij:auto_generated.q[2]
-q[3] <= cntr_sij:auto_generated.q[3]
-q[4] <= cntr_sij:auto_generated.q[4]
-q[5] <= cntr_sij:auto_generated.q[5]
-q[6] <= cntr_sij:auto_generated.q[6]
-q[7] <= cntr_sij:auto_generated.q[7]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr14|cntr_sij:auto_generated
-clock => counter_reg_bit[7].CLK
-clock => counter_reg_bit[6].CLK
-clock => counter_reg_bit[5].CLK
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN1
-sload => counter_reg_bit[7].IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr15
-clock => cntr_pij:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_pij:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_pij:auto_generated.sload
-data[0] => cntr_pij:auto_generated.data[0]
-data[1] => cntr_pij:auto_generated.data[1]
-data[2] => cntr_pij:auto_generated.data[2]
-data[3] => cntr_pij:auto_generated.data[3]
-data[4] => cntr_pij:auto_generated.data[4]
-cin => ~NO_FANOUT~
-q[0] <= cntr_pij:auto_generated.q[0]
-q[1] <= cntr_pij:auto_generated.q[1]
-q[2] <= cntr_pij:auto_generated.q[2]
-q[3] <= cntr_pij:auto_generated.q[3]
-q[4] <= cntr_pij:auto_generated.q[4]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr15|cntr_pij:auto_generated
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN1
-sload => counter_reg_bit[4].IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr16
-clock => cntr_30l:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_30l:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_30l:auto_generated.sload
-data[0] => cntr_30l:auto_generated.data[0]
-data[1] => cntr_30l:auto_generated.data[1]
-data[2] => cntr_30l:auto_generated.data[2]
-data[3] => cntr_30l:auto_generated.data[3]
-data[4] => cntr_30l:auto_generated.data[4]
-data[5] => cntr_30l:auto_generated.data[5]
-data[6] => cntr_30l:auto_generated.data[6]
-data[7] => cntr_30l:auto_generated.data[7]
-cin => ~NO_FANOUT~
-q[0] <= cntr_30l:auto_generated.q[0]
-q[1] <= cntr_30l:auto_generated.q[1]
-q[2] <= cntr_30l:auto_generated.q[2]
-q[3] <= cntr_30l:auto_generated.q[3]
-q[4] <= cntr_30l:auto_generated.q[4]
-q[5] <= cntr_30l:auto_generated.q[5]
-q[6] <= cntr_30l:auto_generated.q[6]
-q[7] <= cntr_30l:auto_generated.q[7]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr16|cntr_30l:auto_generated
-clock => counter_reg_bit[7].CLK
-clock => counter_reg_bit[6].CLK
-clock => counter_reg_bit[5].CLK
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN1
-sload => _.IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr2
-clock => cntr_9cj:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_9cj:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_9cj:auto_generated.sload
-data[0] => cntr_9cj:auto_generated.data[0]
-data[1] => cntr_9cj:auto_generated.data[1]
-data[2] => cntr_9cj:auto_generated.data[2]
-data[3] => cntr_9cj:auto_generated.data[3]
-data[4] => cntr_9cj:auto_generated.data[4]
-data[5] => cntr_9cj:auto_generated.data[5]
-data[6] => cntr_9cj:auto_generated.data[6]
-data[7] => cntr_9cj:auto_generated.data[7]
-cin => ~NO_FANOUT~
-q[0] <= cntr_9cj:auto_generated.q[0]
-q[1] <= cntr_9cj:auto_generated.q[1]
-q[2] <= cntr_9cj:auto_generated.q[2]
-q[3] <= cntr_9cj:auto_generated.q[3]
-q[4] <= cntr_9cj:auto_generated.q[4]
-q[5] <= cntr_9cj:auto_generated.q[5]
-q[6] <= cntr_9cj:auto_generated.q[6]
-q[7] <= cntr_9cj:auto_generated.q[7]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr2|cntr_9cj:auto_generated
-clock => counter_reg_bit[7].CLK
-clock => counter_reg_bit[6].CLK
-clock => counter_reg_bit[5].CLK
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN1
-sload => counter_reg_bit[7].IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr3
-clock => cntr_pij:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_pij:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_pij:auto_generated.sload
-data[0] => cntr_pij:auto_generated.data[0]
-data[1] => cntr_pij:auto_generated.data[1]
-data[2] => cntr_pij:auto_generated.data[2]
-data[3] => cntr_pij:auto_generated.data[3]
-data[4] => cntr_pij:auto_generated.data[4]
-cin => ~NO_FANOUT~
-q[0] <= cntr_pij:auto_generated.q[0]
-q[1] <= cntr_pij:auto_generated.q[1]
-q[2] <= cntr_pij:auto_generated.q[2]
-q[3] <= cntr_pij:auto_generated.q[3]
-q[4] <= cntr_pij:auto_generated.q[4]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr3|cntr_pij:auto_generated
-clock => counter_reg_bit[4].CLK
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
-sload => _.IN1
-sload => counter_reg_bit[4].IN1
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_decode:decode11
-data[0] => decode_2af:auto_generated.data[0]
-data[1] => decode_2af:auto_generated.data[1]
-data[2] => decode_2af:auto_generated.data[2]
-enable => ~NO_FANOUT~
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-eq[0] <= decode_2af:auto_generated.eq[0]
-eq[1] <= decode_2af:auto_generated.eq[1]
-eq[2] <= decode_2af:auto_generated.eq[2]
-eq[3] <= decode_2af:auto_generated.eq[3]
-eq[4] <= decode_2af:auto_generated.eq[4]
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_decode:decode11|decode_2af:auto_generated
-data[0] => w_anode19w[1].IN1
-data[0] => w_anode1w[1].IN0
-data[0] => w_anode30w[1].IN0
-data[0] => w_anode41w[1].IN1
-data[0] => w_anode52w[1].IN0
-data[0] => w_anode63w[1].IN1
-data[0] => w_anode74w[1].IN0
-data[0] => w_anode85w[1].IN1
-data[1] => w_anode19w[2].IN0
-data[1] => w_anode1w[2].IN0
-data[1] => w_anode30w[2].IN1
-data[1] => w_anode41w[2].IN1
-data[1] => w_anode52w[2].IN0
-data[1] => w_anode63w[2].IN0
-data[1] => w_anode74w[2].IN1
-data[1] => w_anode85w[2].IN1
-data[2] => w_anode19w[3].IN0
-data[2] => w_anode1w[3].IN0
-data[2] => w_anode30w[3].IN0
-data[2] => w_anode41w[3].IN0
-data[2] => w_anode52w[3].IN1
-data[2] => w_anode63w[3].IN1
-data[2] => w_anode74w[3].IN1
-data[2] => w_anode85w[3].IN1
-eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
-eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
-eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
-eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
-eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_muxer:u3
-data0 => sub_wire3[0].IN1
-data1 => sub_wire3[1].IN1
-data2 => sub_wire3[2].IN1
-data3 => sub_wire3[3].IN1
-sel[0] => sel[0].IN1
-sel[1] => sel[1].IN1
-result <= lpm_mux:lpm_mux_component.result
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_muxer:u3|lpm_mux:lpm_mux_component
-data[0][0] => mux_6qc:auto_generated.data[0]
-data[1][0] => mux_6qc:auto_generated.data[1]
-data[2][0] => mux_6qc:auto_generated.data[2]
-data[3][0] => mux_6qc:auto_generated.data[3]
-data[4][0] => mux_6qc:auto_generated.data[4]
-data[5][0] => mux_6qc:auto_generated.data[5]
-data[6][0] => mux_6qc:auto_generated.data[6]
-data[7][0] => mux_6qc:auto_generated.data[7]
-sel[0] => mux_6qc:auto_generated.sel[0]
-sel[1] => mux_6qc:auto_generated.sel[1]
-sel[2] => mux_6qc:auto_generated.sel[2]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_6qc:auto_generated.result[0]
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_muxer:u3|lpm_mux:lpm_mux_component|mux_6qc:auto_generated
-data[0] => _.IN0
-data[0] => _.IN0
-data[1] => _.IN0
-data[2] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN0
-data[4] => _.IN0
-data[4] => _.IN0
-data[5] => _.IN0
-data[6] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN0
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => _.IN1
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[0] => _.IN1
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[0] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
-sel[2] => result_node[0].IN0
-sel[2] => _.IN0
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_1:u4
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_1:u4|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_2da1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_2da1:auto_generated.address_a[0]
-address_a[1] => altsyncram_2da1:auto_generated.address_a[1]
-address_a[2] => altsyncram_2da1:auto_generated.address_a[2]
-address_a[3] => altsyncram_2da1:auto_generated.address_a[3]
-address_a[4] => altsyncram_2da1:auto_generated.address_a[4]
-address_a[5] => altsyncram_2da1:auto_generated.address_a[5]
-address_a[6] => altsyncram_2da1:auto_generated.address_a[6]
-address_a[7] => altsyncram_2da1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_2da1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_2da1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_1:u4|altsyncram:altsyncram_component|altsyncram_2da1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_2:u5
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_2:u5|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_vca1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_vca1:auto_generated.address_a[0]
-address_a[1] => altsyncram_vca1:auto_generated.address_a[1]
-address_a[2] => altsyncram_vca1:auto_generated.address_a[2]
-address_a[3] => altsyncram_vca1:auto_generated.address_a[3]
-address_a[4] => altsyncram_vca1:auto_generated.address_a[4]
-address_a[5] => altsyncram_vca1:auto_generated.address_a[5]
-address_a[6] => altsyncram_vca1:auto_generated.address_a[6]
-address_a[7] => altsyncram_vca1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_vca1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_vca1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_2:u5|altsyncram:altsyncram_component|altsyncram_vca1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_3:u6
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_3:u6|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_uca1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_uca1:auto_generated.address_a[0]
-address_a[1] => altsyncram_uca1:auto_generated.address_a[1]
-address_a[2] => altsyncram_uca1:auto_generated.address_a[2]
-address_a[3] => altsyncram_uca1:auto_generated.address_a[3]
-address_a[4] => altsyncram_uca1:auto_generated.address_a[4]
-address_a[5] => altsyncram_uca1:auto_generated.address_a[5]
-address_a[6] => altsyncram_uca1:auto_generated.address_a[6]
-address_a[7] => altsyncram_uca1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_uca1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_uca1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_3:u6|altsyncram:altsyncram_component|altsyncram_uca1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_4:u7
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_4:u7|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_iba1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_iba1:auto_generated.address_a[0]
-address_a[1] => altsyncram_iba1:auto_generated.address_a[1]
-address_a[2] => altsyncram_iba1:auto_generated.address_a[2]
-address_a[3] => altsyncram_iba1:auto_generated.address_a[3]
-address_a[4] => altsyncram_iba1:auto_generated.address_a[4]
-address_a[5] => altsyncram_iba1:auto_generated.address_a[5]
-address_a[6] => altsyncram_iba1:auto_generated.address_a[6]
-address_a[7] => altsyncram_iba1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_iba1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_iba1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_4:u7|altsyncram:altsyncram_component|altsyncram_iba1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|control_sm:u12
-clock => sel_temp[0].CLK
-clock => sel_temp[1].CLK
-clock => state~1.DATAIN
-reset => sel_temp[0].ACLR
-reset => sel_temp[1].ACLR
-reset => state~3.DATAIN
-busy => Selector2.IN1
-busy => Selector4.IN1
-busy => Selector0.IN2
-busy => Selector1.IN2
-busy => next_state.state_4.DATAB
-busy => Selector3.IN2
-want_to_reconfig => next_state.state_1.DATAB
-want_to_reconfig => Selector0.IN1
-want_to_reconfig => sel_temp[1].ENA
-want_to_reconfig => sel_temp[0].ENA
-intended_rom[0] => sel_temp[0].DATAIN
-intended_rom[1] => sel_temp[1].DATAIN
-mux_sel[0] <= sel_temp[0].DB_MAX_OUTPUT_PORT_TYPE
-mux_sel[1] <= sel_temp[1].DB_MAX_OUTPUT_PORT_TYPE
-write_from_rom <= state_temp.state_1.DB_MAX_OUTPUT_PORT_TYPE
-reconfig <= state_temp.state_4.DB_MAX_OUTPUT_PORT_TYPE
-current_state[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-current_state[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-current_state[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-main_reset_rom_address => reset_rom_address.DATAIN
-reset_rom_address <= main_reset_rom_address.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_1:inst4
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_1:inst4|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_2da1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_2da1:auto_generated.address_a[0]
-address_a[1] => altsyncram_2da1:auto_generated.address_a[1]
-address_a[2] => altsyncram_2da1:auto_generated.address_a[2]
-address_a[3] => altsyncram_2da1:auto_generated.address_a[3]
-address_a[4] => altsyncram_2da1:auto_generated.address_a[4]
-address_a[5] => altsyncram_2da1:auto_generated.address_a[5]
-address_a[6] => altsyncram_2da1:auto_generated.address_a[6]
-address_a[7] => altsyncram_2da1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_2da1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_2da1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_1:inst4|altsyncram:altsyncram_component|altsyncram_2da1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_2:inst5
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_2:inst5|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_vca1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_vca1:auto_generated.address_a[0]
-address_a[1] => altsyncram_vca1:auto_generated.address_a[1]
-address_a[2] => altsyncram_vca1:auto_generated.address_a[2]
-address_a[3] => altsyncram_vca1:auto_generated.address_a[3]
-address_a[4] => altsyncram_vca1:auto_generated.address_a[4]
-address_a[5] => altsyncram_vca1:auto_generated.address_a[5]
-address_a[6] => altsyncram_vca1:auto_generated.address_a[6]
-address_a[7] => altsyncram_vca1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_vca1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_vca1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_2:inst5|altsyncram:altsyncram_component|altsyncram_vca1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_3:inst6
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_3:inst6|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_uca1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_uca1:auto_generated.address_a[0]
-address_a[1] => altsyncram_uca1:auto_generated.address_a[1]
-address_a[2] => altsyncram_uca1:auto_generated.address_a[2]
-address_a[3] => altsyncram_uca1:auto_generated.address_a[3]
-address_a[4] => altsyncram_uca1:auto_generated.address_a[4]
-address_a[5] => altsyncram_uca1:auto_generated.address_a[5]
-address_a[6] => altsyncram_uca1:auto_generated.address_a[6]
-address_a[7] => altsyncram_uca1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_uca1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_uca1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_3:inst6|altsyncram:altsyncram_component|altsyncram_uca1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_4:inst7
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-rden => rden.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_4:inst7|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => altsyncram_iba1:auto_generated.rden_a
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_iba1:auto_generated.address_a[0]
-address_a[1] => altsyncram_iba1:auto_generated.address_a[1]
-address_a[2] => altsyncram_iba1:auto_generated.address_a[2]
-address_a[3] => altsyncram_iba1:auto_generated.address_a[3]
-address_a[4] => altsyncram_iba1:auto_generated.address_a[4]
-address_a[5] => altsyncram_iba1:auto_generated.address_a[5]
-address_a[6] => altsyncram_iba1:auto_generated.address_a[6]
-address_a[7] => altsyncram_iba1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_iba1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_iba1:auto_generated.q_a[0]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|rom_4:inst7|altsyncram:altsyncram_component|altsyncram_iba1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => rden_a_store.CLK
-q_a[0] <= ram_block1a0.PORTADATAOUT
-rden_a => ram_block1a0.IN1
-rden_a => ram_block1a0.PORTARE
-rden_a => rden_a_store.DATAIN
-
-
-|Block1|PLL_Reconfig_TOP:inst|the_pll:inst8
-areset => areset.IN1
-configupdate => configupdate.IN1
-inclk0 => sub_wire10[0].IN1
-scanclk => scanclk.IN1
-scanclkena => scanclkena.IN1
-scandata => scandata.IN1
-c0 <= altpll:altpll_component.clk
-c1 <= altpll:altpll_component.clk
-c2 <= altpll:altpll_component.clk
-c3 <= altpll:altpll_component.clk
-c4 <= altpll:altpll_component.clk
-locked <= altpll:altpll_component.locked
-scandataout <= altpll:altpll_component.scandataout
-scandone <= altpll:altpll_component.scandone
-
-
-|Block1|PLL_Reconfig_TOP:inst|the_pll:inst8|altpll:altpll_component
-inclk[0] => the_pll_altpll:auto_generated.inclk[0]
-inclk[1] => the_pll_altpll:auto_generated.inclk[1]
-fbin => ~NO_FANOUT~
-pllena => ~NO_FANOUT~
-clkswitch => ~NO_FANOUT~
-areset => the_pll_altpll:auto_generated.areset
-pfdena => ~NO_FANOUT~
-clkena[0] => ~NO_FANOUT~
-clkena[1] => ~NO_FANOUT~
-clkena[2] => ~NO_FANOUT~
-clkena[3] => ~NO_FANOUT~
-clkena[4] => ~NO_FANOUT~
-clkena[5] => ~NO_FANOUT~
-extclkena[0] => ~NO_FANOUT~
-extclkena[1] => ~NO_FANOUT~
-extclkena[2] => ~NO_FANOUT~
-extclkena[3] => ~NO_FANOUT~
-scanclk => the_pll_altpll:auto_generated.scanclk
-scanclkena => the_pll_altpll:auto_generated.scanclkena
-scanaclr => ~NO_FANOUT~
-scanread => ~NO_FANOUT~
-scanwrite => ~NO_FANOUT~
-scandata => the_pll_altpll:auto_generated.scandata
-phasecounterselect[0] => ~NO_FANOUT~
-phasecounterselect[1] => ~NO_FANOUT~
-phasecounterselect[2] => ~NO_FANOUT~
-phasecounterselect[3] => ~NO_FANOUT~
-phaseupdown => ~NO_FANOUT~
-phasestep => ~NO_FANOUT~
-configupdate => the_pll_altpll:auto_generated.configupdate
-fbmimicbidir <> <GND>
-clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
-clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
-clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
-clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
-clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
-extclk[0] <= <GND>
-extclk[1] <= <GND>
-extclk[2] <= <GND>
-extclk[3] <= <GND>
-clkbad[0] <= <GND>
-clkbad[1] <= <GND>
-enable1 <= <GND>
-enable0 <= <GND>
-activeclock <= <GND>
-clkloss <= <GND>
-locked <= the_pll_altpll:auto_generated.locked
-scandataout <= the_pll_altpll:auto_generated.scandataout
-scandone <= the_pll_altpll:auto_generated.scandone
-sclkout0 <= <GND>
-sclkout1 <= <GND>
-phasedone <= <GND>
-vcooverrange <= <GND>
-vcounderrange <= <GND>
-fbout <= <GND>
-fref <= <GND>
-icdrclk <= <GND>
-
-
-|Block1|PLL_Reconfig_TOP:inst|the_pll:inst8|altpll:altpll_component|the_pll_altpll:auto_generated
-areset => pll_lock_sync.ACLR
-areset => pll1.ARESET
-clk[0] <= pll1.CLK
-clk[1] <= pll1.CLK1
-clk[2] <= pll1.CLK2
-clk[3] <= pll1.CLK3
-clk[4] <= pll1.CLK4
-configupdate => pll1.CONFIGUPDATE
-inclk[0] => pll1.CLK
-inclk[1] => pll1.CLK1
-locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
-scanclk => pll1.SCANCLK
-scanclkena => pll1.SCANCLKENA
-scandata => pll1.SCANDATA
-scandataout <= pll1.SCANDATAOUT
-scandone <= pll1.SCANDONE
+locked <= pll1.LOCKED
+
+
+|Block1|PLL_TIMER:inst|OutClkCtrl:inst2
+CLKin1 => CLKin.DATAB
+CLKin2 => CLKin.DATAA
+CLKout[0] <= CLKout.DB_MAX_OUTPUT_PORT_TYPE
+CLKout[1] <= CLKout.DB_MAX_OUTPUT_PORT_TYPE
+CLKout[2] <= CLKout.DB_MAX_OUTPUT_PORT_TYPE
+cmd[0] => sel.DATAIN
+cmd[1] => subsel.DATAIN
+cmd[2] => ~NO_FANOUT~
+cmd[3] => ~NO_FANOUT~
+cmd[4] => ~NO_FANOUT~
+cmd[5] => ~NO_FANOUT~
+cmd[6] => ~NO_FANOUT~
+cmd[7] => ~NO_FANOUT~
+wcmd => subsel.CLK
+wcmd => sel.CLK
+PLLin[0] => CLKout.DATAA
+PLLin[1] => CLKout.DATAA
+PLLin[2] => CLKout.DATAA
 
 
 |Block1|Decode:inst3
@@ -11410,6 +9584,217 @@ SetInit => CMD.OUTPUTSELECT
 ResTri <= ResTri.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|Block1|RandomSeq:inst8
+CLKout1 <= PLLout:inst1.c0
+CLKin => PLLout:inst1.inclk0
+CLKin => RandomPLLs:inst.inclk0
+CLKout2 <= PLLout:inst1.c0
+TestOutput[0] <= TestOutput:inst4.Allout[0]
+TestOutput[1] <= TestOutput:inst4.Allout[1]
+TestOutput[2] <= TestOutput:inst4.Allout[2]
+TestOutput[3] <= TestOutput:inst4.Allout[3]
+TestOutput[4] <= TestOutput:inst4.Allout[4]
+TestOutput[5] <= TestOutput:inst4.Allout[5]
+TestOutput[6] <= TestOutput:inst4.Allout[6]
+TestOutput[7] <= TestOutput:inst4.Allout[7]
+TestOutput[8] <= TestOutput:inst4.Allout[8]
+TestOutput[9] <= TestOutput:inst4.Allout[9]
+TestOutput[10] <= TestOutput:inst4.Allout[10]
+TestOutput[11] <= TestOutput:inst4.Allout[11]
+TestOutput[12] <= TestOutput:inst4.Allout[12]
+TestOutput[13] <= TestOutput:inst4.Allout[13]
+TestOutput[14] <= TestOutput:inst4.Allout[14]
+
+
+|Block1|RandomSeq:inst8|PLLout:inst1
+inclk0 => sub_wire3[0].IN1
+c0 <= altpll:altpll_component.clk
+
+
+|Block1|RandomSeq:inst8|PLLout:inst1|altpll:altpll_component
+inclk[0] => PLLout_altpll:auto_generated.inclk[0]
+inclk[1] => PLLout_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|Block1|RandomSeq:inst8|PLLout:inst1|altpll:altpll_component|PLLout_altpll:auto_generated
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
+|Block1|RandomSeq:inst8|TestOutput:inst4
+ain => out.IN0
+ain => Allout[0].DATAIN
+ain => Allout[1].DATAIN
+ain => Allout[2].DATAIN
+ain => Allout[3].DATAIN
+bin => out.IN1
+bin => Allout[4].DATAIN
+bin => Allout[5].DATAIN
+bin => Allout[6].DATAIN
+bin => Allout[7].DATAIN
+cin => out.IN1
+cin => Allout[8].DATAIN
+cin => Allout[9].DATAIN
+cin => Allout[10].DATAIN
+cin => Allout[11].DATAIN
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+Allout[0] <= ain.DB_MAX_OUTPUT_PORT_TYPE
+Allout[1] <= ain.DB_MAX_OUTPUT_PORT_TYPE
+Allout[2] <= ain.DB_MAX_OUTPUT_PORT_TYPE
+Allout[3] <= ain.DB_MAX_OUTPUT_PORT_TYPE
+Allout[4] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[5] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[6] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[7] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[8] <= cin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[9] <= cin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[10] <= cin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[11] <= cin.DB_MAX_OUTPUT_PORT_TYPE
+Allout[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
+Allout[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
+Allout[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|RandomSeq:inst8|RandomPLLs:inst
+inclk0 => sub_wire7[0].IN1
+c0 <= altpll:altpll_component.clk
+c1 <= altpll:altpll_component.clk
+c2 <= altpll:altpll_component.clk
+c3 <= altpll:altpll_component.clk
+locked <= altpll:altpll_component.locked
+
+
+|Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component
+inclk[0] => RandomPLLs_altpll:auto_generated.inclk[0]
+inclk[1] => RandomPLLs_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= RandomPLLs_altpll:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+locked <= pll1.LOCKED
+
+
 |Block1|SEG7_LUT:inst28
 oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
@@ -11539,138 +9924,5 @@ CLKin => step[0].CLK
 CLKin => step[1].CLK
 CLKin => step[2].CLK
 CLKout <= CLKout~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|RandomSeq:inst8
-TestOutput[0] <= TestOutput:inst4.Allout[0]
-TestOutput[1] <= TestOutput:inst4.Allout[1]
-TestOutput[2] <= TestOutput:inst4.Allout[2]
-TestOutput[3] <= TestOutput:inst4.Allout[3]
-TestOutput[4] <= TestOutput:inst4.Allout[4]
-TestOutput[5] <= TestOutput:inst4.Allout[5]
-TestOutput[6] <= TestOutput:inst4.Allout[6]
-TestOutput[7] <= TestOutput:inst4.Allout[7]
-TestOutput[8] <= TestOutput:inst4.Allout[8]
-TestOutput[9] <= TestOutput:inst4.Allout[9]
-TestOutput[10] <= TestOutput:inst4.Allout[10]
-TestOutput[11] <= TestOutput:inst4.Allout[11]
-TestOutput[12] <= TestOutput:inst4.Allout[12]
-TestOutput[13] <= TestOutput:inst4.Allout[13]
-TestOutput[14] <= TestOutput:inst4.Allout[14]
-CLKin => RandomPLLs:inst.inclk0
-
-
-|Block1|RandomSeq:inst8|TestOutput:inst4
-ain => out.IN0
-ain => Allout[0].DATAIN
-ain => Allout[1].DATAIN
-ain => Allout[2].DATAIN
-ain => Allout[3].DATAIN
-bin => out.IN1
-bin => Allout[4].DATAIN
-bin => Allout[5].DATAIN
-bin => Allout[6].DATAIN
-bin => Allout[7].DATAIN
-cin => out.IN1
-cin => Allout[8].DATAIN
-cin => Allout[9].DATAIN
-cin => Allout[10].DATAIN
-cin => Allout[11].DATAIN
-out <= out.DB_MAX_OUTPUT_PORT_TYPE
-Allout[0] <= ain.DB_MAX_OUTPUT_PORT_TYPE
-Allout[1] <= ain.DB_MAX_OUTPUT_PORT_TYPE
-Allout[2] <= ain.DB_MAX_OUTPUT_PORT_TYPE
-Allout[3] <= ain.DB_MAX_OUTPUT_PORT_TYPE
-Allout[4] <= bin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[5] <= bin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[6] <= bin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[7] <= bin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[8] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[9] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[10] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[11] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-Allout[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
-Allout[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
-Allout[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Block1|RandomSeq:inst8|RandomPLLs:inst
-inclk0 => sub_wire7[0].IN1
-c0 <= altpll:altpll_component.clk
-c1 <= altpll:altpll_component.clk
-c2 <= altpll:altpll_component.clk
-c3 <= altpll:altpll_component.clk
-locked <= altpll:altpll_component.locked
-
-
-|Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component
-inclk[0] => RandomPLLs_altpll:auto_generated.inclk[0]
-inclk[1] => RandomPLLs_altpll:auto_generated.inclk[1]
-fbin => ~NO_FANOUT~
-pllena => ~NO_FANOUT~
-clkswitch => ~NO_FANOUT~
-areset => ~NO_FANOUT~
-pfdena => ~NO_FANOUT~
-clkena[0] => ~NO_FANOUT~
-clkena[1] => ~NO_FANOUT~
-clkena[2] => ~NO_FANOUT~
-clkena[3] => ~NO_FANOUT~
-clkena[4] => ~NO_FANOUT~
-clkena[5] => ~NO_FANOUT~
-extclkena[0] => ~NO_FANOUT~
-extclkena[1] => ~NO_FANOUT~
-extclkena[2] => ~NO_FANOUT~
-extclkena[3] => ~NO_FANOUT~
-scanclk => ~NO_FANOUT~
-scanclkena => ~NO_FANOUT~
-scanaclr => ~NO_FANOUT~
-scanread => ~NO_FANOUT~
-scanwrite => ~NO_FANOUT~
-scandata => ~NO_FANOUT~
-phasecounterselect[0] => ~NO_FANOUT~
-phasecounterselect[1] => ~NO_FANOUT~
-phasecounterselect[2] => ~NO_FANOUT~
-phasecounterselect[3] => ~NO_FANOUT~
-phaseupdown => ~NO_FANOUT~
-phasestep => ~NO_FANOUT~
-configupdate => ~NO_FANOUT~
-fbmimicbidir <> <GND>
-clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
-clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
-clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
-clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
-clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
-extclk[0] <= <GND>
-extclk[1] <= <GND>
-extclk[2] <= <GND>
-extclk[3] <= <GND>
-clkbad[0] <= <GND>
-clkbad[1] <= <GND>
-enable1 <= <GND>
-enable0 <= <GND>
-activeclock <= <GND>
-clkloss <= <GND>
-locked <= RandomPLLs_altpll:auto_generated.locked
-scandataout <= <GND>
-scandone <= <GND>
-sclkout0 <= <GND>
-sclkout1 <= <GND>
-phasedone <= <GND>
-vcooverrange <= <GND>
-vcounderrange <= <GND>
-fbout <= <GND>
-fref <= <GND>
-icdrclk <= <GND>
-
-
-|Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated
-clk[0] <= pll1.CLK
-clk[1] <= pll1.CLK1
-clk[2] <= pll1.CLK2
-clk[3] <= pll1.CLK3
-clk[4] <= pll1.CLK4
-inclk[0] => pll1.CLK
-inclk[1] => pll1.CLK1
-locked <= pll1.LOCKED
 
 

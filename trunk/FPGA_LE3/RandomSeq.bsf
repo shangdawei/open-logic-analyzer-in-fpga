@@ -37,6 +37,20 @@ applicable agreement for further details.
 		(text "TestOutput[14..0]" (rect 66 27 163 41)(font "Arial" (font_size 8)))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "CLKout1" (rect 0 0 48 14)(font "Arial" (font_size 8)))
+		(text "CLKout1" (rect 115 43 163 57)(font "Arial" (font_size 8)))
+		(line (pt 184 48)(pt 168 48)(line_width 1))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "CLKout2" (rect 0 0 48 14)(font "Arial" (font_size 8)))
+		(text "CLKout2" (rect 115 59 163 73)(font "Arial" (font_size 8)))
+		(line (pt 184 64)(pt 168 64)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 168 80)(line_width 1))
 	)

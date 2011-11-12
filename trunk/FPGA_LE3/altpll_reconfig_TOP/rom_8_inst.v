@@ -1,6 +1,0 @@
-rom_8	rom_8_inst (
-	.address ( address_sig ),
-	.clock ( clock_sig ),
-	.rden ( rden_sig ),
-	.q ( q_sig )
-	);
