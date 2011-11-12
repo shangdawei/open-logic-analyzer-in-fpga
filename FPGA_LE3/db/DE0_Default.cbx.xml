@@ -2,37 +2,15 @@
 <LOG_ROOT>
 	<PROJECT NAME="DE0_Default">
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|Decode24:inst5|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_muxer:u3|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_6qc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|rom_3:inst6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_uca1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|the_pll:inst8|altpll:altpll_component" CBX_FILE_NAME="the_pll_altpll.v"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst7|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr14" CBX_FILE_NAME="cntr_sij.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_1:u4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2da1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst8|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr15" CBX_FILE_NAME="cntr_pij.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|rom_4:inst7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_iba1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst10|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst9|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr16" CBX_FILE_NAME="cntr_30l.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_2:u5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_vca1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0" CBX_FILE_NAME="altsyncram_sch3.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|rom_1:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2da1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|UartPLL:inst19|altpll:altpll_component" CBX_FILE_NAME="UartPLL_altpll.v"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|altsyncram:altsyncram4" CBX_FILE_NAME="altsyncram_fv01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_compare:cmpr7" CBX_FILE_NAME="cmpr_tnd.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr1" CBX_FILE_NAME="cntr_30l.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_3:u6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_uca1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_add_sub:add_sub5" CBX_FILE_NAME="add_sub_hpa.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr2" CBX_FILE_NAME="cntr_9cj.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|the_pll:u1|altpll:altpll_component" CBX_FILE_NAME="the_pll_altpll.v"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|rom_2:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_vca1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_add_sub:add_sub6" CBX_FILE_NAME="add_sub_k8a.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr12" CBX_FILE_NAME="cntr_30l.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr3" CBX_FILE_NAME="cntr_pij.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_decode:decode11" CBX_FILE_NAME="decode_2af.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|rom_4:u7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_iba1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_h0c1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_Reconfig_TOP:inst|altpll_reconfig_rom:inst|pll_reconfig_circuit:u2|pll_reconfig_circuit_pllrcfg_go91:pll_reconfig_circuit_pllrcfg_go91_component|lpm_counter:cntr13" CBX_FILE_NAME="cntr_qij.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0" CBX_FILE_NAME="altsyncram_sch3.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component" CBX_FILE_NAME="RandomPLLs_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|UartPLL:inst19|altpll:altpll_component" CBX_FILE_NAME="UartPLL_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst10|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst7|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst9|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component" CBX_FILE_NAME="TMPPLL_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|RandomSeq:inst8|PLLout:inst1|altpll:altpll_component" CBX_FILE_NAME="PLLout_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst8|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

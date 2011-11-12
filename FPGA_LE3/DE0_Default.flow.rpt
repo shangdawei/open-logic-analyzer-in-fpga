@@ -1,5 +1,5 @@
 Flow report for DE0_Default
-Sat Nov 12 13:52:34 2011
+Sat Nov 12 16:08:31 2011
 Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 12 13:52:34 2011            ;
+; Flow Status                        ; Successful - Sat Nov 12 16:08:30 2011            ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SP 0.08 SJ Full Version ;
 ; Revision Name                      ; DE0_Default                                      ;
 ; Top-level Entity Name              ; Block1                                           ;
@@ -46,15 +46,15 @@ applicable agreement for further details.
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
 ; Met timing requirements            ; No                                               ;
-; Total logic elements               ; 1,486 / 15,408 ( 10 % )                          ;
-;     Total combinational functions  ; 1,163 / 15,408 ( 8 % )                           ;
-;     Dedicated logic registers      ; 803 / 15,408 ( 5 % )                             ;
-; Total registers                    ; 842                                              ;
-; Total pins                         ; 108 / 347 ( 31 % )                               ;
+; Total logic elements               ; 1,349 / 15,408 ( 9 % )                           ;
+;     Total combinational functions  ; 1,030 / 15,408 ( 7 % )                           ;
+;     Dedicated logic registers      ; 960 / 15,408 ( 6 % )                             ;
+; Total registers                    ; 1002                                             ;
+; Total pins                         ; 112 / 347 ( 32 % )                               ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 263,312 / 516,096 ( 51 % )                       ;
+; Total memory bits                  ; 262,144 / 516,096 ( 51 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                  ;
-; Total PLLs                         ; 3 / 4 ( 75 % )                                   ;
+; Total PLLs                         ; 4 / 4 ( 100 % )                                  ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2011 13:47:09 ;
+; Start date & time ; 11/12/2011 16:01:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_Default         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ applicable agreement for further details.
 ; ALLOW_POWER_UP_DONT_CARE                          ; Off                                                       ; On                             ; --          ; --                  ;
 ; AUTO_RAM_TO_LCELL_CONVERSION                      ; On                                                        ; Off                            ; --          ; --                  ;
 ; AUTO_SHIFT_REGISTER_RECOGNITION                   ; Off                                                       ; Auto                           ; --          ; --                  ;
-; COMPILER_SIGNATURE_ID                             ; 119779273479113.132107682907096                           ; --                             ; --          ; --                  ;
+; COMPILER_SIGNATURE_ID                             ; 119779273479113.132108487107532                           ; --                             ; --          ; --                  ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE                  ; Speed                                                     ; Balanced                       ; --          ; --                  ;
 ; ECO_OPTIMIZE_TIMING                               ; On                                                        ; Off                            ; --          ; --                  ;
 ; EDA_OUTPUT_DATA_FORMAT                            ; None                                                      ; --                             ; --          ; eda_timing_analysis ;
@@ -103,6 +103,7 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                                      ; ALTPLL_RECONFIG                                           ; --                             ; --          ; --                  ;
 ; IP_TOOL_NAME                                      ; LPM_SHIFTREG                                              ; --                             ; --          ; --                  ;
 ; IP_TOOL_NAME                                      ; LPM_LATCH                                                 ; --                             ; --          ; --                  ;
+; IP_TOOL_NAME                                      ; ALTPLL                                                    ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.1                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
@@ -111,6 +112,7 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                                   ; 9.1                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
+; IP_TOOL_VERSION                                   ; 9.1                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.1                                                       ; --                             ; --          ; --                  ;
 ; MAX_CORE_JUNCTION_TEMP                            ; 85                                                        ; --                             ; --          ; --                  ;
 ; MIN_CORE_JUNCTION_TEMP                            ; 0                                                         ; --                             ; --          ; --                  ;
@@ -162,6 +164,13 @@ applicable agreement for further details.
 ; MISC_FILE                                         ; ADD_LATCH_bb.v                                            ; --                             ; --          ; --                  ;
 ; MISC_FILE                                         ; ADD_LATCH.inc                                             ; --                             ; --          ; --                  ;
 ; MISC_FILE                                         ; ADD_LATCH.cmp                                             ; --                             ; --          ; --                  ;
+; MISC_FILE                                         ; PLLout.bsf                                                ; --                             ; --          ; --                  ;
+; MISC_FILE                                         ; PLLout_inst.v                                             ; --                             ; --          ; --                  ;
+; MISC_FILE                                         ; PLLout_bb.v                                               ; --                             ; --          ; --                  ;
+; MISC_FILE                                         ; PLLout.inc                                                ; --                             ; --          ; --                  ;
+; MISC_FILE                                         ; PLLout.cmp                                                ; --                             ; --          ; --                  ;
+; MISC_FILE                                         ; PLLout.ppf                                                ; --                             ; --          ; --                  ;
+; MISC_FILE                                         ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.dpf         ; --                             ; --          ; --                  ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE                       ; 1.2V                                                      ; --                             ; --          ; --                  ;
 ; NUMBER_OF_DESTINATION_TO_REPORT                   ; 100                                                       ; 10                             ; --          ; --                  ;
 ; NUMBER_OF_PATHS_TO_REPORT                         ; 2000                                                      ; 200                            ; --          ; --                  ;
@@ -209,11 +218,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:14     ; 1.0                     ; 254 MB              ; 00:00:14                           ;
-; Fitter                  ; 00:04:55     ; 2.3                     ; 403 MB              ; 00:05:43                           ;
-; Assembler               ; 00:00:07     ; 1.0                     ; 228 MB              ; 00:00:07                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 186 MB              ; 00:00:04                           ;
-; Total                   ; 00:05:19     ; --                      ; --                  ; 00:06:08                           ;
+; Analysis & Synthesis    ; 00:00:16     ; 1.0                     ; 247 MB              ; 00:00:12                           ;
+; Fitter                  ; 00:06:47     ; 2.7                     ; 418 MB              ; 00:07:52                           ;
+; Assembler               ; 00:00:07     ; 1.0                     ; 228 MB              ; 00:00:06                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 185 MB              ; 00:00:03                           ;
+; Total                   ; 00:07:12     ; --                      ; --                  ; 00:08:13                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

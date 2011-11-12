@@ -866,21 +866,9 @@ set_instance_assignment -name TH_REQUIREMENT "2 ns" -from "RandomSeq:inst8|*" -t
 set_instance_assignment -name TH_REQUIREMENT "2 ns" -from * -to "RandomSeq:inst8|*"
 set_location_assignment PIN_H6 -to sw2
 set_global_assignment -name VERILOG_FILE trigclrdelay.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTPLLS.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/ALTREC.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/control_sm.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/pll_reconfig_circuit.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_1.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_2.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_3.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_4.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/rom_muxer.v
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/the_pll.v
 set_global_assignment -name BDF_FILE 16Trig.bdf
 set_global_assignment -name VERILOG_FILE CLKD16.v
 set_global_assignment -name SDC_FILE TS_constraints.sdc
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/altpll_reconfig_rom.v
-set_global_assignment -name BDF_FILE altpll_reconfig_TOP/PLL_Reconfig_TOP.bdf
 set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
 set_global_assignment -name QIP_FILE TMPPLL.qip
 set_global_assignment -name BDF_FILE Block1.bdf
@@ -916,8 +904,15 @@ set_global_assignment -name VERILOG_FILE TestOutput.v
 set_global_assignment -name BDF_FILE RandomSeq.bdf
 set_global_assignment -name VERILOG_FILE LED_SW.v
 set_global_assignment -name BDF_FILE UartTop.bdf
-set_global_assignment -name VERILOG_FILE altpll_reconfig_TOP/CLKMaker.v
 set_global_assignment -name PARALLEL_SYNTHESIS ON
 set_global_assignment -name REMOVE_REDUNDANT_LOGIC_CELLS ON
 set_global_assignment -name ALLOW_ANY_SHIFT_REGISTER_SIZE_FOR_RECOGNITION ON
+set_global_assignment -name BDF_FILE PLL_TIMER.bdf
+set_global_assignment -name VERILOG_FILE OutCLKCtri.v
+set_global_assignment -name QIP_FILE PLLout.qip
+set_location_assignment PIN_V5 -to CLKIN8
+set_location_assignment PIN_U7 -to CLKIN9
+set_location_assignment PIN_V6 -to CLKout1
+set_location_assignment PIN_V7 -to CLKout2
+set_global_assignment -name MISC_FILE "Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/DE0_Default.dpf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
