@@ -54,39 +54,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-OutputController
-# storage
-db|DE0_Default.(2).cnf
-db|DE0_Default.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-OFF
-}
-# case_sensitive
-# source_file
-outputcontroller.v
-b7a16794cd1dd13a45933d3040d8e12
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-OFF
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
 MyUart
 # storage
 db|DE0_Default.(3).cnf
@@ -18707,42 +18674,6 @@ core:inst14
 
 # end
 # entity
-OutputController
-# storage
-db|DE0_Default.(116).cnf
-db|DE0_Default.(116).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-outputcontroller.v
-b7a16794cd1dd13a45933d3040d8e12
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-OutputController:inst13
-}
-# macro_sequence
-
-# end
-# entity
 MyUart
 # storage
 db|DE0_Default.(117).cnf
@@ -29233,30 +29164,10 @@ RandomSeq:inst8|PLLout:inst1|altpll:altpll_component|PLLout_altpll:auto_generate
 ALTERA_RESERVED_QISALTERA_RESERVED_QIS
 # end
 # entity
-Block1
-# storage
-db|DE0_Default.(0).cnf
-db|DE0_Default.(0).cnf
-# case_insensitive
-# source_file
-block1.bdf
-7872ad23a0527dac84a67ac148f2c546
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 OutClkCtrl
 # storage
-db|DE0_Default.(30).cnf
-db|DE0_Default.(30).cnf
+db|DE0_Default.(2).cnf
+db|DE0_Default.(2).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -29264,7 +29175,7 @@ ON
 # case_sensitive
 # source_file
 outclkctri.v
-5377737515be5d2c5b4693e159d217fa
+7ffa198248964ab1658ff2fdf8b3d8
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -29284,6 +29195,62 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 PLL_TIMER:inst|OutClkCtrl:inst2
+}
+# macro_sequence
+
+# end
+# entity
+OutputController
+# storage
+db|DE0_Default.(30).cnf
+db|DE0_Default.(30).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+outputcontroller.v
+8d3ec1f3bb99722af2d6ce63e2c16e5a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+OutputController:inst13
+}
+# macro_sequence
+
+# end
+# entity
+Block1
+# storage
+db|DE0_Default.(0).cnf
+db|DE0_Default.(0).cnf
+# case_insensitive
+# source_file
+block1.bdf
+d21263a6f45a8755b08036b9b1f87376
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
 }
 # macro_sequence
 
