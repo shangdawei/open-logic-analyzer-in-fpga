@@ -9,17 +9,31 @@ PLLin
 
 input CLKin1;
 input CLKin2;
-wire CLKin;
-assign CLKin = (subsel)?CLKin1:CLKin2;
-input [7:0]cmd;
+
+reg CLKdiv1;//CLK 50M
+reg [2:0]divs1;
+reg CLKdiv2;//CLK 5M
+reg [2:0]divs2;
+reg CLKdiv3;//CLK 500K
+reg [2:0]divs3;
+reg CLKdiv4;//CLK 50K
+reg [2:0]divs4;
+reg CLKdiv5;//CLK 5K
+reg [2:0]divs5;
+reg CLKdiv6;//CLK 500
+reg [2:0]divs6;
+
+reg CLKin;
+input [3:0]cmd;
 input wcmd;
 output [2:0]CLKout;
 input [2:0]PLLin;
 
-reg subsel;
+reg [2:0]subsel;
 reg sel;
 reg [2:0] CLKin_ex3;
 reg [2:0] state;
+
 
 
 assign CLKout[0]=(sel)?(CLKin_ex3[0]):(PLLin[0]);
@@ -30,10 +44,32 @@ assign CLKout[2]=(sel)?(CLKin_ex3[2]):(PLLin[2]);
 		sel=0;
 		subsel=0;
 	end
+	
+	always begin
+		case (subsel)
+			3'd0:
+				CLKin=CLKin1;
+			3'd1:
+				CLKin=CLKin2;
+			3'd2:
+				CLKin=CLKdiv1;
+			3'd3:
+				CLKin=CLKdiv2;
+				
+			3'd4:
+				CLKin=CLKdiv3;
+			3'd5:
+				CLKin=CLKdiv4;
+			3'd6:
+				CLKin=CLKdiv5;
+			default:
+				CLKin=CLKdiv6;
+		endcase
+	end
 
 	always @(posedge wcmd)begin
-		sel=cmd[0];
-		subsel=cmd[1];
+		sel=cmd[3];
+		subsel=cmd[2:0];
 	end
 
 	always @(negedge CLKin)begin
@@ -46,5 +82,55 @@ assign CLKout[2]=(sel)?(CLKin_ex3[2]):(PLLin[2]);
 		CLKin_ex3[2]=state[2];
 	end
 
+	always @(negedge PLLin[0])begin
+		if(divs1<4)begin
+			divs1=divs1+1;
+		end else begin
+			divs1=0;
+			CLKdiv1=~CLKdiv1;
+		end
+	end
+	
+	always @(negedge CLKdiv1)begin
+		if(divs2<4)begin
+			divs2=divs2+1;
+		end else begin
+			divs2=0;
+			CLKdiv2=~CLKdiv2;
+		end
+	end
+	
+	always @(negedge CLKdiv2)begin
+		if(divs3<4)begin
+			divs3=divs3+1;
+		end else begin
+			divs3=0;
+			CLKdiv3=~CLKdiv3;
+		end
+	end
+	always @(negedge CLKdiv3)begin
+		if(divs4<4)begin
+			divs4=divs4+1;
+		end else begin
+			divs4=0;
+			CLKdiv4=~CLKdiv4;
+		end
+	end
+	always @(negedge CLKdiv4)begin
+		if(divs5<4)begin
+			divs5=divs5+1;
+		end else begin
+			divs5=0;
+			CLKdiv5=~CLKdiv5;
+		end
+	end
+	always @(negedge CLKdiv5)begin
+		if(divs6<4)begin
+			divs6=divs6+1;
+		end else begin
+			divs6=0;
+			CLKdiv6=~CLKdiv6;
+		end
+	end
 	
 endmodule

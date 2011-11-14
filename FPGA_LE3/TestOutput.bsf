@@ -38,25 +38,11 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "cin" (rect 0 0 14 12)(font "Arial" ))
-		(text "cin" (rect 21 59 35 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
-	)
-	(port
 		(pt 128 32)
 		(output)
-		(text "out" (rect 0 0 15 12)(font "Arial" ))
-		(text "out" (rect 92 27 107 39)(font "Arial" ))
-		(line (pt 128 32)(pt 112 32)(line_width 1))
-	)
-	(port
-		(pt 128 48)
-		(output)
 		(text "Allout[14..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "Allout[14..0]" (rect 48 43 107 55)(font "Arial" ))
-		(line (pt 128 48)(pt 112 48)(line_width 3))
+		(text "Allout[14..0]" (rect 48 27 107 39)(font "Arial" ))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 112 80)(line_width 1))

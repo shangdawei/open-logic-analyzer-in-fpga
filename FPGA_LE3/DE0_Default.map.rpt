@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_Default
-Sat Nov 12 18:29:16 2011
+Mon Nov 14 23:50:45 2011
 Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
 
 
@@ -18,8 +18,8 @@ Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
  10. General Register Statistics
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram
- 14. Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated
+ 13. Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram
+ 14. Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated
  15. Parameter Settings for User Entity Instance: UartPLL:inst19|altpll:altpll_component
  16. Parameter Settings for User Entity Instance: AllStore:inst2|FIFO:inst|scfifo:scfifo_component
  17. Parameter Settings for User Entity Instance: AllStore:inst2|QSignal:inst3|ASignal:inst5|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component
@@ -62,7 +62,7 @@ Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
  54. Parameter Settings for User Entity Instance: 16Trig:inst4|QTrig:inst10|Decode24:inst4|lpm_decode:lpm_decode_component
  55. Parameter Settings for User Entity Instance: RandomSeq:inst8|PLLout:inst1|altpll:altpll_component
  56. Parameter Settings for User Entity Instance: RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component
- 57. Parameter Settings for Inferred Entity Instance: AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0
+ 57. Parameter Settings for Inferred Entity Instance: AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0
  58. altpll Parameter Settings by Entity Instance
  59. scfifo Parameter Settings by Entity Instance
  60. lpm_shiftreg Parameter Settings by Entity Instance
@@ -93,15 +93,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 12 18:29:16 2011            ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 14 23:50:45 2011            ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SP 0.08 SJ Full Version ;
 ; Revision Name                      ; DE0_Default                                      ;
 ; Top-level Entity Name              ; Block1                                           ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 1,027                                            ;
-;     Total combinational functions  ; 825                                              ;
-;     Dedicated logic registers      ; 562                                              ;
-; Total registers                    ; 562                                              ;
+; Total logic elements               ; 1,077                                            ;
+;     Total combinational functions  ; 873                                              ;
+;     Dedicated logic registers      ; 599                                              ;
+; Total registers                    ; 599                                              ;
 ; Total pins                         ; 87                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 262,144                                          ;
@@ -238,7 +238,6 @@ applicable agreement for further details.
 ; AllStore.bdf                     ; yes             ; User Block Diagram/Schematic File  ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/AllStore.bdf                ;
 ; MyRx.v                           ; yes             ; User Verilog HDL File              ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/MyRx.v                      ;
 ; Decode.v                         ; yes             ; User Verilog HDL File              ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/Decode.v                    ;
-; TestOutput.v                     ; yes             ; User Verilog HDL File              ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/TestOutput.v                ;
 ; RandomSeq.bdf                    ; yes             ; User Block Diagram/Schematic File  ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/RandomSeq.bdf               ;
 ; LED_SW.v                         ; yes             ; User Verilog HDL File              ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/LED_SW.v                    ;
 ; PLL_TIMER.bdf                    ; yes             ; User Block Diagram/Schematic File  ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/PLL_TIMER.bdf               ;
@@ -247,7 +246,7 @@ applicable agreement for further details.
 ; altpll.tdf                       ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/megafunctions/altpll.tdf       ;
 ; db/uartpll_altpll.v              ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/uartpll_altpll.v         ;
 ; scfifo.tdf                       ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/megafunctions/scfifo.tdf       ;
-; db/scfifo_h0c1.tdf               ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/scfifo_h0c1.tdf          ;
+; db/scfifo_i0c1.tdf               ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/scfifo_i0c1.tdf          ;
 ; db/a_dpfifo_ku81.tdf             ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/a_dpfifo_ku81.tdf        ;
 ; db/altsyncram_t1g1.tdf           ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/altsyncram_t1g1.tdf      ;
 ; db/cmpr_ms8.tdf                  ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/cmpr_ms8.tdf             ;
@@ -256,12 +255,14 @@ applicable agreement for further details.
 ; db/cntr_4ob.tdf                  ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/cntr_4ob.tdf             ;
 ; 21mux.bdf                        ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/21mux.bdf      ;
 ; lpm_shiftreg.tdf                 ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/megafunctions/lpm_shiftreg.tdf ;
-; db/tmppll_altpll.v               ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/tmppll_altpll.v          ;
+; db/tmppll_altpll1.v              ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/tmppll_altpll1.v         ;
 ; lpm_decode.tdf                   ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/megafunctions/lpm_decode.tdf   ;
 ; db/decode_cdi.tdf                ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/decode_cdi.tdf           ;
 ; db/pllout_altpll.v               ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/pllout_altpll.v          ;
 ; randomplls.v                     ; yes             ; Auto-Found Wizard-Generated File   ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/randomplls.v                ;
 ; db/randomplls_altpll.v           ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/randomplls_altpll.v      ;
+; 4count.bdf                       ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/4count.bdf     ;
+; 74138.bdf                        ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/74138.bdf      ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/megafunctions/altsyncram.tdf   ;
 ; db/altsyncram_sch3.tdf           ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/altsyncram_sch3.tdf      ;
 ; db/decode_dra.tdf                ; yes             ; Auto-Generated Megafunction        ; Z:/FCD-3009-1.1/DE0/OPLA/FPGA_LE3/db/decode_dra.tdf           ;
@@ -274,20 +275,20 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------+
 ; Resource                                    ; Usage                         ;
 +---------------------------------------------+-------------------------------+
-; Estimated Total logic elements              ; 1,027                         ;
+; Estimated Total logic elements              ; 1,077                         ;
 ;                                             ;                               ;
-; Total combinational functions               ; 825                           ;
+; Total combinational functions               ; 873                           ;
 ; Logic element usage by number of LUT inputs ;                               ;
-;     -- 4 input functions                    ; 585                           ;
-;     -- 3 input functions                    ; 96                            ;
-;     -- <=2 input functions                  ; 144                           ;
+;     -- 4 input functions                    ; 586                           ;
+;     -- 3 input functions                    ; 124                           ;
+;     -- <=2 input functions                  ; 163                           ;
 ;                                             ;                               ;
 ; Logic elements by mode                      ;                               ;
-;     -- normal mode                          ; 777                           ;
+;     -- normal mode                          ; 825                           ;
 ;     -- arithmetic mode                      ; 48                            ;
 ;                                             ;                               ;
-; Total registers                             ; 562                           ;
-;     -- Dedicated logic registers            ; 562                           ;
+; Total registers                             ; 599                           ;
+;     -- Dedicated logic registers            ; 599                           ;
 ;     -- I/O registers                        ; 0                             ;
 ;                                             ;                               ;
 ; I/O pins                                    ; 87                            ;
@@ -295,8 +296,8 @@ applicable agreement for further details.
 ; Total PLLs                                  ; 4                             ;
 ; Maximum fan-out node                        ; AllStore:inst2|21mux:inst16|5 ;
 ; Maximum fan-out                             ; 566                           ;
-; Total fan-out                               ; 15963                         ;
-; Average fan-out                             ; 7.69                          ;
+; Total fan-out                               ; 16162                         ;
+; Average fan-out                             ; 7.48                          ;
 +---------------------------------------------+-------------------------------+
 
 
@@ -305,7 +306,7 @@ applicable agreement for further details.
 +----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
 +----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Block1                                                  ; 825 (2)           ; 562 (1)      ; 262144      ; 0            ; 0       ; 0         ; 87   ; 0            ; |Block1                                                                                                                                                                                                    ; work         ;
+; |Block1                                                  ; 873 (2)           ; 599 (1)      ; 262144      ; 0            ; 0       ; 0         ; 87   ; 0            ; |Block1                                                                                                                                                                                                    ; work         ;
 ;    |16Trig:inst4|                                        ; 86 (1)            ; 100 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|16Trig:inst4                                                                                                                                                                                       ;              ;
 ;       |Decode24:inst5|                                   ; 4 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|16Trig:inst4|Decode24:inst5                                                                                                                                                                        ;              ;
 ;          |lpm_decode:lpm_decode_component|               ; 4 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|16Trig:inst4|Decode24:inst5|lpm_decode:lpm_decode_component                                                                                                                                        ;              ;
@@ -346,16 +347,16 @@ applicable agreement for further details.
 ;       |21mux:inst16|                                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|21mux:inst16                                                                                                                                                                        ;              ;
 ;       |FIFO:inst|                                        ; 162 (0)           ; 54 (0)       ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst                                                                                                                                                                           ;              ;
 ;          |scfifo:scfifo_component|                       ; 162 (0)           ; 54 (0)       ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component                                                                                                                                                   ;              ;
-;             |scfifo_h0c1:auto_generated|                 ; 162 (5)           ; 54 (1)       ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated                                                                                                                        ;              ;
-;                |a_dpfifo_ku81:dpfifo|                    ; 157 (25)          ; 53 (17)      ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo                                                                                                   ;              ;
-;                   |altsyncram_t1g1:FIFOram|              ; 100 (0)           ; 4 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram                                                                           ;              ;
-;                      |altsyncram:ram_block1a0|           ; 100 (0)           ; 4 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0                                                   ;              ;
-;                         |altsyncram_sch3:auto_generated| ; 100 (0)           ; 4 (4)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated                    ;              ;
-;                            |decode_dra:decode2|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|decode_dra:decode2 ;              ;
-;                            |mux_0pb:mux3|                ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|mux_0pb:mux3       ;              ;
-;                   |cntr_3ob:rd_ptr_msb|                  ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_3ob:rd_ptr_msb                                                                               ;              ;
-;                   |cntr_4ob:wr_ptr|                      ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_4ob:wr_ptr                                                                                   ;              ;
-;                   |cntr_go7:usedw_counter|               ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_go7:usedw_counter                                                                            ;              ;
+;             |scfifo_i0c1:auto_generated|                 ; 162 (5)           ; 54 (1)       ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated                                                                                                                        ;              ;
+;                |a_dpfifo_ku81:dpfifo|                    ; 157 (25)          ; 53 (17)      ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo                                                                                                   ;              ;
+;                   |altsyncram_t1g1:FIFOram|              ; 100 (0)           ; 4 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram                                                                           ;              ;
+;                      |altsyncram:ram_block1a0|           ; 100 (0)           ; 4 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0                                                   ;              ;
+;                         |altsyncram_sch3:auto_generated| ; 100 (0)           ; 4 (4)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated                    ;              ;
+;                            |decode_dra:decode2|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|decode_dra:decode2 ;              ;
+;                            |mux_0pb:mux3|                ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|mux_0pb:mux3       ;              ;
+;                   |cntr_3ob:rd_ptr_msb|                  ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_3ob:rd_ptr_msb                                                                               ;              ;
+;                   |cntr_4ob:wr_ptr|                      ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_4ob:wr_ptr                                                                                   ;              ;
+;                   |cntr_go7:usedw_counter|               ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_go7:usedw_counter                                                                            ;              ;
 ;       |QSignal:inst3|                                    ; 0 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|QSignal:inst3                                                                                                                                                                       ;              ;
 ;          |ASignal:inst5|                                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|QSignal:inst3|ASignal:inst5                                                                                                                                                         ;              ;
 ;             |ShiftReg:inst1|                             ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|AllStore:inst2|QSignal:inst3|ASignal:inst5|ShiftReg:inst1                                                                                                                                          ;              ;
@@ -450,19 +451,22 @@ applicable agreement for further details.
 ;    |MyRx:inst1|                                          ; 37 (37)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|MyRx:inst1                                                                                                                                                                                         ;              ;
 ;    |MyUart:inst15|                                       ; 27 (27)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|MyUart:inst15                                                                                                                                                                                      ;              ;
 ;    |OutputController:inst13|                             ; 337 (337)         ; 142 (142)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|OutputController:inst13                                                                                                                                                                            ;              ;
-;    |PLL_TIMER:inst|                                      ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst                                                                                                                                                                                     ;              ;
-;       |OutClkCtrl:inst2|                                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst|OutClkCtrl:inst2                                                                                                                                                                    ;              ;
+;    |PLL_TIMER:inst|                                      ; 38 (0)            ; 34 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst                                                                                                                                                                                     ;              ;
+;       |OutClkCtrl:inst2|                                 ; 38 (38)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst|OutClkCtrl:inst2                                                                                                                                                                    ;              ;
 ;       |TMPPLL:inst|                                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst|TMPPLL:inst                                                                                                                                                                         ;              ;
 ;          |altpll:altpll_component|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component                                                                                                                                                 ;              ;
-;             |TMPPLL_altpll:auto_generated|               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated                                                                                                                    ;              ;
-;    |RandomSeq:inst8|                                     ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8                                                                                                                                                                                    ;              ;
+;             |TMPPLL_altpll1:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated                                                                                                                   ;              ;
+;    |RandomSeq:inst8|                                     ; 19 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8                                                                                                                                                                                    ;              ;
+;       |4count:inst4|                                     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|4count:inst4                                                                                                                                                                       ;              ;
+;       |74138:inst6|                                      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|74138:inst6                                                                                                                                                                        ;              ;
+;       |CLKD16:inst10|                                    ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|CLKD16:inst10                                                                                                                                                                      ;              ;
+;       |CLKD16:inst12|                                    ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|CLKD16:inst12                                                                                                                                                                      ;              ;
 ;       |PLLout:inst1|                                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|PLLout:inst1                                                                                                                                                                       ;              ;
 ;          |altpll:altpll_component|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|PLLout:inst1|altpll:altpll_component                                                                                                                                               ;              ;
 ;             |PLLout_altpll:auto_generated|               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|PLLout:inst1|altpll:altpll_component|PLLout_altpll:auto_generated                                                                                                                  ;              ;
 ;       |RandomPLLs:inst|                                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|RandomPLLs:inst                                                                                                                                                                    ;              ;
 ;          |altpll:altpll_component|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component                                                                                                                                            ;              ;
 ;             |RandomPLLs_altpll:auto_generated|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated                                                                                                           ;              ;
-;       |TestOutput:inst4|                                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|RandomSeq:inst8|TestOutput:inst4                                                                                                                                                                   ;              ;
 ;    |SEG7_LUT:inst28|                                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|SEG7_LUT:inst28                                                                                                                                                                                    ;              ;
 ;    |SEG7_LUT:inst29|                                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|SEG7_LUT:inst29                                                                                                                                                                                    ;              ;
 ;    |SEG7_LUT:inst42|                                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|SEG7_LUT:inst42                                                                                                                                                                                    ;              ;
@@ -481,7 +485,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
 ; Name                                                                                                                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|ALTSYNCRAM ; M9K  ; Simple Dual Port ; 2048         ; 128          ; 2048         ; 128          ; 262144 ; None ;
+; AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|ALTSYNCRAM ; M9K  ; Simple Dual Port ; 2048         ; 128          ; 2048         ; 128          ; 262144 ; None ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
 
 
@@ -493,7 +497,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TrigClrDelay:inst25|tdelay[11]                                                                                                                                                               ; Stuck at GND due to stuck port data_in ;
 ; MyRx:inst1|state[3]                                                                                                                                                                          ; Stuck at GND due to stuck port data_in ;
 ; core:inst14|state[0]                                                                                                                                                                         ; Stuck at GND due to stuck port data_in ;
-; AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|wren_a_store ; Lost fanout                            ;
+; AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|wren_a_store ; Lost fanout                            ;
 ; Total Number of Removed Registers = 4                                                                                                                                                        ;                                        ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
 
@@ -503,7 +507,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 562   ;
+; Total registers                              ; 599   ;
 ; Number of registers using Synchronous Clear  ; 68    ;
 ; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 187   ;
@@ -530,8 +534,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MyUart:inst15|store[5]                  ; 1       ;
 ; MyUart:inst15|store[6]                  ; 1       ;
 ; TrigClrDelay:inst25|tdelay[2]           ; 1       ;
-; TrigClrDelay:inst25|tdelay[6]           ; 1       ;
 ; TrigClrDelay:inst25|tdelay[5]           ; 1       ;
+; TrigClrDelay:inst25|tdelay[6]           ; 1       ;
 ; OutputController:inst13|tDataIn[41]     ; 1       ;
 ; OutputController:inst13|tDataIn[73]     ; 1       ;
 ; OutputController:inst13|tDataIn[9]      ; 1       ;
@@ -623,37 +627,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Block1|TrigClrDelay:inst25|state[3]                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst|CMD[3]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst1|CMD[3]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst2|CMD[3]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst3|CMD[1]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst8|trig:inst|CMD[1]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst|CMD[0]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst1|CMD[1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst2|CMD[1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst7|trig:inst3|CMD[3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst8|trig:inst|CMD[3]   ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst8|trig:inst1|CMD[0]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst8|trig:inst2|CMD[0]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst8|trig:inst2|CMD[3]  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst8|trig:inst3|CMD[3]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst9|trig:inst|CMD[3]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst9|trig:inst1|CMD[3]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst9|trig:inst2|CMD[0]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst9|trig:inst|CMD[0]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst9|trig:inst1|CMD[1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst9|trig:inst2|CMD[1]  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst9|trig:inst3|CMD[1]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst10|trig:inst|CMD[3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst10|trig:inst|CMD[1]  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst10|trig:inst1|CMD[1] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst10|trig:inst2|CMD[1] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst10|trig:inst3|CMD[3] ;
-; 3:1                ; 48 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |Block1|OutputController:inst13|tDataIn[87]         ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |Block1|TrigClrDelay:inst25|delaytime[2]            ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Block1|MyUart:inst15|index[1]                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Block1|MyRx:inst1|ReadyDelay[1]                    ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Block1|MyRx:inst1|state[2]                         ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Block1|MyRx:inst1|num[3]                           ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Block1|core:inst14|timecalc[3]                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst10|trig:inst2|CMD[3] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Block1|16Trig:inst4|QTrig:inst10|trig:inst3|CMD[1] ;
+; 3:1                ; 48 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |Block1|OutputController:inst13|tDataIn[95]         ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |Block1|TrigClrDelay:inst25|delaytime[5]            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Block1|MyUart:inst15|index[0]                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Block1|MyRx:inst1|ReadyDelay[3]                    ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Block1|MyRx:inst1|state[1]                         ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Block1|MyRx:inst1|num[0]                           ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Block1|core:inst14|timecalc[2]                     ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |Block1|core:inst14|state[1]                        ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; Yes        ; |Block1|OutputController:inst13|DataOut[5]          ;
-; 3:1                ; 80 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; Yes        ; |Block1|OutputController:inst13|tDataIn[108]        ;
+; 17:1               ; 8 bits    ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; Yes        ; |Block1|OutputController:inst13|DataOut[2]          ;
+; 3:1                ; 80 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; Yes        ; |Block1|OutputController:inst13|tDataIn[88]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram ;
+; Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram ;
 +---------------------------------+--------------+------+-----------------------------------------------------------------------------------------+
 ; Assignment                      ; Value        ; From ; To                                                                                      ;
 +---------------------------------+--------------+------+-----------------------------------------------------------------------------------------+
@@ -662,7 +666,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated ;
+; Source assignments for AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated ;
 +---------------------------------+--------------+------+------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Assignment                      ; Value        ; From ; To                                                                                                                                             ;
 +---------------------------------+--------------+------+------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1060,13 +1064,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; OVERFLOW_CHECKING       ; OFF         ; Untyped                                               ;
 ; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                               ;
 ; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                               ;
-; ALMOST_FULL_VALUE       ; 1020        ; Signed Integer                                        ;
+; ALMOST_FULL_VALUE       ; 2020        ; Signed Integer                                        ;
 ; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                               ;
 ; USE_EAB                 ; ON          ; Untyped                                               ;
 ; MAXIMIZE_SPEED          ; 5           ; Untyped                                               ;
 ; DEVICE_FAMILY           ; Cyclone III ; Untyped                                               ;
 ; OPTIMIZE_FOR_SPEED      ; 9           ; Untyped                                               ;
-; CBXI_PARAMETER          ; scfifo_h0c1 ; Untyped                                               ;
+; CBXI_PARAMETER          ; scfifo_i0c1 ; Untyped                                               ;
 +-------------------------+-------------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1787,20 +1791,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; M2                            ; 1                 ; Untyped                                     ;
 ; N2                            ; 1                 ; Untyped                                     ;
 ; SS                            ; 1                 ; Untyped                                     ;
-; C0_HIGH                       ; 1                 ; Signed Integer                              ;
-; C1_HIGH                       ; 1                 ; Signed Integer                              ;
-; C2_HIGH                       ; 4                 ; Signed Integer                              ;
-; C3_HIGH                       ; 4                 ; Signed Integer                              ;
+; C0_HIGH                       ; 2                 ; Signed Integer                              ;
+; C1_HIGH                       ; 2                 ; Signed Integer                              ;
+; C2_HIGH                       ; 8                 ; Signed Integer                              ;
+; C3_HIGH                       ; 8                 ; Signed Integer                              ;
 ; C4_HIGH                       ; 3                 ; Signed Integer                              ;
 ; C5_HIGH                       ; 0                 ; Untyped                                     ;
 ; C6_HIGH                       ; 0                 ; Untyped                                     ;
 ; C7_HIGH                       ; 0                 ; Untyped                                     ;
 ; C8_HIGH                       ; 0                 ; Untyped                                     ;
 ; C9_HIGH                       ; 0                 ; Untyped                                     ;
-; C0_LOW                        ; 1                 ; Signed Integer                              ;
-; C1_LOW                        ; 1                 ; Signed Integer                              ;
-; C2_LOW                        ; 4                 ; Signed Integer                              ;
-; C3_LOW                        ; 4                 ; Signed Integer                              ;
+; C0_LOW                        ; 2                 ; Signed Integer                              ;
+; C1_LOW                        ; 2                 ; Signed Integer                              ;
+; C2_LOW                        ; 8                 ; Signed Integer                              ;
+; C3_LOW                        ; 8                 ; Signed Integer                              ;
 ; C4_LOW                        ; 2                 ; Signed Integer                              ;
 ; C5_LOW                        ; 0                 ; Untyped                                     ;
 ; C6_LOW                        ; 0                 ; Untyped                                     ;
@@ -1808,9 +1812,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; C8_LOW                        ; 0                 ; Untyped                                     ;
 ; C9_LOW                        ; 0                 ; Untyped                                     ;
 ; C0_INITIAL                    ; 1                 ; Signed Integer                              ;
-; C1_INITIAL                    ; 2                 ; Signed Integer                              ;
+; C1_INITIAL                    ; 3                 ; Signed Integer                              ;
 ; C2_INITIAL                    ; 1                 ; Signed Integer                              ;
-; C3_INITIAL                    ; 5                 ; Signed Integer                              ;
+; C3_INITIAL                    ; 9                 ; Signed Integer                              ;
 ; C4_INITIAL                    ; 1                 ; Signed Integer                              ;
 ; C5_INITIAL                    ; 0                 ; Untyped                                     ;
 ; C6_INITIAL                    ; 0                 ; Untyped                                     ;
@@ -2003,7 +2007,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; C7_TEST_SOURCE                ; 5                 ; Untyped                                     ;
 ; C8_TEST_SOURCE                ; 5                 ; Untyped                                     ;
 ; C9_TEST_SOURCE                ; 5                 ; Untyped                                     ;
-; CBXI_PARAMETER                ; TMPPLL_altpll     ; Untyped                                     ;
+; CBXI_PARAMETER                ; TMPPLL_altpll1    ; Untyped                                     ;
 ; VCO_FREQUENCY_CONTROL         ; AUTO              ; Untyped                                     ;
 ; VCO_PHASE_SHIFT_STEP          ; 0                 ; Untyped                                     ;
 ; WIDTH_CLOCK                   ; 5                 ; Signed Integer                              ;
@@ -2496,7 +2500,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; OPERATION_MODE                ; SOURCE_SYNCHRONOUS ; Untyped                                         ;
 ; PLL_TYPE                      ; AUTO               ; Untyped                                         ;
 ; QUALIFY_CONF_DONE             ; OFF                ; Untyped                                         ;
-; COMPENSATE_CLOCK              ; CLK3               ; Untyped                                         ;
+; COMPENSATE_CLOCK              ; CLK0               ; Untyped                                         ;
 ; SCAN_CHAIN                    ; LONG               ; Untyped                                         ;
 ; PRIMARY_CLOCK                 ; INCLK0             ; Untyped                                         ;
 ; INCLK0_INPUT_FREQUENCY        ; 20000              ; Signed Integer                                  ;
@@ -2526,20 +2530,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLK6_MULTIPLY_BY              ; 0                  ; Untyped                                         ;
 ; CLK5_MULTIPLY_BY              ; 1                  ; Untyped                                         ;
 ; CLK4_MULTIPLY_BY              ; 1                  ; Untyped                                         ;
-; CLK3_MULTIPLY_BY              ; 1                  ; Signed Integer                                  ;
+; CLK3_MULTIPLY_BY              ; 1                  ; Untyped                                         ;
 ; CLK2_MULTIPLY_BY              ; 1                  ; Signed Integer                                  ;
 ; CLK1_MULTIPLY_BY              ; 1                  ; Signed Integer                                  ;
-; CLK0_MULTIPLY_BY              ; 2                  ; Signed Integer                                  ;
+; CLK0_MULTIPLY_BY              ; 3                  ; Signed Integer                                  ;
 ; CLK9_DIVIDE_BY                ; 0                  ; Untyped                                         ;
 ; CLK8_DIVIDE_BY                ; 0                  ; Untyped                                         ;
 ; CLK7_DIVIDE_BY                ; 0                  ; Untyped                                         ;
 ; CLK6_DIVIDE_BY                ; 0                  ; Untyped                                         ;
 ; CLK5_DIVIDE_BY                ; 1                  ; Untyped                                         ;
 ; CLK4_DIVIDE_BY                ; 1                  ; Untyped                                         ;
-; CLK3_DIVIDE_BY                ; 20                 ; Signed Integer                                  ;
-; CLK2_DIVIDE_BY                ; 20000              ; Signed Integer                                  ;
-; CLK1_DIVIDE_BY                ; 50                 ; Signed Integer                                  ;
-; CLK0_DIVIDE_BY                ; 5                  ; Signed Integer                                  ;
+; CLK3_DIVIDE_BY                ; 1                  ; Untyped                                         ;
+; CLK2_DIVIDE_BY                ; 5000               ; Signed Integer                                  ;
+; CLK1_DIVIDE_BY                ; 250                ; Signed Integer                                  ;
+; CLK0_DIVIDE_BY                ; 23                 ; Signed Integer                                  ;
 ; CLK9_PHASE_SHIFT              ; 0                  ; Untyped                                         ;
 ; CLK8_PHASE_SHIFT              ; 0                  ; Untyped                                         ;
 ; CLK7_PHASE_SHIFT              ; 0                  ; Untyped                                         ;
@@ -2548,7 +2552,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLK4_PHASE_SHIFT              ; 0                  ; Untyped                                         ;
 ; CLK3_PHASE_SHIFT              ; 0                  ; Untyped                                         ;
 ; CLK2_PHASE_SHIFT              ; 0                  ; Untyped                                         ;
-; CLK1_PHASE_SHIFT              ; 500000             ; Untyped                                         ;
+; CLK1_PHASE_SHIFT              ; 2500000            ; Untyped                                         ;
 ; CLK0_PHASE_SHIFT              ; 0                  ; Untyped                                         ;
 ; CLK5_TIME_DELAY               ; 0                  ; Untyped                                         ;
 ; CLK4_TIME_DELAY               ; 0                  ; Untyped                                         ;
@@ -2562,7 +2566,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLK6_DUTY_CYCLE               ; 50                 ; Untyped                                         ;
 ; CLK5_DUTY_CYCLE               ; 50                 ; Untyped                                         ;
 ; CLK4_DUTY_CYCLE               ; 50                 ; Untyped                                         ;
-; CLK3_DUTY_CYCLE               ; 50                 ; Signed Integer                                  ;
+; CLK3_DUTY_CYCLE               ; 50                 ; Untyped                                         ;
 ; CLK2_DUTY_CYCLE               ; 50                 ; Signed Integer                                  ;
 ; CLK1_DUTY_CYCLE               ; 50                 ; Signed Integer                                  ;
 ; CLK0_DUTY_CYCLE               ; 50                 ; Signed Integer                                  ;
@@ -2796,7 +2800,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; PORT_CLK0                     ; PORT_USED          ; Untyped                                         ;
 ; PORT_CLK1                     ; PORT_USED          ; Untyped                                         ;
 ; PORT_CLK2                     ; PORT_USED          ; Untyped                                         ;
-; PORT_CLK3                     ; PORT_USED          ; Untyped                                         ;
+; PORT_CLK3                     ; PORT_UNUSED        ; Untyped                                         ;
 ; PORT_CLK4                     ; PORT_UNUSED        ; Untyped                                         ;
 ; PORT_CLK5                     ; PORT_UNUSED        ; Untyped                                         ;
 ; PORT_CLK6                     ; PORT_UNUSED        ; Untyped                                         ;
@@ -2862,7 +2866,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0 ;
+; Parameter Settings for Inferred Entity Instance: AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0 ;
 +------------------------------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Name                     ; Value                  ; Type                                                                                                                                ;
 +------------------------------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
@@ -3087,7 +3091,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                      ; Value                                                                                                                                            ;
 +-------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Number of entity instances                ; 1                                                                                                                                                ;
-; Entity Instance                           ; AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0 ;
+; Entity Instance                           ; AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                                                                                                        ;
 ;     -- WIDTH_A                            ; 128                                                                                                                                              ;
 ;     -- NUMWORDS_A                         ; 2048                                                                                                                                             ;
@@ -3107,7 +3111,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
-    Info: Processing started: Sat Nov 12 18:29:04 2011
+    Info: Processing started: Mon Nov 14 23:50:32 2011
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_Default -c DE0_Default
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file trigclrdelay.v
@@ -3226,21 +3230,13 @@ Info (10662): Verilog HDL Assignment information at Myuart.v(16): truncated unsi
 Info (10662): Verilog HDL Assignment information at Myuart.v(17): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Info (10662): Verilog HDL Assignment information at Myuart.v(29): truncated unsized constant literal with size 32 to size 5 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(32): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(32): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(33): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(33): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(34): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(34): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(35): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(35): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(36): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(36): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(37): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(37): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(38): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(38): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Myuart.v(39): size of case item expression (32) exceeds the size of the case expression (5)
-Info (10662): Verilog HDL Assignment information at Myuart.v(39): truncated unsized constant literal with size 32 to size 1 with no loss of information
 Info (10662): Verilog HDL Assignment information at Myuart.v(44): truncated unsized constant literal with size 32 to size 5 with no loss of information
 Warning (10230): Verilog HDL assignment warning at Myuart.v(46): truncated value with size 32 to match size of target (5)
 Info (10662): Verilog HDL Assignment information at Myuart.v(49): truncated unsized constant literal with size 32 to size 1 with no loss of information
@@ -3319,7 +3315,7 @@ Info: Elaborating entity "scfifo" for hierarchy "AllStore:inst2|FIFO:inst|scfifo
 Info: Elaborated megafunction instantiation "AllStore:inst2|FIFO:inst|scfifo:scfifo_component"
 Info: Instantiated megafunction "AllStore:inst2|FIFO:inst|scfifo:scfifo_component" with the following parameter:
     Info: Parameter "add_ram_output_register" = "ON"
-    Info: Parameter "almost_full_value" = "1020"
+    Info: Parameter "almost_full_value" = "2020"
     Info: Parameter "intended_device_family" = "Cyclone III"
     Info: Parameter "lpm_hint" = "RAM_BLOCK_TYPE=M9K"
     Info: Parameter "lpm_numwords" = "2048"
@@ -3330,28 +3326,28 @@ Info: Instantiated megafunction "AllStore:inst2|FIFO:inst|scfifo:scfifo_componen
     Info: Parameter "overflow_checking" = "OFF"
     Info: Parameter "underflow_checking" = "OFF"
     Info: Parameter "use_eab" = "ON"
-Info: Found 1 design units, including 1 entities, in source file db/scfifo_h0c1.tdf
-    Info: Found entity 1: scfifo_h0c1
-Info: Elaborating entity "scfifo_h0c1" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/scfifo_i0c1.tdf
+    Info: Found entity 1: scfifo_i0c1
+Info: Elaborating entity "scfifo_i0c1" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated"
 Info: Found 1 design units, including 1 entities, in source file db/a_dpfifo_ku81.tdf
     Info: Found entity 1: a_dpfifo_ku81
-Info: Elaborating entity "a_dpfifo_ku81" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo"
+Info: Elaborating entity "a_dpfifo_ku81" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo"
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_t1g1.tdf
     Info: Found entity 1: altsyncram_t1g1
-Info: Elaborating entity "altsyncram_t1g1" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram"
+Info: Elaborating entity "altsyncram_t1g1" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram"
 Info: Found 1 design units, including 1 entities, in source file db/cmpr_ms8.tdf
     Info: Found entity 1: cmpr_ms8
-Info: Elaborating entity "cmpr_ms8" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cmpr_ms8:almost_full_comparer"
-Info: Elaborating entity "cmpr_ms8" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cmpr_ms8:three_comparison"
+Info: Elaborating entity "cmpr_ms8" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cmpr_ms8:almost_full_comparer"
+Info: Elaborating entity "cmpr_ms8" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cmpr_ms8:three_comparison"
 Info: Found 1 design units, including 1 entities, in source file db/cntr_3ob.tdf
     Info: Found entity 1: cntr_3ob
-Info: Elaborating entity "cntr_3ob" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_3ob:rd_ptr_msb"
+Info: Elaborating entity "cntr_3ob" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_3ob:rd_ptr_msb"
 Info: Found 1 design units, including 1 entities, in source file db/cntr_go7.tdf
     Info: Found entity 1: cntr_go7
-Info: Elaborating entity "cntr_go7" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_go7:usedw_counter"
+Info: Elaborating entity "cntr_go7" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_go7:usedw_counter"
 Info: Found 1 design units, including 1 entities, in source file db/cntr_4ob.tdf
     Info: Found entity 1: cntr_4ob
-Info: Elaborating entity "cntr_4ob" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_4ob:wr_ptr"
+Info: Elaborating entity "cntr_4ob" for hierarchy "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_4ob:wr_ptr"
 Info: Elaborating entity "21mux" for hierarchy "AllStore:inst2|21mux:inst19"
 Info: Elaborated megafunction instantiation "AllStore:inst2|21mux:inst19"
 Info: Elaborating entity "QSignal" for hierarchy "AllStore:inst2|QSignal:inst3"
@@ -3427,24 +3423,24 @@ Info: Instantiated megafunction "PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_compon
     Info: Parameter "self_reset_on_loss_lock" = "ON"
     Info: Parameter "vco_post_scale" = "1"
     Info: Parameter "width_clock" = "5"
-    Info: Parameter "c0_high" = "1"
+    Info: Parameter "c0_high" = "2"
     Info: Parameter "c0_initial" = "1"
-    Info: Parameter "c0_low" = "1"
+    Info: Parameter "c0_low" = "2"
     Info: Parameter "c0_mode" = "even"
     Info: Parameter "c0_ph" = "0"
-    Info: Parameter "c1_high" = "1"
-    Info: Parameter "c1_initial" = "2"
-    Info: Parameter "c1_low" = "1"
+    Info: Parameter "c1_high" = "2"
+    Info: Parameter "c1_initial" = "3"
+    Info: Parameter "c1_low" = "2"
     Info: Parameter "c1_mode" = "even"
     Info: Parameter "c1_ph" = "0"
-    Info: Parameter "c2_high" = "4"
+    Info: Parameter "c2_high" = "8"
     Info: Parameter "c2_initial" = "1"
-    Info: Parameter "c2_low" = "4"
+    Info: Parameter "c2_low" = "8"
     Info: Parameter "c2_mode" = "even"
     Info: Parameter "c2_ph" = "0"
-    Info: Parameter "c3_high" = "4"
-    Info: Parameter "c3_initial" = "5"
-    Info: Parameter "c3_low" = "4"
+    Info: Parameter "c3_high" = "8"
+    Info: Parameter "c3_initial" = "9"
+    Info: Parameter "c3_low" = "8"
     Info: Parameter "c3_mode" = "even"
     Info: Parameter "c3_ph" = "0"
     Info: Parameter "c4_high" = "3"
@@ -3457,14 +3453,25 @@ Info: Instantiated megafunction "PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_compon
     Info: Parameter "clk2_counter" = "c2"
     Info: Parameter "clk3_counter" = "c3"
     Info: Parameter "clk4_counter" = "c4"
-Info: Found 1 design units, including 1 entities, in source file db/tmppll_altpll.v
-    Info: Found entity 1: TMPPLL_altpll
-Info: Elaborating entity "TMPPLL_altpll" for hierarchy "PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/tmppll_altpll1.v
+    Info: Found entity 1: TMPPLL_altpll1
+Info: Elaborating entity "TMPPLL_altpll1" for hierarchy "PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated"
 Info: Elaborating entity "OutClkCtrl" for hierarchy "PLL_TIMER:inst|OutClkCtrl:inst2"
-Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(30): truncated unsized constant literal with size 32 to size 1 with no loss of information
-Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(31): truncated unsized constant literal with size 32 to size 1 with no loss of information
-Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(40): truncated value with size 32 to match size of target (3)
-Warning (10862): input port "cmd[7..2]" at OutCLKCtri.v(14) has no fan-out
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(44): truncated unsized constant literal with size 32 to size 1 with no loss of information
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(45): truncated unsized constant literal with size 32 to size 3 with no loss of information
+Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(76): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(87): truncated value with size 32 to match size of target (3)
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(89): truncated unsized constant literal with size 32 to size 3 with no loss of information
+Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(96): truncated value with size 32 to match size of target (3)
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(98): truncated unsized constant literal with size 32 to size 3 with no loss of information
+Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(105): truncated value with size 32 to match size of target (3)
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(107): truncated unsized constant literal with size 32 to size 3 with no loss of information
+Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(113): truncated value with size 32 to match size of target (3)
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(115): truncated unsized constant literal with size 32 to size 3 with no loss of information
+Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(121): truncated value with size 32 to match size of target (3)
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(123): truncated unsized constant literal with size 32 to size 3 with no loss of information
+Warning (10230): Verilog HDL assignment warning at OutCLKCtri.v(129): truncated value with size 32 to match size of target (3)
+Info (10662): Verilog HDL Assignment information at OutCLKCtri.v(131): truncated unsized constant literal with size 32 to size 3 with no loss of information
 Info: Elaborating entity "Decode" for hierarchy "Decode:inst3"
 Info (10662): Verilog HDL Assignment information at Decode.v(38): truncated unsized constant literal with size 32 to size 2 with no loss of information
 Warning (10271): Verilog HDL Case Statement warning at Decode.v(41): size of case item expression (32) exceeds the size of the case expression (2)
@@ -3608,7 +3615,6 @@ Info: Instantiated megafunction "RandomSeq:inst8|PLLout:inst1|altpll:altpll_comp
 Info: Found 1 design units, including 1 entities, in source file db/pllout_altpll.v
     Info: Found entity 1: PLLout_altpll
 Info: Elaborating entity "PLLout_altpll" for hierarchy "RandomSeq:inst8|PLLout:inst1|altpll:altpll_component|PLLout_altpll:auto_generated"
-Info: Elaborating entity "TestOutput" for hierarchy "RandomSeq:inst8|TestOutput:inst4"
 Warning: Using design file randomplls.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: RandomPLLs
 Info: Elaborating entity "RandomPLLs" for hierarchy "RandomSeq:inst8|RandomPLLs:inst"
@@ -3616,23 +3622,19 @@ Info: Elaborating entity "altpll" for hierarchy "RandomSeq:inst8|RandomPLLs:inst
 Info: Elaborated megafunction instantiation "RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component"
 Info: Instantiated megafunction "RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component" with the following parameter:
     Info: Parameter "bandwidth_type" = "AUTO"
-    Info: Parameter "clk0_divide_by" = "5"
+    Info: Parameter "clk0_divide_by" = "23"
     Info: Parameter "clk0_duty_cycle" = "50"
-    Info: Parameter "clk0_multiply_by" = "2"
+    Info: Parameter "clk0_multiply_by" = "3"
     Info: Parameter "clk0_phase_shift" = "0"
-    Info: Parameter "clk1_divide_by" = "50"
+    Info: Parameter "clk1_divide_by" = "250"
     Info: Parameter "clk1_duty_cycle" = "50"
     Info: Parameter "clk1_multiply_by" = "1"
-    Info: Parameter "clk1_phase_shift" = "500000"
-    Info: Parameter "clk2_divide_by" = "20000"
+    Info: Parameter "clk1_phase_shift" = "2500000"
+    Info: Parameter "clk2_divide_by" = "5000"
     Info: Parameter "clk2_duty_cycle" = "50"
     Info: Parameter "clk2_multiply_by" = "1"
     Info: Parameter "clk2_phase_shift" = "0"
-    Info: Parameter "clk3_divide_by" = "20"
-    Info: Parameter "clk3_duty_cycle" = "50"
-    Info: Parameter "clk3_multiply_by" = "1"
-    Info: Parameter "clk3_phase_shift" = "0"
-    Info: Parameter "compensate_clock" = "CLK3"
+    Info: Parameter "compensate_clock" = "CLK0"
     Info: Parameter "inclk0_input_frequency" = "20000"
     Info: Parameter "intended_device_family" = "Cyclone III"
     Info: Parameter "lpm_hint" = "CBX_MODULE_PREFIX=RandomPLLs"
@@ -3667,7 +3669,7 @@ Info: Instantiated megafunction "RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_c
     Info: Parameter "port_clk0" = "PORT_USED"
     Info: Parameter "port_clk1" = "PORT_USED"
     Info: Parameter "port_clk2" = "PORT_USED"
-    Info: Parameter "port_clk3" = "PORT_USED"
+    Info: Parameter "port_clk3" = "PORT_UNUSED"
     Info: Parameter "port_clk4" = "PORT_UNUSED"
     Info: Parameter "port_clk5" = "PORT_UNUSED"
     Info: Parameter "port_clkena0" = "PORT_UNUSED"
@@ -3685,14 +3687,18 @@ Info: Instantiated megafunction "RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_c
 Info: Found 1 design units, including 1 entities, in source file db/randomplls_altpll.v
     Info: Found entity 1: RandomPLLs_altpll
 Info: Elaborating entity "RandomPLLs_altpll" for hierarchy "RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated"
+Info: Elaborating entity "4count" for hierarchy "RandomSeq:inst8|4count:inst4"
+Info: Elaborated megafunction instantiation "RandomSeq:inst8|4count:inst4"
+Info: Elaborating entity "74138" for hierarchy "RandomSeq:inst8|74138:inst6"
+Info: Elaborated megafunction instantiation "RandomSeq:inst8|74138:inst6"
+Info: Elaborating entity "CLKD16" for hierarchy "RandomSeq:inst8|CLKD16:inst12"
+Warning (10230): Verilog HDL assignment warning at CLKD16.v(29): truncated value with size 32 to match size of target (3)
 Info: Elaborating entity "SEG7_LUT" for hierarchy "SEG7_LUT:inst28"
 Info: Elaborating entity "LED_SW" for hierarchy "LED_SW:inst17"
-Info: Elaborating entity "CLKD16" for hierarchy "CLKD16:inst21"
-Warning (10230): Verilog HDL assignment warning at CLKD16.v(29): truncated value with size 32 to match size of target (3)
 Warning (14130): Reduced register "TrigClrDelay:inst25|tdelay[11]" with stuck data_in port to stuck value GND
 Warning: Clock multiplexers are found and protected
     Warning: Found clock multiplexer PLL_TIMER:inst|OutClkCtrl:inst2|CLKout[2]
-    Warning: Found clock multiplexer PLL_TIMER:inst|OutClkCtrl:inst2|CLKin
+    Warning: Found clock multiplexer PLL_TIMER:inst|OutClkCtrl:inst2|Mux0
     Warning: Found clock multiplexer PLL_TIMER:inst|OutClkCtrl:inst2|CLKout[1]
     Warning: Found clock multiplexer PLL_TIMER:inst|OutClkCtrl:inst2|CLKout[0]
 Warning: Timing-Driven Synthesis is skipped because the Classic Timing Analyzer is turned on
@@ -3701,137 +3707,137 @@ Warning: Clock multiplexers are found and protected
     Warning: Found clock multiplexer AllStore:inst2|21mux:inst16|5~synth
 Warning (14130): Reduced register "core:inst14|state[0]" with stuck data_in port to stuck value GND
 Info: Converted the following 1 logical RAM block slices to smaller depth
-    Info: Converted the following logical RAM block "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ALTSYNCRAM" slices to smaller maximum block depth of 512
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a48"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a40"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a32"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a56"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a72"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a80"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a64"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a88"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a8"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a16"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a0"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a24"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a112"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a104"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a96"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a120"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a51"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a83"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a19"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a115"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a75"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a43"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a11"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a107"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a35"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a67"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a3"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a99"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a91"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a59"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a27"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a123"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a41"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a73"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a9"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a105"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a81"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a49"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a17"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a113"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a65"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a33"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a1"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a97"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a57"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a89"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a25"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a121"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a82"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a74"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a66"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a90"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a42"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a50"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a34"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a58"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a18"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a10"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a2"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a26"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a106"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a114"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a98"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a122"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a52"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a44"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a36"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a60"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a76"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a84"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a68"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a92"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a12"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a20"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a4"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a28"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a116"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a108"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a100"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a124"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a55"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a87"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a23"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a119"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a79"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a47"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a15"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a111"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a39"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a71"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a7"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a103"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a95"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a63"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a31"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a127"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a45"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a77"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a13"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a109"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a85"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a53"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a21"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a117"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a69"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a37"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a5"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a101"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a61"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a93"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a29"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a125"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a86"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a78"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a70"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a94"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a46"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a54"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a38"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a62"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a22"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a14"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a6"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a30"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a110"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a118"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a102"
-        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a126"
-Info: Elaborated megafunction instantiation "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0"
-Info: Instantiated megafunction "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0" with the following parameter:
+    Info: Converted the following logical RAM block "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ALTSYNCRAM" slices to smaller maximum block depth of 512
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a48"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a40"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a32"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a56"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a72"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a80"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a64"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a88"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a8"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a16"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a0"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a24"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a112"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a104"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a96"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a120"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a51"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a83"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a19"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a115"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a75"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a43"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a11"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a107"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a35"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a67"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a3"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a99"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a91"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a59"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a27"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a123"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a41"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a73"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a9"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a105"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a81"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a49"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a17"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a113"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a65"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a33"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a1"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a97"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a57"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a89"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a25"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a121"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a82"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a74"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a66"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a90"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a42"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a50"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a34"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a58"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a18"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a10"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a2"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a26"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a106"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a114"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a98"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a122"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a52"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a44"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a36"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a60"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a76"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a84"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a68"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a92"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a12"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a20"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a4"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a28"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a116"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a108"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a100"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a124"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a55"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a87"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a23"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a119"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a79"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a47"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a15"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a111"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a39"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a71"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a7"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a103"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a95"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a63"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a31"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a127"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a45"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a77"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a13"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a109"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a85"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a53"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a21"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a117"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a69"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a37"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a5"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a101"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a61"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a93"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a29"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a125"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a86"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a78"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a70"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a94"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a46"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a54"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a38"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a62"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a22"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a14"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a6"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a30"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a110"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a118"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a102"
+        Info: RAM block slice "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|ram_block1a126"
+Info: Elaborated megafunction instantiation "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0"
+Info: Instantiated megafunction "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0" with the following parameter:
     Info: Parameter "LPM_TYPE" = "altsyncram"
     Info: Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info: Parameter "WIDTH_A" = "128"
@@ -3901,20 +3907,18 @@ Critical Warning: Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register OutputController:inst13|tIndex[3] will power up to Low
     Critical Warning (18010): Register OutputController:inst13|tIndex[4] will power up to Low
 Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
-    Info: Register "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|wren_a_store" lost all its fanouts during netlist optimizations.
-Warning: PLL "PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|pll1" has parameter clk3_counter set to C3 specified but port CLK[3] is not connected
-Warning: PLL "RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|pll1" has parameter compensate_clock set to clock3 but port CLK[3] is not connected
-Warning: PLL "RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|pll1" has parameters clk3_multiply_by and clk3_divide_by specified but port CLK[3] is not connected
-Info: Implemented 1646 device resources after synthesis - the final resource count might be different
+    Info: Register "AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|wren_a_store" lost all its fanouts during netlist optimizations.
+Warning: PLL "PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|pll1" has parameter clk3_counter set to C3 specified but port CLK[3] is not connected
+Info: Implemented 1696 device resources after synthesis - the final resource count might be different
     Info: Implemented 25 input pins
     Info: Implemented 62 output pins
-    Info: Implemented 1043 logic cells
+    Info: Implemented 1093 logic cells
     Info: Implemented 512 RAM segments
     Info: Implemented 4 PLLs
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 64 warnings
-    Info: Peak virtual memory: 246 megabytes
-    Info: Processing ended: Sat Nov 12 18:29:16 2011
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 247 megabytes
+    Info: Processing ended: Mon Nov 14 23:50:45 2011
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
 
 

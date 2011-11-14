@@ -96,7 +96,7 @@ applicable agreement for further details.
 	(drawing
 		(text "(ack)" (rect 51 67 72 79)(font "Arial" ))
 		(text "128 bits x 2048 words" (rect 53 132 144 144)(font "Arial" ))
-		(text "almost_full at 1020" (rect 64 122 144 134)(font "Arial" ))
+		(text "almost_full at 2020" (rect 64 122 144 134)(font "Arial" ))
 		(line (pt 16 16)(pt 144 16)(line_width 1))
 		(line (pt 144 16)(pt 144 144)(line_width 1))
 		(line (pt 144 144)(pt 16 144)(line_width 1))

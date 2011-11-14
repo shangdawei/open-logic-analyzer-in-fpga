@@ -29,14 +29,14 @@ module MyUart(EN,Init,SendingCLK,Data,Tx,RdCLK);
 			index=0;
 		end else if(EN || (index!=0)) begin
 			case(index)
-				0:Tx=1;
-				1:Tx=0;
-				10:Tx=1;
-				11:Tx=1;
-				12:Tx=1;
-				13:Tx=1;
-				14:Tx=1;
-				15:Tx=1;
+				0:Tx=1'd1;
+				1:Tx=1'd0;
+				10:Tx=1'd1;
+				11:Tx=1'd1;
+				12:Tx=1'd1;
+				13:Tx=1'd1;
+				14:Tx=1'd1;
+				15:Tx=1'd1;
 				default:Tx=store[9-index];
 			endcase
 			

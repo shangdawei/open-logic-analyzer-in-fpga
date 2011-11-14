@@ -1,26 +1,32 @@
-module TestOutput(ain,bin,cin,out,Allout);
+module TestOutput(ain,bin,Allout);
 
 	input ain;
 	input bin;
-	input cin;
-	output out;
-	output [14:0] Allout;
+	output reg [14:0] Allout;
 
-	assign	out=(ain && bin) || cin;
-	assign	Allout[0]=ain;
-	assign	Allout[1]=ain;
-	assign	Allout[2]=ain;
-	assign	Allout[3]=ain;
-	assign	Allout[4]=bin;
-	assign	Allout[5]=bin;
-	assign	Allout[6]=bin;
-	assign	Allout[7]=bin;
-	assign	Allout[8]=cin;
-	assign	Allout[9]=cin;
-	assign	Allout[10]=cin;
-	assign	Allout[11]=cin;
-	assign	Allout[12]=out;
-	assign	Allout[13]=out;
-	assign	Allout[14]=out;
+	always begin
+		Allout[0]=bin;
+		Allout[1]=ain;
+		Allout[2]=ain ^ bin;
+		Allout[3]=ain | bin;
+	end
+
+	always @(posedge ain)begin
+		Allout[6:4]=Allout[6:4]+1;
+	end
+	
+	always begin
+		case (Allout[6:4])
+			3'b000:Allout[14:7]=8'b00000001;
+			3'b001:Allout[14:7]=8'b00000010;
+			3'b010:Allout[14:7]=8'b00000100;
+			3'b011:Allout[14:7]=8'b00001000;
+			
+			3'b100:Allout[14:7]=8'b00010000;
+			3'b101:Allout[14:7]=8'b00100000;
+			3'b110:Allout[14:7]=8'b01000000;
+			default:Allout[14:7]=8'b10000000;	
+		endcase
+	end
 
 endmodule

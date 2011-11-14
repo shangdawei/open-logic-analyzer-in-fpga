@@ -3,87 +3,97 @@ Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
 Type           : Worst-case tsu
-Slack          : -2.209 ns
-Required Time  : 2.000 ns
-Actual Time    : 4.209 ns
-From           : Xin[2]
-To             : AllStore:inst2|QSignal:inst3|ASignal:inst7|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
+Slack          : -2.625 ns
+Required Time  : 3.000 ns
+Actual Time    : 5.625 ns
+From           : Reload2
+To             : core:inst14|state[1]
 From Clock     : --
 To Clock       : CLKIN
-Failed Paths   : 86
+Failed Paths   : 51
 
 Type           : Worst-case tco
-Slack          : -19.097 ns
-Required Time  : 3.000 ns
-Actual Time    : 22.097 ns
-From           : CLKD16:inst23|CLKout
-To             : LED[2]
-From Clock     : CLKIN
+Slack          : -350.140 ns
+Required Time  : 2.000 ns
+Actual Time    : 352.140 ns
+From           : RandomSeq:inst8|74138:inst6|15~7_OTERM107
+To             : TestOut[7]
+From Clock     : CLKIN2
 To Clock       : --
-Failed Paths   : 56
+Failed Paths   : 57
 
 Type           : Worst-case tpd
-Slack          : -4.081 ns
-Required Time  : 2.000 ns
-Actual Time    : 6.081 ns
-From           : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[1]
-To             : TestOut[12]
+Slack          : -3.689 ns
+Required Time  : 3.000 ns
+Actual Time    : 6.689 ns
+From           : TrigEN_SW
+To             : LED[5]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 25
 
 Type           : Worst-case th
-Slack          : -4.505 ns
+Slack          : -8.813 ns
 Required Time  : 3.000 ns
-Actual Time    : 7.505 ns
-From           : Xin[14]
-To             : AllStore:inst2|QSignal:inst6|ASignal:inst7|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
+Actual Time    : 11.813 ns
+From           : Xin[11]
+To             : AllStore:inst2|QSignal:inst5|ASignal:inst8|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
 From Clock     : --
 To Clock       : CLKIN
-Failed Paths   : 88
+Failed Paths   : 71
 
-Type           : Clock Setup: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]'
-Slack          : -12.436 ns
-Required Time  : 125.00 MHz ( period = 8.000 ns )
+Type           : Clock Setup: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]'
+Slack          : -14.125 ns
+Required Time  : 62.50 MHz ( period = 16.000 ns )
 Actual Time    : N/A
-From           : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|_~1_OTERM95
+From           : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|_~1_OTERM113_Duplicate_11
 To             : core:inst14|state[1]
 From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
-Failed Paths   : 7654
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+Failed Paths   : 6213
 
-Type           : Clock Setup: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]'
-Slack          : -10.019 ns
-Required Time  : 500.00 MHz ( period = 2.000 ns )
+Type           : Clock Setup: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[1]'
+Slack          : -12.738 ns
+Required Time  : 250.00 MHz ( period = 4.000 ns )
 Actual Time    : N/A
-From           : AllStore:inst2|QSignal:inst5|ASignal:inst6|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
-To             : AllStore:inst2|QSignal:inst5|ASignal:inst6|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
-From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]
-Failed Paths   : 48
-
-Type           : Clock Setup: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[1]'
-Slack          : -7.930 ns
-Required Time  : 500.00 MHz ( period = 2.000 ns )
-Actual Time    : N/A
-From           : AllStore:inst2|QSignal:inst6|ASignal:inst8|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
-To             : AllStore:inst2|QSignal:inst6|ASignal:inst8|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]
-From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[1]
+From           : AllStore:inst2|QSignal:inst6|ASignal:inst7|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
+To             : AllStore:inst2|QSignal:inst6|ASignal:inst7|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[1]
 Failed Paths   : 48
 
 Type           : Clock Setup: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]'
-Slack          : -0.135 ns
+Slack          : -12.637 ns
 Required Time  : 0.12 MHz ( period = 8680.000 ns )
 Actual Time    : N/A
-From           : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_go7:usedw_counter|counter_reg_bit[2]
-To             : OutputController:inst13|RD
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
+From           : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|cntr_go7:usedw_counter|counter_reg_bit[2]~_Duplicate_7
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|_~1_OTERM113
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
 To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]
-Failed Paths   : 3
+Failed Paths   : 6167
+
+Type           : Clock Setup: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]'
+Slack          : -10.496 ns
+Required Time  : 0.46 MHz ( period = 2170.000 ns )
+Actual Time    : N/A
+From           : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|_~1_OTERM113_Duplicate_11
+To             : core:inst14|state[1]
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
+To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
+Failed Paths   : 6251
+
+Type           : Clock Setup: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]'
+Slack          : -9.915 ns
+Required Time  : 250.00 MHz ( period = 4.000 ns )
+Actual Time    : N/A
+From           : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|_~1_OTERM113_Duplicate_11
+To             : core:inst14|state[1]
+From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
+Failed Paths   : 6297
 
 Type           : Clock Setup: 'CLKIN'
-Slack          : 0.638 ns
+Slack          : 0.420 ns
 Required Time  : 50.00 MHz ( period = 20.000 ns )
 Actual Time    : N/A
 From           : Decode:inst3|adden
@@ -92,135 +102,185 @@ From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_gene
 To Clock       : CLKIN
 Failed Paths   : 0
 
-Type           : Clock Setup: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]'
-Slack          : 1.074 ns
-Required Time  : 0.46 MHz ( period = 2170.000 ns )
-Actual Time    : N/A
-From           : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|_~1_OTERM95
-To             : core:inst14|state[1]
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
-To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
+Type           : Clock Setup: 'RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[1]'
+Slack          : 4997.571 ns
+Required Time  : 0.20 MHz ( period = 5000.000 ns )
+Actual Time    : 411.69 MHz ( period = 2.429 ns )
+From           : RandomSeq:inst8|4count:inst4|44~0_OTERM1865
+To             : RandomSeq:inst8|74138:inst6|15~3_OTERM1949
+From Clock     : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[1]
+To Clock       : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[1]
 Failed Paths   : 0
+
+Type           : Clock Setup: 'RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[2]'
+Slack          : 99998.499 ns
+Required Time  : 0.01 MHz ( period = 100000.000 ns )
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : RandomSeq:inst8|CLKD16:inst12|step[1]
+To             : RandomSeq:inst8|CLKD16:inst12|CLKout~0_OTERM1873
+From Clock     : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[2]
+To Clock       : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[2]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]'
+Slack          : -13.157 ns
+Required Time  : 250.00 MHz ( period = 4.000 ns )
+Actual Time    : N/A
+From           : core:inst14|ENWFIFO
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|wrreq_delaya[1]
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
+Failed Paths   : 6295
 
 Type           : Clock Hold: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]'
-Slack          : -10.616 ns
+Slack          : -10.136 ns
 Required Time  : 0.46 MHz ( period = 2170.000 ns )
 Actual Time    : N/A
-From           : AllStore:inst2|QSignal:inst4|ASignal:inst7|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
-To             : AllStore:inst2|QSignal:inst4|ASignal:inst7|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[1]
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]
+From           : AllStore:inst2|QSignal:inst6|ASignal:inst8|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|ram_block1a2~porta_datain_reg0
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[1]
 To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
-Failed Paths   : 4666
+Failed Paths   : 5492
+
+Type           : Clock Hold: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]'
+Slack          : -3.176 ns
+Required Time  : 62.50 MHz ( period = 16.000 ns )
+Actual Time    : N/A
+From           : core:inst14|ENWFIFO
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|wrreq_delaya[1]
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+Failed Paths   : 185
 
 Type           : Clock Hold: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]'
-Slack          : -4.299 ns
+Slack          : -0.863 ns
 Required Time  : 0.12 MHz ( period = 8680.000 ns )
 Actual Time    : N/A
-From           : AllStore:inst2|QSignal:inst5|ASignal:inst6|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
-To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|ram_block1a1~porta_datain_reg0
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]
+From           : AllStore:inst2|QSignal:inst6|ASignal:inst8|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|ram_block1a2~porta_datain_reg0
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[1]
 To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]
-Failed Paths   : 1521
+Failed Paths   : 25
 
-Type           : Clock Hold: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]'
-Slack          : -2.353 ns
-Required Time  : 125.00 MHz ( period = 8.000 ns )
+Type           : Clock Hold: 'RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[2]'
+Slack          : 0.502 ns
+Required Time  : 0.01 MHz ( period = 100000.000 ns )
 Actual Time    : N/A
-From           : AllStore:inst2|QSignal:inst5|ASignal:inst6|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
-To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0|altsyncram_sch3:auto_generated|ram_block1a1~porta_datain_reg0
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
-Failed Paths   : 577
-
-Type           : Clock Hold: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]'
-Slack          : 0.569 ns
-Required Time  : 500.00 MHz ( period = 2.000 ns )
-Actual Time    : N/A
-From           : AllStore:inst2|QSignal:inst4|ASignal:inst7|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
-To             : AllStore:inst2|QSignal:inst4|ASignal:inst7|ShiftReg:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[1]
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[0]
+From           : RandomSeq:inst8|CLKD16:inst12|CLKout~0_OTERM1873
+To             : RandomSeq:inst8|CLKD16:inst12|CLKout~0_OTERM1873
+From Clock     : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[2]
+To Clock       : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[2]
 Failed Paths   : 0
 
-Type           : Clock Hold: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[1]'
-Slack          : 1.413 ns
-Required Time  : 500.00 MHz ( period = 2.000 ns )
+Type           : Clock Hold: 'RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[1]'
+Slack          : 0.894 ns
+Required Time  : 0.20 MHz ( period = 5000.000 ns )
 Actual Time    : N/A
-From           : AllStore:inst2|QSignal:inst5|ASignal:inst8|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
-To             : AllStore:inst2|QSignal:inst5|ASignal:inst8|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[1]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[1]
+From           : RandomSeq:inst8|74138:inst6|15~3_OTERM1949
+To             : RandomSeq:inst8|74138:inst6|15~3_OTERM99
+From Clock     : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[1]
+To Clock       : RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component|RandomPLLs_altpll:auto_generated|wire_pll1_clk[1]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[1]'
+Slack          : 1.421 ns
+Required Time  : 250.00 MHz ( period = 4.000 ns )
+Actual Time    : N/A
+From           : AllStore:inst2|QSignal:inst5|ASignal:inst5|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]
+To             : AllStore:inst2|QSignal:inst5|ASignal:inst5|ShiftReg:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[1]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[1]
 Failed Paths   : 0
 
 Type           : Clock Hold: 'CLKIN'
-Slack          : 14.252 ns
+Slack          : 14.467 ns
 Required Time  : 50.00 MHz ( period = 20.000 ns )
 Actual Time    : N/A
 From           : Decode:inst3|Order[3]
-To             : 16Trig:inst4|Decode24:inst5|lpm_decode:lpm_decode_component|decode_cdi:auto_generated|dffe1a[1]
+To             : 16Trig:inst4|Decode24:inst5|lpm_decode:lpm_decode_component|decode_cdi:auto_generated|dffe1a[2]
 From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
 To Clock       : CLKIN
 Failed Paths   : 0
 
-Type           : Recovery: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]'
-Slack          : -10.293 ns
-Required Time  : 5.438 ns
-Actual Time    : 15.731 ns
-From           : core:inst14|ClrFIFO_OTERM1827
-To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|_~1_OTERM95
+Type           : Recovery: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]'
+Slack          : -7.371 ns
+Required Time  : 11.290 ns
+Actual Time    : 18.661 ns
+From           : core:inst14|ClrFIFO_OTERM1825
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|dffe_af
 From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
-Failed Paths   : 61
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
+Failed Paths   : 67
+
+Type           : Recovery: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]'
+Slack          : -11.581 ns
+Required Time  : 7.080 ns
+Actual Time    : 18.661 ns
+From           : core:inst14|ClrFIFO_OTERM1825
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|dffe_af
+From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+Failed Paths   : 67
 
 Type           : Recovery: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]'
-Slack          : 2.141 ns
-Required Time  : 8.452 ns
-Actual Time    : 6.311 ns
-From           : core:inst14|ENOUT
-To             : OutputController:inst13|tDataIn[58]_OTERM1081
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
+Slack          : -10.212 ns
+Required Time  : 9.921 ns
+Actual Time    : 20.133 ns
+From           : core:inst14|ClrFIFO_OTERM1825
+To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|dffe_af
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
 To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]
-Failed Paths   : 0
+Failed Paths   : 330
 
 Type           : Recovery: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]'
-Slack          : 0.786 ns
-Required Time  : 5.542 ns
-Actual Time    : 4.756 ns
+Slack          : -11.377 ns
+Required Time  : 5.283 ns
+Actual Time    : 16.660 ns
 From           : core:inst14|state[3]~_Duplicate_1
 To             : inst49
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
 To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
-Failed Paths   : 0
+Failed Paths   : 68
 
-Type           : Removal: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]'
-Slack          : 2.774 ns
-Required Time  : 8.912 ns
-Actual Time    : 11.686 ns
-From           : core:inst14|ClrFIFO_OTERM1825
-To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|dffe_af~_Duplicate_6
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
-To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
-Failed Paths   : 0
+Type           : Removal: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]'
+Slack          : -12.147 ns
+Required Time  : 16.815 ns
+Actual Time    : 4.668 ns
+From           : core:inst14|ClrFIFO_OTERM1833
+To             : core:inst14|state[1]~2_OTERM111
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
+Failed Paths   : 67
+
+Type           : Removal: 'PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]'
+Slack          : -2.166 ns
+Required Time  : 10.480 ns
+Actual Time    : 8.314 ns
+From           : core:inst14|ClrFIFO_OTERM1833
+To             : core:inst14|state[1]~2_OTERM111
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+To Clock       : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[2]
+Failed Paths   : 35
 
 Type           : Removal: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]'
-Slack          : 0.267 ns
-Required Time  : 12.600 ns
-Actual Time    : 12.867 ns
-From           : core:inst14|ENOUT
-To             : OutputController:inst13|tIndex[4]
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
+Slack          : 2.808 ns
+Required Time  : 10.070 ns
+Actual Time    : 12.878 ns
+From           : core:inst14|ClrFIFO_OTERM1833
+To             : core:inst14|state[1]~2_OTERM111
+From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll1:auto_generated|wire_pll1_clk[0]
 To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[0]
 Failed Paths   : 0
 
 Type           : Removal: 'UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]'
-Slack          : 1.487 ns
-Required Time  : 14.553 ns
-Actual Time    : 16.040 ns
-From           : core:inst14|ClrFIFO_OTERM1825
-To             : AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|dffe_af~_Duplicate_6
-From Clock     : PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component|TMPPLL_altpll:auto_generated|wire_pll1_clk[2]
+Slack          : -5.574 ns
+Required Time  : 17.741 ns
+Actual Time    : 12.167 ns
+From           : core:inst14|ClrFIFO_OTERM1833
+To             : core:inst14|state[1]~2_OTERM111
+From Clock     : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
 To Clock       : UartPLL:inst19|altpll:altpll_component|UartPLL_altpll:auto_generated|wire_pll1_clk[1]
-Failed Paths   : 0
+Failed Paths   : 67
 
 Type           : Other violations (see messages)
 Slack          : 
@@ -240,7 +300,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 14835
+Failed Paths   : 37880
 
 --------------------------------------------------------------------------------------
 

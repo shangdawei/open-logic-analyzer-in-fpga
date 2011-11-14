@@ -1,5 +1,5 @@
 Flow report for DE0_Default
-Sat Nov 12 18:37:10 2011
+Tue Nov 15 00:00:00 2011
 Quartus II Version 9.1 Build 222 10/21/2009 Service Pack 0.08 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 12 18:37:09 2011            ;
+; Flow Status                        ; Successful - Mon Nov 14 23:59:59 2011            ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SP 0.08 SJ Full Version ;
 ; Revision Name                      ; DE0_Default                                      ;
 ; Top-level Entity Name              ; Block1                                           ;
@@ -46,10 +46,10 @@ applicable agreement for further details.
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
 ; Met timing requirements            ; No                                               ;
-; Total logic elements               ; 1,386 / 15,408 ( 9 % )                           ;
+; Total logic elements               ; 1,333 / 15,408 ( 9 % )                           ;
 ;     Total combinational functions  ; 1,063 / 15,408 ( 7 % )                           ;
-;     Dedicated logic registers      ; 962 / 15,408 ( 6 % )                             ;
-; Total registers                    ; 984                                              ;
+;     Dedicated logic registers      ; 888 / 15,408 ( 6 % )                             ;
+; Total registers                    ; 914                                              ;
 ; Total pins                         ; 87 / 347 ( 25 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 262,144 / 516,096 ( 51 % )                       ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2011 18:29:04 ;
+; Start date & time ; 11/14/2011 23:50:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_Default         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ applicable agreement for further details.
 ; ALLOW_POWER_UP_DONT_CARE                          ; Off                                                       ; On                             ; --          ; --                  ;
 ; AUTO_RAM_TO_LCELL_CONVERSION                      ; On                                                        ; Off                            ; --          ; --                  ;
 ; AUTO_SHIFT_REGISTER_RECOGNITION                   ; Off                                                       ; Auto                           ; --          ; --                  ;
-; COMPILER_SIGNATURE_ID                             ; 119779273479113.132109374407708                           ; --                             ; --          ; --                  ;
+; COMPILER_SIGNATURE_ID                             ; 119779273479113.132128583206008                           ; --                             ; --          ; --                  ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE                  ; Speed                                                     ; Balanced                       ; --          ; --                  ;
 ; ECO_OPTIMIZE_TIMING                               ; On                                                        ; Off                            ; --          ; --                  ;
 ; EDA_OUTPUT_DATA_FORMAT                            ; None                                                      ; --                             ; --          ; eda_timing_analysis ;
@@ -106,7 +106,7 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                                      ; ALTPLL                                                    ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.1                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
-; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
+; IP_TOOL_VERSION                                   ; 9.1                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.0                                                       ; --                             ; --          ; --                  ;
 ; IP_TOOL_VERSION                                   ; 9.1                                                       ; --                             ; --          ; --                  ;
@@ -218,11 +218,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:11     ; 1.0                     ; 246 MB              ; 00:00:12                           ;
-; Fitter                  ; 00:07:38     ; 2.8                     ; 422 MB              ; 00:08:41                           ;
-; Assembler               ; 00:00:07     ; 1.0                     ; 228 MB              ; 00:00:06                           ;
-; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 185 MB              ; 00:00:03                           ;
-; Total                   ; 00:07:58     ; --                      ; --                  ; 00:09:02                           ;
+; Analysis & Synthesis    ; 00:00:12     ; 1.0                     ; 247 MB              ; 00:00:13                           ;
+; Fitter                  ; 00:08:59     ; 2.6                     ; 411 MB              ; 00:10:21                           ;
+; Assembler               ; 00:00:07     ; 1.0                     ; 228 MB              ; 00:00:07                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 185 MB              ; 00:00:03                           ;
+; Total                   ; 00:09:21     ; --                      ; --                  ; 00:10:44                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

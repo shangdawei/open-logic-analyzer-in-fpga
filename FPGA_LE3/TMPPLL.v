@@ -167,24 +167,24 @@ module TMPPLL (
 		altpll_component.self_reset_on_loss_lock = "ON",
 		altpll_component.vco_post_scale = 1,
 		altpll_component.width_clock = 5,
-		altpll_component.c0_high = 1,
+		altpll_component.c0_high = 2,
 		altpll_component.c0_initial = 1,
-		altpll_component.c0_low = 1,
+		altpll_component.c0_low = 2,
 		altpll_component.c0_mode = "even",
 		altpll_component.c0_ph = 0,
-		altpll_component.c1_high = 1,
-		altpll_component.c1_initial = 2,
-		altpll_component.c1_low = 1,
+		altpll_component.c1_high = 2,
+		altpll_component.c1_initial = 3,
+		altpll_component.c1_low = 2,
 		altpll_component.c1_mode = "even",
 		altpll_component.c1_ph = 0,
-		altpll_component.c2_high = 4,
+		altpll_component.c2_high = 8,
 		altpll_component.c2_initial = 1,
-		altpll_component.c2_low = 4,
+		altpll_component.c2_low = 8,
 		altpll_component.c2_mode = "even",
 		altpll_component.c2_ph = 0,
-		altpll_component.c3_high = 4,
-		altpll_component.c3_initial = 5,
-		altpll_component.c3_low = 4,
+		altpll_component.c3_high = 8,
+		altpll_component.c3_initial = 9,
+		altpll_component.c3_low = 8,
 		altpll_component.c3_mode = "even",
 		altpll_component.c3_ph = 0,
 		altpll_component.c4_high = 3,
@@ -230,10 +230,10 @@ endmodule
 // Retrieval info: PRIVATE: DUTY_CYCLE2 STRING "50.00000000"
 // Retrieval info: PRIVATE: DUTY_CYCLE3 STRING "50.00000000"
 // Retrieval info: PRIVATE: DUTY_CYCLE4 STRING "50.00000000"
-// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE0 STRING "500.000000"
-// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE1 STRING "500.000000"
-// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE2 STRING "125.000000"
-// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE3 STRING "125.000000"
+// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE0 STRING "250.000000"
+// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE1 STRING "250.000000"
+// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE2 STRING "62.500000"
+// Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE3 STRING "62.500000"
 // Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE4 STRING "200.000000"
 // Retrieval info: PRIVATE: EXPLICIT_SWITCHOVER_COUNTER STRING "0"
 // Retrieval info: PRIVATE: EXT_FEEDBACK_RADIO STRING "0"
@@ -265,10 +265,10 @@ endmodule
 // Retrieval info: PRIVATE: MIRROR_CLK2 STRING "0"
 // Retrieval info: PRIVATE: MIRROR_CLK3 STRING "0"
 // Retrieval info: PRIVATE: MIRROR_CLK4 STRING "0"
-// Retrieval info: PRIVATE: MULT_FACTOR0 NUMERIC "10"
-// Retrieval info: PRIVATE: MULT_FACTOR1 NUMERIC "10"
-// Retrieval info: PRIVATE: MULT_FACTOR2 NUMERIC "10"
-// Retrieval info: PRIVATE: MULT_FACTOR3 NUMERIC "10"
+// Retrieval info: PRIVATE: MULT_FACTOR0 NUMERIC "5"
+// Retrieval info: PRIVATE: MULT_FACTOR1 NUMERIC "5"
+// Retrieval info: PRIVATE: MULT_FACTOR2 NUMERIC "5"
+// Retrieval info: PRIVATE: MULT_FACTOR3 NUMERIC "5"
 // Retrieval info: PRIVATE: MULT_FACTOR4 NUMERIC "5"
 // Retrieval info: PRIVATE: NORMAL_MODE_RADIO STRING "0"
 // Retrieval info: PRIVATE: OUTPUT_FREQ0 STRING "250.00000000"
@@ -398,24 +398,24 @@ endmodule
 // Retrieval info: CONSTANT: SELF_RESET_ON_LOSS_LOCK STRING "ON"
 // Retrieval info: CONSTANT: VCO_POST_SCALE NUMERIC "1"
 // Retrieval info: CONSTANT: WIDTH_CLOCK NUMERIC "5"
-// Retrieval info: CONSTANT: c0_high NUMERIC "1"
+// Retrieval info: CONSTANT: c0_high NUMERIC "2"
 // Retrieval info: CONSTANT: c0_initial NUMERIC "1"
-// Retrieval info: CONSTANT: c0_low NUMERIC "1"
+// Retrieval info: CONSTANT: c0_low NUMERIC "2"
 // Retrieval info: CONSTANT: c0_mode STRING "even"
 // Retrieval info: CONSTANT: c0_ph NUMERIC "0"
-// Retrieval info: CONSTANT: c1_high NUMERIC "1"
-// Retrieval info: CONSTANT: c1_initial NUMERIC "2"
-// Retrieval info: CONSTANT: c1_low NUMERIC "1"
+// Retrieval info: CONSTANT: c1_high NUMERIC "2"
+// Retrieval info: CONSTANT: c1_initial NUMERIC "3"
+// Retrieval info: CONSTANT: c1_low NUMERIC "2"
 // Retrieval info: CONSTANT: c1_mode STRING "even"
 // Retrieval info: CONSTANT: c1_ph NUMERIC "0"
-// Retrieval info: CONSTANT: c2_high NUMERIC "4"
+// Retrieval info: CONSTANT: c2_high NUMERIC "8"
 // Retrieval info: CONSTANT: c2_initial NUMERIC "1"
-// Retrieval info: CONSTANT: c2_low NUMERIC "4"
+// Retrieval info: CONSTANT: c2_low NUMERIC "8"
 // Retrieval info: CONSTANT: c2_mode STRING "even"
 // Retrieval info: CONSTANT: c2_ph NUMERIC "0"
-// Retrieval info: CONSTANT: c3_high NUMERIC "4"
-// Retrieval info: CONSTANT: c3_initial NUMERIC "5"
-// Retrieval info: CONSTANT: c3_low NUMERIC "4"
+// Retrieval info: CONSTANT: c3_high NUMERIC "8"
+// Retrieval info: CONSTANT: c3_initial NUMERIC "9"
+// Retrieval info: CONSTANT: c3_low NUMERIC "8"
 // Retrieval info: CONSTANT: c3_mode STRING "even"
 // Retrieval info: CONSTANT: c3_ph NUMERIC "0"
 // Retrieval info: CONSTANT: c4_high NUMERIC "3"
