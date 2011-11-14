@@ -2,14 +2,14 @@
 <LOG_ROOT>
 	<PROJECT NAME="DE0_Default">
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|Decode24:inst5|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_h0c1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_h0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0" CBX_FILE_NAME="altsyncram_sch3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_i0c1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|RandomSeq:inst8|RandomPLLs:inst|altpll:altpll_component" CBX_FILE_NAME="RandomPLLs_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|UartPLL:inst19|altpll:altpll_component" CBX_FILE_NAME="UartPLL_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst10|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst7|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst9|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component" CBX_FILE_NAME="TMPPLL_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|AllStore:inst2|FIFO:inst|scfifo:scfifo_component|scfifo_i0c1:auto_generated|a_dpfifo_ku81:dpfifo|altsyncram_t1g1:FIFOram|altsyncram:ram_block1a0" CBX_FILE_NAME="altsyncram_sch3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|PLL_TIMER:inst|TMPPLL:inst|altpll:altpll_component" CBX_FILE_NAME="TMPPLL_altpll1.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|RandomSeq:inst8|PLLout:inst1|altpll:altpll_component" CBX_FILE_NAME="PLLout_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|16Trig:inst4|QTrig:inst8|Decode24:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cdi.tdf"/>
 	</PROJECT>

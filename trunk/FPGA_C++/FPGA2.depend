@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1321286805 source:c:\fpga_c\fpga2\fpga2\s1.cpp
+	<cstdio>
+	<iostream>
+	<cstdlib>
+
