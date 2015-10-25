@@ -1,0 +1,1 @@
+A open logic analyzer,designed in FPGA and display in computer, with Ultra speed. Now Rewriting. Following GNU-GPLv3. Current Platform: Cyclone III EP3C16(C6)
